@@ -4,13 +4,13 @@ Meat Based Menu
 
 First Courses:
 
-- Pasta Bucatini with Amatriciana souce - Price: 14.50 €;
+- Pasta Bucatini with Amatriciana sauce - Price: 14.50 €;
 
-- Pasta Rigatoni with Carbonara souce - Price:  14.50 €;
+- Pasta Rigatoni with Carbonara sauce - Price:  14.50 €;
 
-- Pasta Pappardella with Ragù Boar souce - Price: 12.50 €;
+- Pasta Pappardella with Ragù Boar sauce - Price: 12.50 €;
 
-- Pasta Spaghetti with Bolognese souce - Price: 12.50 €;
+- Pasta Spaghetti with Bolognese sauce - Price: 12.50 €;
 
 - Pasta Spaghetti with Shrimp and Porcini mushrooms - Price: 18.00 €;
 
@@ -35,6 +35,10 @@ Sprite - 33cl - price: 2.99 €
 7UP - 33cl - price: 2.99 €
 Sparkling Water - 1.5l - price: 1.50 €
 Still Water - 1.5l - price: 1.50 €
+
+** our Beer Barrel unfortunately has stopped working, we won't serve draft beer today and we're sorry for the inconvenience **
+
+** today's special: white Sauvignon wine offered by the local winery, for more details, ask the waiter/res **
 
 Service tips:
 
