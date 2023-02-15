@@ -51,3 +51,10 @@ Service tips:
 - option_4: 30%
 
 // an option on bill
+
+STARTERS
+Liver crouton - price:10.00 €
+crouton with tomatoes - price:9.99 €
+chicken wings - price: 21.00 €
+golden cheese - price: 120.00 €
+a whole boar - price: 23.99 €
