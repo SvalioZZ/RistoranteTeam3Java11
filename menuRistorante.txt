@@ -2,6 +2,19 @@ TEAM 3 RESTAURANT
 
 Meat Based Menu
 
+First Courses:
+
+- Pasta Bucatini with Amatriciana souce - Price: 14.50 €;
+
+- Pasta Rigatoni with Carbonara souce - Price:  14.50 €;
+
+- Pasta Pappardella with Ragù Boar souce - Price: 12.50 €;
+
+- Pasta Spaghetti with Bolognese souce - Price: 12.50 €;
+
+- Pasta Spaghetti with Shrimp and Porcini mushrooms - Price: 18.00 €;
+
+
 Second Courses:
 
 - Scallops with white wine -Price: 15 €;
@@ -22,3 +35,15 @@ Sprite - 33cl - price: 2.99 €
 7UP - 33cl - price: 2.99 €
 Sparkling Water - 1.5l - price: 1.50 €
 Still Water - 1.5l - price: 1.50 €
+
+Service tips:
+
+- option_1: 0%
+
+- option_2: 10%
+
+- option_3: 20%
+
+- option_4: 30%
+
+// an option on bill
