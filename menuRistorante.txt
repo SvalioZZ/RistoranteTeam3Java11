@@ -2,6 +2,19 @@ TEAM 3 RESTAURANT
 
 Meat Based Menu
 
+Second Courses:
+
+- Scallops with white wine -Price: 15 €;
+
+- Fillet with porcine mushrooms - Price 24.99€;
+
+- Sliced beef with rucola and grana - Price 18.99€;
+
+- Dolphin Thread - Price 29 €;
+
+- Kobe's Thread (not Bryant) - Price 129.99 €;
+
+
 Beverages:
 
 Coca Cola - 33cl - price: 2.99 €
