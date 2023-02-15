@@ -1,5 +1,11 @@
 TEAM 3 RESTAURANT
 
-Menù a base di carne:
+Meat Based Menu
 
-BEVANDE:
+Beverages:
+
+Coca Cola - 33cl - price: 2.99 €
+Sprite - 33cl - price: 2.99 €
+7UP - 33cl - price: 2.99 €
+Sparkling Water - 1.5l - price: 1.50 €
+Still Water - 1.5l - price: 1.50 €
