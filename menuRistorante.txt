@@ -58,3 +58,10 @@ crouton with tomatoes - price:9.99 €
 chicken wings - price: 21.00 €
 golden cheese - price: 120.00 €
 a whole boar - price: 23.99 €
+
+DESSERTS
+Chocolate/Strawberry Cheesecake - price: 8.00 €
+Tiramisù - price: 10.00 €
+Apple Pie - price: 6.00 €
+Red Velvet cake - price: 8.00 €
+Brownie - price: price: 5.00 €
