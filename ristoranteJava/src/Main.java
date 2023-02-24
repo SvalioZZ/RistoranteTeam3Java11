@@ -8,20 +8,20 @@ public class Main {
         
         ArrayList<Beverage> beverages = new ArrayList<>();
         
-        Beverage newBaverage = new Beverage("Beer", 7.99);
-        Beverage BavaregeBello = new Beverage("Coka ina", 2.99);
+        Beverage coca_cola = new Beverage("Coca-Cola", "33cl", 2.99);
+        Beverage sprite = new Beverage("Sprite", "33cl", 2.99);
+        Beverage sevenUp = new Beverage("SevenUp", "33cl", 2.99);
+        Beverage sparkling_water = new Beverage("Sparkling Water", "1,5l", 2.99);
+        Beverage strill_water = new Beverage("Coca-Cola", "1,5l", 2.99);
         
-        beverages.add(newBaverage);
-        beverages.add(BavaregeBello);
+        beverages.add(coca_cola);
+        beverages.add(sprite);
+        beverages.add(sevenUp);
+        beverages.add(sparkling_water);
+        beverages.add(strill_water);
     
         System.out.println(beverages);
-//        System.out.println(newBaverage);
-//        Beverage oldBeverage = new Beverage();
-//        oldBeverage.setName("Chocolate Shake");
-//        oldBeverage.setPrice(5.99);
-//        System.out.println(oldBeverage);
-//        System.out.println("Client ordered: " + oldBeverage.getName() + " that costs $" + oldBeverage.getPrice());
-    
+        
     }
     
 }

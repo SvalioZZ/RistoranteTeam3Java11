@@ -5,9 +5,12 @@ public class Beverage {
     private String name;
     private double price;
     
-    public Beverage(String name, double price) {
+    private String capacity;
+    
+    public Beverage(String name, String capacity, double price) {
         this.name = name;
         this.price = price;
+        this.capacity = capacity;
     }
     
     public Beverage() {
@@ -28,6 +31,6 @@ public class Beverage {
     }
     @Override
     public String toString() {
-        return "\n" + name + " - " + price + "\n";
+        return name + " - " + capacity + " - " + price;
     }
 }
