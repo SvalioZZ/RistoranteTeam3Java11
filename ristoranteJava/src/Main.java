@@ -22,8 +22,6 @@ public class Main {
         beverages.add(sparkling_water);
         beverages.add(strill_water);
 
-        System.out.println("\nBeverages: \n" + beverages);
-
         ArrayList<Second_Courses> secondCourses = new ArrayList<>();
         secondCourses.add(new Second_Courses("Scallops with white wine", 15.00));
         secondCourses.add(new Second_Courses("\nFillet with porcine mushrooms", 24.99));
@@ -31,15 +29,13 @@ public class Main {
         secondCourses.add(new Second_Courses("\nDolphin Thread", 29.99));
         secondCourses.add(new Second_Courses("\nKobe's Thread (not Bryant)", 129.99));
 
-        System.out.println("\nThe second Courses are : \n" + secondCourses);
-
         ArrayList<Desserts> desserts = new ArrayList<>();
         Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);
-        Desserts chocolateCheesecake = new Desserts("Chocolate Cheesecake", 8.00);
-        Desserts tiramisu = new Desserts("Tiramisù", 10.00);
-        Desserts applePie = new Desserts("Apple Pie", 6.00);
-        Desserts redVelvetCake = new Desserts("Red Velvet Cake", 8.00);
-        Desserts brownie = new Desserts("Brownie", 5.00);
+        Desserts chocolateCheesecake = new Desserts("\nChocolate Cheesecake", 8.00);
+        Desserts tiramisu = new Desserts("\nTiramisù", 10.00);
+        Desserts applePie = new Desserts("\nApple Pie", 6.00);
+        Desserts redVelvetCake = new Desserts("\nRed Velvet Cake", 8.00);
+        Desserts brownie = new Desserts("\nBrownie", 5.00);
 
         desserts.add(strawberriesCheesecake);
         desserts.add(chocolateCheesecake);
@@ -47,8 +43,7 @@ public class Main {
         desserts.add(applePie);
         desserts.add(redVelvetCake);
         desserts.add(brownie);
-
-        System.out.println("\nThe Desserts are: \n" + desserts);
+        
     }
 
 }
