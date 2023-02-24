@@ -1,7 +1,4 @@
-import pietanze.Beverage;
-import pietanze.Desserts;
-import pietanze.First_Courses;
-import pietanze.Second_Courses;
+import pietanze.*;
 
 import java.util.ArrayList;
 
@@ -52,6 +49,13 @@ public class Main {
         desserts.add(applePie);
         desserts.add(redVelvetCake);
         desserts.add(brownie);
+
+        ArrayList<Appetizers> appetizers = new ArrayList<>();
+        appetizers.add(new Appetizers("Liver crouton", 10.00));
+        appetizers.add(new Appetizers("\nCrouton with tomatoes", 9.99));
+        appetizers.add(new Appetizers("\nChicken wings", 21.00));
+        appetizers.add(new Appetizers("\nGolden cheese", 120.00));
+        appetizers.add(new Appetizers("\nA whole boar", 23.99));
 
     }
     
