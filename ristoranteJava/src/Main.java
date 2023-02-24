@@ -1,5 +1,6 @@
 import pietanze.Beverage;
 import pietanze.Desserts;
+import pietanze.First_Courses;
 import pietanze.Second_Courses;
 
 import java.util.ArrayList;
@@ -22,6 +23,14 @@ public class Main {
         beverages.add(sparkling_water);
         beverages.add(strill_water);
 
+
+        ArrayList<First_Courses> firstCourses = new ArrayList<>();
+        firstCourses.add(new First_Courses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
+        firstCourses.add(new First_Courses("\nPasta Bucatini with Amatriciana sauce", 14.50));
+        firstCourses.add(new First_Courses("\nPasta Pappardella with Ragù Boar sauce", 12.50));
+        firstCourses.add(new First_Courses("\nPasta Spaghetti with Bolognese sauce", 12.50));
+        firstCourses.add(new First_Courses("\nPasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
+
         ArrayList<Second_Courses> secondCourses = new ArrayList<>();
         secondCourses.add(new Second_Courses("Scallops with white wine", 15.00));
         secondCourses.add(new Second_Courses("\nFillet with porcine mushrooms", 24.99));
@@ -43,7 +52,7 @@ public class Main {
         desserts.add(applePie);
         desserts.add(redVelvetCake);
         desserts.add(brownie);
-        
+
     }
 
 }
