@@ -13,5 +13,35 @@ package pietanze;
 
 
 public class Desserts {
+    private String name;
+    private double price;
+
+    public Desserts(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public Desserts() {
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName(String name) {
+        return name;
+    }
+    public double getPrice(double price){
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return name + " - " +  price;
+    }
 
 }

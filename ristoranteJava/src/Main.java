@@ -1,4 +1,5 @@
 import pietanze.Beverage;
+import pietanze.Desserts;
 import pietanze.Second_Courses;
 
 import java.util.ArrayList;
@@ -31,6 +32,23 @@ public class Main {
         secondCourses.add(new Second_Courses("\nKobe's Thread (not Bryant)", 129.99));
 
         System.out.println("\nThe second Courses are : \n" + secondCourses);
+
+        ArrayList<Desserts> desserts = new ArrayList<>();
+        Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);
+        Desserts chocolateCheesecake = new Desserts("Chocolate Cheesecake", 8.00);
+        Desserts tiramisu = new Desserts("Tiramisù", 10.00);
+        Desserts applePie = new Desserts("Apple Pie", 6.00);
+        Desserts redVelvetCake = new Desserts("Red Velvet Cake", 8.00);
+        Desserts brownie = new Desserts("Brownie", 5.00);
+
+        desserts.add(strawberriesCheesecake);
+        desserts.add(chocolateCheesecake);
+        desserts.add(tiramisu);
+        desserts.add(applePie);
+        desserts.add(redVelvetCake);
+        desserts.add(brownie);
+
+        System.out.println("\nThe Desserts are: \n" + desserts);
     }
 
 }
