@@ -56,7 +56,19 @@ public class Main {
         appetizers.add(new Appetizers("\nChicken wings", 21.00));
         appetizers.add(new Appetizers("\nGolden cheese", 120.00));
         appetizers.add(new Appetizers("\nA whole boar", 23.99));
-
+    
+        System.out.println(
+                "----------------------------\n Beverages: \n----------------------------\n" +
+                        beverages +
+                        "\n----------------------------\n Appetizers: \n----------------------------\n" +
+                        appetizers +
+                        "\n----------------------------\n First Courses: \n----------------------------\n" +
+                        firstCourses +
+                        "\n----------------------------\n Second Courses: \n----------------------------\n" +
+                        secondCourses +
+                        "\n----------------------------\n Desserts: \n----------------------------\n" +
+                        desserts
+        );
     }
     
     
