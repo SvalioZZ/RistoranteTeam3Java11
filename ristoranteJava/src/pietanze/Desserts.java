@@ -12,7 +12,7 @@ package pietanze;
  */
 
 
-public class Desserts {
+public class Desserts extends FatherClass {
     private String name;
     private double price;
 
@@ -32,16 +32,15 @@ public class Desserts {
         this.name = name;
     }
 
-    public String getName(String name) {
-        return name;
+    public void getName(String name) {
+        this.name = name;
     }
-    public double getPrice(double price){
-        return price;
+    public void getPrice(double price){
+        this.price = price;
     }
 
     @Override
-    public String toString() {
-        return name + " - " +  price;
+    public void printMenu() {
+        System.out.println(name + " - " + price);
     }
-
 }

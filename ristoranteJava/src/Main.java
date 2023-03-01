@@ -37,11 +37,11 @@ public class Main {
 
         ArrayList<Desserts> desserts = new ArrayList<>();
         Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);
-        Desserts chocolateCheesecake = new Desserts("\nChocolate Cheesecake", 8.00);
-        Desserts tiramisu = new Desserts("\nTiramisù", 10.00);
-        Desserts applePie = new Desserts("\nApple Pie", 6.00);
-        Desserts redVelvetCake = new Desserts("\nRed Velvet Cake", 8.00);
-        Desserts brownie = new Desserts("\nBrownie", 5.00);
+        Desserts chocolateCheesecake = new Desserts("Chocolate Cheesecake", 8.00);
+        Desserts tiramisu = new Desserts("Tiramisù", 10.00);
+        Desserts applePie = new Desserts("Apple Pie", 6.00);
+        Desserts redVelvetCake = new Desserts("Red Velvet Cake", 8.00);
+        Desserts brownie = new Desserts("Brownie", 5.00);
 
         desserts.add(strawberriesCheesecake);
         desserts.add(chocolateCheesecake);
@@ -70,6 +70,11 @@ public class Main {
         System.out.println("\n----------------------------\n Second Courses: \n----------------------------");
         for (int i = 0; i <secondCourses.size() ; i++) {
             System.out.println(secondCourses.get(i));
+        }
+
+        System.out.println("\n----------------------------\n Desserts: \n----------------------------");
+        for (int i = 0; i <desserts.size() ; i++) {
+            desserts.get(i).printMenu();
         }
     }
     
