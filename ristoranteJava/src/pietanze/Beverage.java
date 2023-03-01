@@ -1,6 +1,6 @@
 package pietanze;
 
-public class Beverage {
+public class Beverage extends FatherClass {
     
     private String name;
     private double price;
@@ -18,19 +18,18 @@ public class Beverage {
     public String getName() {
         return name;
     }
-    public Beverage setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
     public double getPrice() {
         return price;
     }
-    public Beverage setPrice(double price) {
+    public void setPrice(double price) {
         this.price = price;
-        return this;
     }
+    
     @Override
-    public String toString() {
-        return name + " - " + capacity + " - " + price;
+    public void printMenu() {
+        System.out.println(name + ": " + capacity + "- price: " + price);
     }
 }

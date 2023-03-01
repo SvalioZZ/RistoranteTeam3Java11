@@ -9,10 +9,10 @@ public class Main {
         ArrayList<Beverage> beverages = new ArrayList<>();
         System.out.println("Meat Based Menu:");
         Beverage coca_cola = new Beverage("Coca-Cola", "33cl", 2.99);
-        Beverage sprite = new Beverage("\nSprite", "33cl", 2.99);
-        Beverage sevenUp = new Beverage("\nSevenUp", "33cl", 2.99);
-        Beverage sparkling_water = new Beverage("\nSparkling Water", "1,5l", 2.99);
-        Beverage strill_water = new Beverage("\nCoca-Cola", "1,5l", 2.99);
+        Beverage sprite = new Beverage("Sprite", "33cl", 2.99);
+        Beverage sevenUp = new Beverage("SevenUp", "33cl", 2.99);
+        Beverage sparkling_water = new Beverage("Sparkling Water", "1,5l", 2.99);
+        Beverage strill_water = new Beverage("Coca-Cola", "1,5l", 2.99);
 
         beverages.add(coca_cola);
         beverages.add(sprite);
@@ -62,16 +62,10 @@ public class Main {
         appetizers.add(new Appetizers("\nGolden cheese", 120.00));
         appetizers.add(new Appetizers("\nA whole boar", 23.99));
     
-        System.out.println(
-                "----------------------------\n Beverages: \n----------------------------\n" +
-                        beverages +
-                        "\n----------------------------\n Appetizers: \n----------------------------\n" +
-                        appetizers +
-                        "\n----------------------------\n First Courses: \n----------------------------\n" +
-                        firstCourses +
-                        "\n----------------------------\n Desserts: \n----------------------------\n" +
-                        desserts
-        );
+        System.out.println("\n----------------------------\n Beverages: \n----------------------------");
+        for (int i = 0; i < beverages.size() ; i++) {
+            beverages.get(i).printMenu();
+        }
     }
     
     
