@@ -11,19 +11,19 @@ package pietanze;
  * i setter e i getter per le variabili stanziate in precedenza.
  */
 
-    public class First_Courses {
+    public class FirstCourses extends FatherClass {
         private String name;
         private double price;
 
-        public First_Courses(String name, double price ) {
+        public FirstCourses(String name, double price ) {
             this.name = name;
             this.price = price;
         }
 
-        @Override
-        public String toString() {
-            return name + " - " + price;
-        }
+    @Override
+    public void printMenu() {
+        System.out.println(name + " - " + price );
     }
+}
 
 
