@@ -12,12 +12,12 @@ package pietanze;
  */
 
 
-public class Second_Courses {
+public class SecondCourses {
 
     private String name;
     private double price;
 
-    public Second_Courses (String name, Double price) {
+    public SecondCourses (String name, Double price) {
 
         this.name = name;
         this.price = price;

@@ -28,12 +28,17 @@ public class Main {
         firstCourses.add(new First_Courses("\nPasta Spaghetti with Bolognese sauce", 12.50));
         firstCourses.add(new First_Courses("\nPasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
 
-        ArrayList<Second_Courses> secondCourses = new ArrayList<>();
-        secondCourses.add(new Second_Courses("Scallops with white wine", 15.00));
-        secondCourses.add(new Second_Courses("\nFillet with porcine mushrooms", 24.99));
-        secondCourses.add(new Second_Courses("\nSliced beef with rucola and grana", 18.99));
-        secondCourses.add(new Second_Courses("\nDolphin Thread", 29.99));
-        secondCourses.add(new Second_Courses("\nKobe's Thread (not Bryant)", 129.99));
+        ArrayList<SecondCourses> secondCourses = new ArrayList<>();
+        secondCourses.add(new SecondCourses("Scallops with white wine", 15.00));
+        secondCourses.add(new SecondCourses("Fillet with porcine mushrooms", 24.99));
+        secondCourses.add(new SecondCourses("Sliced beef with rucola and grana", 18.99));
+        secondCourses.add(new SecondCourses("Dolphin Thread", 29.99));
+        secondCourses.add(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+
+        System.out.println("\n----------------------------\n Second Courses: \n----------------------------");
+        for (int i = 0; i <secondCourses.size() ; i++) {
+            System.out.println(secondCourses.get(i));
+        }
 
         ArrayList<Desserts> desserts = new ArrayList<>();
         Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);
@@ -64,8 +69,6 @@ public class Main {
                         appetizers +
                         "\n----------------------------\n First Courses: \n----------------------------\n" +
                         firstCourses +
-                        "\n----------------------------\n Second Courses: \n----------------------------\n" +
-                        secondCourses +
                         "\n----------------------------\n Desserts: \n----------------------------\n" +
                         desserts
         );
