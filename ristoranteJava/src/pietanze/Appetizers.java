@@ -11,7 +11,7 @@ package pietanze;
  * i setter e i getter per le variabili stanziate in precedenza.
  */
 
-public class Appetizers {
+public class Appetizers extends FatherClass {
     private String name;
     private double price;
 
@@ -36,7 +36,7 @@ public class Appetizers {
         this.price = price;
     }
     @Override
-    public String toString() {
-        return  name + " - " + price ;
+    public void printMenu() {
+        System.out.println(name + " - " + price );
     }
 }

@@ -52,14 +52,19 @@ public class Main {
 
         ArrayList<Appetizers> appetizers = new ArrayList<>();
         appetizers.add(new Appetizers("Liver crouton", 10.00));
-        appetizers.add(new Appetizers("\nCrouton with tomatoes", 9.99));
-        appetizers.add(new Appetizers("\nChicken wings", 21.00));
-        appetizers.add(new Appetizers("\nGolden cheese", 120.00));
-        appetizers.add(new Appetizers("\nA whole boar", 23.99));
+        appetizers.add(new Appetizers("Crouton with tomatoes", 9.99));
+        appetizers.add(new Appetizers("Chicken wings", 21.00));
+        appetizers.add(new Appetizers("Golden cheese", 120.00));
+        appetizers.add(new Appetizers("A whole boar", 23.99));
     
         System.out.println("\n----------------------------\n Beverages: \n----------------------------");
         for (int i = 0; i < beverages.size() ; i++) {
             beverages.get(i).printMenu();
+        }
+
+        System.out.println("\n----------------------------\n Appetizers: \n----------------------------");
+        for (int i = 0; i < appetizers.size() ; i++) {
+            appetizers.get(i).printMenu();
         }
 
         System.out.println("\n----------------------------\n First Courses: \n----------------------------");
