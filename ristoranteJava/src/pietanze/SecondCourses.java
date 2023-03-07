@@ -12,7 +12,7 @@ package pietanze;
  */
 
 
-public class SecondCourses {
+public class SecondCourses extends FatherClass{
 
     private String name;
     private double price;

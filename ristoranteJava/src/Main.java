@@ -74,7 +74,7 @@ public class Main {
 
         System.out.println("\n----------------------------\n Second Courses: \n----------------------------");
         for (int i = 0; i <secondCourses.size() ; i++) {
-            System.out.println(secondCourses.get(i));
+            secondCourses.get(i).printMenu();
         }
 
         System.out.println("\n----------------------------\n Desserts: \n----------------------------");
