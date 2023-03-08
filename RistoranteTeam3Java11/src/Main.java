@@ -28,12 +28,12 @@ public class Main {
         firstCourses.add(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
         firstCourses.add(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
 
-        ArrayList<SecondCourses> secondCourses = new ArrayList<>();
-        secondCourses.add(new SecondCourses("Scallops with white wine", 15.00));
-        secondCourses.add(new SecondCourses("Fillet with porcine mushrooms", 24.99));
-        secondCourses.add(new SecondCourses("Sliced beef with rucola and grana", 18.99));
-        secondCourses.add(new SecondCourses("Dolphin Thread", 29.99));
-        secondCourses.add(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+        Menu.addToMenuSecondCourses(new SecondCourses("Scallops with white wine", 15.00));
+        Menu.addToMenuSecondCourses(new SecondCourses("Fillet with porcine mushrooms", 24.99));
+        Menu.addToMenuSecondCourses(new SecondCourses("Sliced beef with rucola and grana", 18.99));
+        Menu.addToMenuSecondCourses(new SecondCourses("Dolphin Thread", 29.99));
+        Menu.addToMenuSecondCourses(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+
 
         ArrayList<Desserts> desserts = new ArrayList<>();
         Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);
@@ -56,6 +56,8 @@ public class Main {
         appetizers.add(new Appetizers("Chicken wings", 21.00));
         appetizers.add(new Appetizers("Golden cheese", 120.00));
         appetizers.add(new Appetizers("A whole boar", 23.99));
+
+
     
         System.out.println("\n----------------------------\n Beverages: \n----------------------------");
         for (int i = 0; i < beverages.size() ; i++) {
@@ -78,9 +80,9 @@ public class Main {
         }
 
         System.out.println("\n----------------------------\n Second Courses: \n----------------------------");
-        for (int i = 0; i <secondCourses.size() ; i++) {
-            secondCourses.get(i).printMenu();
-        }
+        //For sistemato
+
+        Menu.printMenuSecondCourses();
 
         System.out.println("\n----------------------------\n Desserts: \n----------------------------");
         for (int i = 0; i <desserts.size() ; i++) {
