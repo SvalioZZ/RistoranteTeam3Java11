@@ -62,6 +62,11 @@ public class Main {
             beverages.get(i).printMenu();
         }
 
+        //TODO usiamo sempre il foreach
+        for (Beverage beverage: beverages) {
+            beverage.printMenu();
+        }
+
         System.out.println("\n----------------------------\n Appetizers: \n----------------------------");
         for (int i = 0; i < appetizers.size() ; i++) {
             appetizers.get(i).printMenu();

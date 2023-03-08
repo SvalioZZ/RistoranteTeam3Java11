@@ -12,7 +12,7 @@ package pietanze;
  */
 
 
-public class SecondCourses extends FatherClass{
+public class SecondCourses  {
 
     private String name;
     private double price;
@@ -39,7 +39,6 @@ public class SecondCourses extends FatherClass{
         return price;
     }
 
-    @Override
     public void printMenu() {
         System.out.println(name + " - " + price );
     }

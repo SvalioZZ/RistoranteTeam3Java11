@@ -11,7 +11,9 @@ package pietanze;
  * i setter e i getter per le variabili stanziate in precedenza.
  */
 
-public class Appetizers extends FatherClass {
+
+//TODO eliminare la doppia cartella per il progetto
+public class Appetizers {
     private String name;
     private double price;
 
@@ -35,7 +37,6 @@ public class Appetizers extends FatherClass {
     public void setPrice(double price) {
         this.price = price;
     }
-    @Override
     public void printMenu() {
         System.out.println(name + " - " + price );
     }

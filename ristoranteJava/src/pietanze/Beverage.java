@@ -1,6 +1,6 @@
 package pietanze;
 
-public class Beverage extends FatherClass {
+public class Beverage  {
     
     private String name;
     private double price;
@@ -28,7 +28,6 @@ public class Beverage extends FatherClass {
         this.price = price;
     }
     
-    @Override
     public void printMenu() {
         System.out.println(name + ": " + capacity + "- price: " + price);
     }
