@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RistoranteTeam3Java11.iml" filepath="$PROJECT_DIR$/.idea/RistoranteTeam3Java11.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ristoranteJava/ristoranteJava.iml" filepath="$PROJECT_DIR$/ristoranteJava/ristoranteJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RistoranteTeam3Java11/RistoranteTeam3Java11.iml" filepath="$PROJECT_DIR$/RistoranteTeam3Java11/RistoranteTeam3Java11.iml" />
     </modules>
   </component>
 </project>
