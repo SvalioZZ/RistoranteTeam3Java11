@@ -40,7 +40,7 @@ public class SecondCourses extends FatherClass{
     }
 
     @Override
-    public String toString() {
-        return  name + " - " + price ;
+    public void printMenu() {
+        System.out.println(name + " - " + price );
     }
 }
