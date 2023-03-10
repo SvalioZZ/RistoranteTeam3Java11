@@ -34,6 +34,6 @@ public class Beverage  {
     
     @Override
     public String toString() {
-        return name + ": " + capacity + "- price: " + price;
+        return name + ": " + capacity + " - price: " + price;
     }
 }
