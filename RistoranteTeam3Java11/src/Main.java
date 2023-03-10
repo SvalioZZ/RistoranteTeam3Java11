@@ -46,12 +46,12 @@ public class Main {
         Desserts redVelvetCake = new Desserts("Red Velvet Cake", 8.00);
         Desserts brownie = new Desserts("Brownie", 5.00);
 
-        desserts.add(strawberriesCheesecake);
-        desserts.add(chocolateCheesecake);
-        desserts.add(tiramisu);
-        desserts.add(applePie);
-        desserts.add(redVelvetCake);
-        desserts.add(brownie);
+        menu.addToMenuDesserts(strawberriesCheesecake);
+        menu.addToMenuDesserts(chocolateCheesecake);
+        menu.addToMenuDesserts(tiramisu);
+        menu.addToMenuDesserts(applePie);
+        menu.addToMenuDesserts(redVelvetCake);
+        menu.addToMenuDesserts(brownie);
 
         ArrayList<Appetizers> appetizers = new ArrayList<>();
         appetizers.add(new Appetizers("Liver crouton", 10.00));
