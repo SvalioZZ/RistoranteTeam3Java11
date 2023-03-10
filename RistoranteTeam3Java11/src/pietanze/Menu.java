@@ -8,21 +8,21 @@ import java.util.stream.Collectors;
 public class Menu {
 
     private List<Beverage> beverages;
+    private List<FirstCourses> firstCourses;
     private List<SecondCourses> secondCourses;
     private List<Desserts> desserts;
-
-    private Beverage beverage;
 
 
     public void printMenu() {
         printMenuBeverages();
-        //Printmenu primi piatti
+        printMenuFirstCourses();
         printMenuSecondCourses();
         printMenuDesserts();
     }
 
     public Menu() {
         beverages = new ArrayList<>();
+        firstCourses = new ArrayList<>();
         secondCourses = new ArrayList<>();
         desserts = new ArrayList<>();
     }
@@ -30,7 +30,17 @@ public class Menu {
     //TODO ognuno inserirà la propria lista qui dentro , il metodo per gestirla, e il metodo per stamparla
     //TODO e poi ci sarà un metodo per la stampa globale
 
-
+    public void addToMenuFirstCourses(FirstCourses  firstCourse) {firstCourses.add(firstCourse);}
+    public void printMenuFirstCourses() {
+        System.out.println("""
+                --------------------------------
+                First Courses:\s
+                --------------------------------"""
+        );
+        for (FirstCourses course: firstCourses) {
+            System.out.println(course);
+        }
+    }
     public void addToMenuSecondCourses(SecondCourses secondCourse) {
         secondCourses.add(secondCourse);
     }

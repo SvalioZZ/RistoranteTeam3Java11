@@ -24,11 +24,11 @@ public class Main {
         // Valerio out
         
         ArrayList<FirstCourses> firstCourses = new ArrayList<>();
-        firstCourses.add(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
-        firstCourses.add(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
-        firstCourses.add(new FirstCourses("Pasta Pappardella with Ragù Boar sauce", 12.50));
-        firstCourses.add(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
-        firstCourses.add(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
+        menu.addToMenuFirstCourses(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
+        menu.addToMenuFirstCourses(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
+        menu.addToMenuFirstCourses(new FirstCourses("Pasta Pappardella with Ragù Boar sauce", 12.50));
+        menu.addToMenuFirstCourses(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
+        menu.addToMenuFirstCourses(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
 
         menu.addToMenuSecondCourses(new SecondCourses("Scallops with white wine", 15.00));
         menu.addToMenuSecondCourses(new SecondCourses("Fillet with porcine mushrooms", 24.99));
