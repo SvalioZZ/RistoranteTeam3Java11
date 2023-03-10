@@ -29,7 +29,7 @@ public class Beverage  {
     }
     
     public void printMenu() {
-        System.out.println(name + ": " + capacity + "- price: " + price);
+        System.out.println(name + ": " + capacity + " - price: " + price);
     }
     
     @Override
