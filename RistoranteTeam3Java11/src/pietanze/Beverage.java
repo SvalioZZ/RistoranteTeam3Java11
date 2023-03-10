@@ -31,4 +31,9 @@ public class Beverage  {
     public void printMenu() {
         System.out.println(name + ": " + capacity + "- price: " + price);
     }
+    
+    @Override
+    public String toString() {
+        return name + ": " + capacity + "- price: " + price;
+    }
 }

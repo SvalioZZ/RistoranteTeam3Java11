@@ -6,21 +6,23 @@ public class Main {
 
     public static void main(String[] args) {
         
+        Menu menu = new Menu();
+        
         ArrayList<Beverage> beverages = new ArrayList<>();
         System.out.println("Meat Based Menu:");
         Beverage coca_cola = new Beverage("Coca-Cola", "33cl", 2.99);
         Beverage sprite = new Beverage("Sprite", "33cl", 2.99);
         Beverage sevenUp = new Beverage("SevenUp", "33cl", 2.99);
         Beverage sparkling_water = new Beverage("Sparkling Water", "1,5l", 2.99);
-        Beverage strill_water = new Beverage("Coca-Cola", "1,5l", 2.99);
-
-        beverages.add(coca_cola);
-        beverages.add(sprite);
-        beverages.add(sevenUp);
-        beverages.add(sparkling_water);
-        beverages.add(strill_water);
-
-
+        Beverage still_water = new Beverage("Still Water", "1,5l", 2.99);
+        menu.addToMenuBeverages(coca_cola);
+        menu.addToMenuBeverages(sprite);
+        menu.addToMenuBeverages(sevenUp);
+        menu.addToMenuBeverages(sparkling_water);
+        menu.addToMenuBeverages(still_water);
+        
+        // Valerio out
+        
         ArrayList<FirstCourses> firstCourses = new ArrayList<>();
         firstCourses.add(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
         firstCourses.add(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
@@ -28,13 +30,12 @@ public class Main {
         firstCourses.add(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
         firstCourses.add(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
 
-        Menu.addToMenuSecondCourses(new SecondCourses("Scallops with white wine", 15.00));
-        Menu.addToMenuSecondCourses(new SecondCourses("Fillet with porcine mushrooms", 24.99));
-        Menu.addToMenuSecondCourses(new SecondCourses("Sliced beef with rucola and grana", 18.99));
-        Menu.addToMenuSecondCourses(new SecondCourses("Dolphin Thread", 29.99));
-        Menu.addToMenuSecondCourses(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
-
-
+        menu.addToMenuSecondCourses(new SecondCourses("Scallops with white wine", 15.00));
+        menu.addToMenuSecondCourses(new SecondCourses("Fillet with porcine mushrooms", 24.99));
+        menu.addToMenuSecondCourses(new SecondCourses("Sliced beef with rucola and grana", 18.99));
+        menu.addToMenuSecondCourses(new SecondCourses("Dolphin Thread", 29.99));
+        menu.addToMenuSecondCourses(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+        
         ArrayList<Desserts> desserts = new ArrayList<>();
         Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);
         Desserts chocolateCheesecake = new Desserts("Chocolate Cheesecake", 8.00);
@@ -56,38 +57,11 @@ public class Main {
         appetizers.add(new Appetizers("Chicken wings", 21.00));
         appetizers.add(new Appetizers("Golden cheese", 120.00));
         appetizers.add(new Appetizers("A whole boar", 23.99));
+        
+
+        menu.printMenu();
 
 
-    
-        System.out.println("\n----------------------------\n Beverages: \n----------------------------");
-        for (int i = 0; i < beverages.size() ; i++) {
-            beverages.get(i).printMenu();
-        }
-
-        //TODO usiamo sempre il foreach
-        for (Beverage beverage: beverages) {
-            beverage.printMenu();
-        }
-
-        System.out.println("\n----------------------------\n Appetizers: \n----------------------------");
-        for (int i = 0; i < appetizers.size() ; i++) {
-            appetizers.get(i).printMenu();
-        }
-
-        System.out.println("\n----------------------------\n First Courses: \n----------------------------");
-        for (int i = 0; i < firstCourses.size() ; i++) {
-            firstCourses.get(i).printMenu();
-        }
-
-        System.out.println("\n----------------------------\n Second Courses: \n----------------------------");
-        //For sistemato
-
-        Menu.printMenuSecondCourses();
-
-        System.out.println("\n----------------------------\n Desserts: \n----------------------------");
-        for (int i = 0; i <desserts.size() ; i++) {
-            desserts.get(i).printMenu();
-        }
     }
     
     

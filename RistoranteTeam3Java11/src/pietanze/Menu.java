@@ -1,34 +1,53 @@
 package pietanze;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Menu {
-
+    
     private List<Beverage> beverages;
-    private static List<SecondCourses> secondCourses;
-
-
-    public static void printMenu (){
+    private List<SecondCourses> secondCourses;
+    
+    private Beverage beverage;
+    
+    
+    public void printMenu() {
         //Printmenu primi piatti
+        printMenuBeverages();
         printMenuSecondCourses();
     }
-
+    
     public Menu() {
-       beverages = new ArrayList<>();
-       secondCourses = new ArrayList<>();
-
+        beverages = new ArrayList<>();
+        secondCourses = new ArrayList<>();
     }
-
+    
     //TODO ognuno inserirà la propria lista qui dentro , il metodo per gestirla, e il metodo per stamparla
     //TODO e poi ci sarà un metodo per la stampa globale
-
-
-    public static void addToMenuSecondCourses(SecondCourses secondCourse){
+    
+    
+    public void addToMenuSecondCourses(SecondCourses secondCourse) {
         secondCourses.add(secondCourse);
     }
-    public static void printMenuSecondCourses (){
+    
+    public void printMenuSecondCourses() {
         System.out.println(secondCourses);
     }
-
+    
+    public void addToMenuBeverages(Beverage beverage) {
+        beverages.add(beverage);
+    }
+    
+    public void printMenuBeverages() {
+        System.out.println("""
+                --------------------------------
+                Beverages:\s
+                --------------------------------"""
+        );
+        for (Beverage beverage : beverages) {
+            System.out.println(beverage);
+        }
+    }
 }
