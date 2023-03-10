@@ -35,6 +35,8 @@ public class Main {
         menu.addToMenuSecondCourses(new SecondCourses("Sliced beef with rucola and grana", 18.99));
         menu.addToMenuSecondCourses(new SecondCourses("Dolphin Thread", 29.99));
         menu.addToMenuSecondCourses(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+
+        // Giovanni ha frnut (he finished)
         
         ArrayList<Desserts> desserts = new ArrayList<>();
         Desserts strawberriesCheesecake = new Desserts("Strawberries Cheesecake", 8.00);

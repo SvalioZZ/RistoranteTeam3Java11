@@ -14,8 +14,8 @@ public class Menu {
     
     
     public void printMenu() {
-        //Printmenu primi piatti
         printMenuBeverages();
+        //Printmenu primi piatti
         printMenuSecondCourses();
     }
     
@@ -33,7 +33,14 @@ public class Menu {
     }
     
     public void printMenuSecondCourses() {
-        System.out.println(secondCourses);
+        System.out.println("""
+                --------------------------------
+                Second Courses:\s
+                --------------------------------"""
+        );
+        for (SecondCourses course: secondCourses) {
+            System.out.println(course);
+        }
     }
     
     public void addToMenuBeverages(Beverage beverage) {

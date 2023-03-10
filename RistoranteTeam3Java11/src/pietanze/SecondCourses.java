@@ -42,4 +42,12 @@ public class SecondCourses  {
     public void printMenu() {
         System.out.println(name + " - " + price );
     }
+
+    @Override
+    public String toString() {
+        return
+                name +
+                ", price : " + price
+                ;
+    }
 }
