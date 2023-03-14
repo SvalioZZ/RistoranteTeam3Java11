@@ -8,6 +8,9 @@ public class Main {
         
         Menu menu = new Menu();
         
+        ArrayList<Beverage> beverages = new ArrayList<>();
+        System.out.println("Meat Based Menu:");
+        
         menu.addToMenuBeverages(new Beverage("Coca-Cola", "33cl", 2.99));
         menu.addToMenuBeverages(new Beverage("Sprite", "33cl", 2.99));
         menu.addToMenuBeverages(new Beverage("SevenUp", "33cl", 2.99));
@@ -38,9 +41,9 @@ public class Main {
         menu.addToMenuDesserts(new Desserts("Apple Pie", 6.00));
         menu.addToMenuDesserts(new Desserts("Red Velvet Cake", 8.00));
         menu.addToMenuDesserts(new Desserts("Brownie", 5.00));
-
-        // Stefano out
         
+        // Stefano out
+
         ArrayList<Appetizers> appetizers = new ArrayList<>();
         appetizers.add(new Appetizers("Liver crouton", 10.00));
         appetizers.add(new Appetizers("Crouton with tomatoes", 9.99));
