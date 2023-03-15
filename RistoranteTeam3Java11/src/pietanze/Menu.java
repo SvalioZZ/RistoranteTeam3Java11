@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 public class Menu {
 
     private List<Beverage> beverages;
+    private List<Appetizers> appetizers;
     private List<FirstCourses> firstCourses;
     private List<SecondCourses> secondCourses;
     private List<Desserts> desserts;
@@ -15,6 +16,7 @@ public class Menu {
 
     public void printMenu() {
         printMenuBeverages();
+        printMenuAppetizers();
         printMenuFirstCourses();
         printMenuSecondCourses();
         printMenuDesserts();
@@ -30,6 +32,17 @@ public class Menu {
     //TODO ognuno inserirà la propria lista qui dentro , il metodo per gestirla, e il metodo per stamparla
     //TODO e poi ci sarà un metodo per la stampa globale
 
+    public void addToMenuAppetizers(Appetizers  appetizer) {appetizers.add(appetizer);}
+    public void printMenuAppetizers() {
+        System.out.println("""
+                --------------------------------
+                Appetizers:\s
+                --------------------------------"""
+        );
+        for (Appetizers appetizer: appetizers) {
+            System.out.println(appetizer);
+        }
+    }
     public void addToMenuFirstCourses(FirstCourses  firstCourse) {firstCourses.add(firstCourse);}
     public void printMenuFirstCourses() {
         System.out.println("""
