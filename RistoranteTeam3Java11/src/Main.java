@@ -1,6 +1,9 @@
 import pietanze.*;
 
 import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Scanner;
+
 
 public class Main {
 
@@ -27,11 +30,12 @@ public class Main {
         
         // Daniele out
 
-        menu.addToMenuSecondCourses(new SecondCourses("Scallops with white wine", 15.00));
-        menu.addToMenuSecondCourses(new SecondCourses("Fillet with porcine mushrooms", 24.99));
-        menu.addToMenuSecondCourses(new SecondCourses("Sliced beef with rucola and grana", 18.99));
-        menu.addToMenuSecondCourses(new SecondCourses("Dolphin Thread", 29.99));
-        menu.addToMenuSecondCourses(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+
+        menu.addToPortataList(new SecondCourses("Scallops with white wine", 15.00));
+        menu.addToPortataList(new SecondCourses("Fillet with porcine mushrooms", 24.99));
+        menu.addToPortataList(new SecondCourses("Sliced beef with rucola and grana", 18.99));
+        menu.addToPortataList(new SecondCourses("Dolphin Thread", 29.99));
+        menu.addToPortataList(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
 
         // Giovanni ha frnut (he finished)
         
@@ -55,8 +59,32 @@ public class Main {
         menu.printMenu();
 
 
+        menu.printOptions();
+        enum Portate { SECOND }
+
+
+        System.out.println("Choose what you rather");
+
+        Scanner scanner = new Scanner(System.in);
+        Portate input = Portate.valueOf(scanner.nextLine());
+
+        while (!Objects.equals(String.valueOf(input), "exit")){
+
+            switch (input){
+                case SECOND : menu.printMenuSecondCourses();
+                break;
+
+                default:
+                    System.out.println("Please enter a valid value");
+                    break;
+
+            }
+
+        }
+
+
     }
-    
-    
-    
+
+
+
 }

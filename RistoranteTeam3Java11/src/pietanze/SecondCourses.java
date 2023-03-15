@@ -12,42 +12,47 @@ package pietanze;
  */
 
 
-public class SecondCourses  {
+public class SecondCourses extends Portata {
 
     private String name;
     private double price;
 
-    public SecondCourses (String name, Double price) {
-
-        this.name = name;
-        this.price = price;
+    public SecondCourses(String name, double price) {
+        super(name, price);
+    }
+    public void printMenuSecondCourses() {
+        System.out.println(name + " - " + price);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+//    public SecondCourses (String name, Double price) {
+//
+//        this.name = name;
+//        this.price = price;
+//    }
 
-    public String getName() {
-        return name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public void setPrice(double price) {
+//        this.price = price;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public double getPrice() {
+//        return price;
+//    }
 
-    public double getPrice() {
-        return price;
-    }
 
-    public void printMenu() {
-        System.out.println(name + " - " + price );
-    }
-
-    @Override
-    public String toString() {
-        return
-                name +
-                ", price : " + price
-                ;
-    }
+//    @Override
+//    public String toString() {
+//        return
+//                name +
+//                ", price : " + price
+//                ;
+//    }
 }

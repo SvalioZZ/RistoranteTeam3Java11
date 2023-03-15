@@ -17,20 +17,40 @@ public class Menu {
     private List<Desserts> desserts;
 
 
+    public void printOptions(){
+        System.out.println("""
+                --------------------------------
+                4 -> Second Courses:\s
+                --------------------------------"""
+        );
+    }
+
     public void printMenu() {
         printMenuBeverages();
         printMenuAppetizers();
         printMenuFirstCourses();
         printMenuSecondCourses();
         printMenuDesserts();
+
     }
 
+
     public Menu() {
+        portataList = new ArrayList<>();
         beverages = new ArrayList<>();
         firstCourses = new ArrayList<>();
         secondCourses = new ArrayList<>();
         desserts = new ArrayList<>();
     }
+
+    public void addToPortataList (SecondCourses secondCourse){
+        portataList.add(secondCourse);
+    }
+    public void printPortata (){
+
+    }
+
+
 
     //TODO ognuno inserirà la propria lista qui dentro , il metodo per gestirla, e il metodo per stamparla
     //TODO e poi ci sarà un metodo per la stampa globale
@@ -60,18 +80,15 @@ public class Menu {
             course.printInfo();
         }
     }
-    public void addToMenuSecondCourses(SecondCourses secondCourse) {
-        secondCourses.add(secondCourse);
-    }
+//    public void addToMenuSecondCourses(SecondCourses secondCourse) {
+//        secondCourses.add(secondCourse);
+//    }
 
     public void printMenuSecondCourses() {
-        System.out.println("""
-                --------------------------------
-                Second Courses:\s
-                --------------------------------"""
-        );
+
         for (SecondCourses course: secondCourses) {
-            System.out.println(course);
+//            System.out.println(course);
+            course.printMenuSecondCourses();
         }
     }
 
