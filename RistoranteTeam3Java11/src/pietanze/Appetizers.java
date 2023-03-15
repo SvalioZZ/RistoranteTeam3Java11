@@ -27,8 +27,12 @@ public class Appetizers {
     public void printMenu() {
         System.out.println(name + " - " + price );
     }
+
+    //TODO non serve per stampare
     @Override
     public String toString() {
         return name + " - " + price;
     }
+
+
 }

@@ -7,6 +7,9 @@ import java.util.stream.Collectors;
 
 public class Menu {
 
+    //TODO inserire nome tipo(enumerato: vegano ,carn, vegetariano), lista portate, prezzo medio
+
+    private List<Portata> portataList;
     private List<Beverage> beverages;
     private List<Appetizers> appetizers;
     private List<FirstCourses> firstCourses;
@@ -51,7 +54,10 @@ public class Menu {
                 --------------------------------"""
         );
         for (FirstCourses course: firstCourses) {
+            //TODO si chiama sempre il metodo sull'oggetto
             System.out.println(course);
+            course.printPortata();
+            course.printInfo();
         }
     }
     public void addToMenuSecondCourses(SecondCourses secondCourse) {

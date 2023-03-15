@@ -36,13 +36,18 @@ package pietanze;
         this.price = price;
     }
 
-    public void printMenu() {
+    public void printPortata() {
         System.out.println(name + " - " + price );
     }
 
     @Override
     public String toString() {
         return name + " - " + price;
+    }
+
+    //TODO da fare su tutte le classe
+    public void printInfo() {
+        System.out.println(this.name+ this.price);
     }
 }
 
