@@ -20,14 +20,14 @@ public class Menu {
     public void printOptions(){
         System.out.println("""
                 --------------------------------
-                4 -> Second Courses:\s
+                SECOND -> Second Courses:\s
                 --------------------------------"""
         );
     }
 
     public void printMenu() {
         printMenuBeverages();
-        printMenuAppetizers();
+//        printMenuAppetizers();
         printMenuFirstCourses();
         printMenuSecondCourses();
         printMenuDesserts();
@@ -43,12 +43,16 @@ public class Menu {
         desserts = new ArrayList<>();
     }
 
-    public void addToPortataList (SecondCourses secondCourse){
-        portataList.add(secondCourse);
+    public void addToPortataList (List<SecondCourses> secondCourses){
+        portataList.addAll(secondCourses);
     }
-    public void printPortata (){
 
+    public void printPortataList (List<Portata> portataList ){
+        for (Portata portata : portataList) {
+            System.out.println(portata);
+        }
     }
+
 
 
 
@@ -75,19 +79,18 @@ public class Menu {
         );
         for (FirstCourses course: firstCourses) {
             //TODO si chiama sempre il metodo sull'oggetto
-            System.out.println(course);
+//            System.out.println(course);
             course.printPortata();
-            course.printInfo();
+//            course.printInfo();
         }
     }
-//    public void addToMenuSecondCourses(SecondCourses secondCourse) {
-//        secondCourses.add(secondCourse);
-//    }
+    public void addToMenuSecondCourses(SecondCourses secondCourse) {
+        secondCourses.add(secondCourse);
+    }
 
     public void printMenuSecondCourses() {
 
         for (SecondCourses course: secondCourses) {
-//            System.out.println(course);
             course.printMenuSecondCourses();
         }
     }
