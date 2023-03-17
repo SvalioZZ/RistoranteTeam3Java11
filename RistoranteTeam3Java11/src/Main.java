@@ -1,6 +1,7 @@
 import pietanze.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -70,15 +71,17 @@ public class Main {
         String input = scanner.nextLine();
 
         while (!Objects.equals(String.valueOf(input), "exit")) {
-            Portate portate = Portate.valueOf(input);
+            Portate portate = Portate.valueOf(input.toUpperCase());
             switch (portate) {
-
-
-                case SECOND -> menu.printMenuSecondCourses();
-
+                case SECOND -> {
+                    menu.printMenuSecondCourses();
+                    input = scanner.nextLine();
+                }
+                case BEVERAGES -> {
+                    menu.printMenuBeverages();
+                    
+                }
                 default -> System.out.println("Please enter a valid value");
-
-
             }
         }
     }

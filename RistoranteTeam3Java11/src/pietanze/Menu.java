@@ -15,8 +15,6 @@ public class Menu {
     private List<FirstCourses> firstCourses;
     private List<SecondCourses> secondCourses;
     private List<Desserts> desserts;
-
-
     public void printOptions(){
         System.out.println("""
                 --------------------------------
@@ -35,13 +33,13 @@ public class Menu {
     }
 
 
-    public Menu() {
-        portataList = new ArrayList<>();
-        beverages = new ArrayList<>();
-        firstCourses = new ArrayList<>();
-        secondCourses = new ArrayList<>();
-        desserts = new ArrayList<>();
-    }
+//    public Menu() {
+//        portataList = new ArrayList<>();
+//        beverages = new ArrayList<>();
+//        firstCourses = new ArrayList<>();
+//        secondCourses = new ArrayList<>();
+//        desserts = new ArrayList<>();
+//    }
 
     public void addToPortataList (List<SecondCourses> secondCourses){
         portataList.addAll(secondCourses);

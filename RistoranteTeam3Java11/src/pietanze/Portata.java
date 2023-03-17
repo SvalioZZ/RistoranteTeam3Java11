@@ -27,6 +27,6 @@ public class Portata {
     }
 
     public void printMenuPortata() {
-        System.out.println(name + " - " + price );
+        System.out.println(name + " - " + price);
     }
 }
