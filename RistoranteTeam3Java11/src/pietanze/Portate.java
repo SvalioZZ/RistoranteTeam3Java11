@@ -2,7 +2,8 @@ package pietanze;
 
 public enum Portate {
     BEVERAGES,
-    SECOND;
+    SECOND,
+    DESSERTS;
 
 
 }

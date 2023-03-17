@@ -79,9 +79,11 @@ public class Main {
                 }
                 case BEVERAGES -> {
                     menu.printMenuBeverages();
-                    
+
                 }
+                case DESSERTS -> menu.printMenuDesserts();
                 default -> System.out.println("Please enter a valid value");
+
             }
         }
     }
