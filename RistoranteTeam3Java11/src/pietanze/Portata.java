@@ -1,6 +1,6 @@
 package pietanze;
 
-public  class Portata {
+public class Portata {
 
     private String name;
     private double price;
@@ -26,7 +26,7 @@ public  class Portata {
         this.name = name;
     }
 
-    public void printMenu() {
+    public void printMenuPortata() {
         System.out.println(name + " - " + price );
     }
 }
