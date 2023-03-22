@@ -16,4 +16,9 @@ public class Beverage extends Portata {
         System.out.println(super.getName() + ": " + this.capacity + " - " + super.getPrice());
     }
     
+    @Override
+    public String getPortataType(Portate type) {
+        type = Portate.BEVERAGES;
+        return super.getPortataType(type);
+    }
 }
