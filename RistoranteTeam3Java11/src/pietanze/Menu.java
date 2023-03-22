@@ -1,9 +1,7 @@
 package pietanze;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Menu {
 
@@ -15,8 +13,7 @@ public class Menu {
     private List<FirstCourses> firstCourses;
     private List<SecondCourses> secondCourses;
     private List<Desserts> desserts;
-
-    public void printOptions() {
+    public void printOptions(){
         System.out.println("""
                 --------------------------------
                 SECOND -> Second Courses:\s
@@ -30,72 +27,66 @@ public class Menu {
         printMenuFirstCourses();
         printMenuSecondCourses();
         printMenuDesserts();
-
     }
 
 
-//    public Menu() {
-//        portataList = new ArrayList<>();
-//        beverages = new ArrayList<>();
-//        firstCourses = new ArrayList<>();
-//        secondCourses = new ArrayList<>();
-//        desserts = new ArrayList<>();
+    public Menu() {
+        portataList = new ArrayList<>();
+        beverages = new ArrayList<>();
+        firstCourses = new ArrayList<>();
+        secondCourses = new ArrayList<>();
+        desserts = new ArrayList<>();
+    }
+
+//    public void addToPortataList (List<SecondCourses> secondCourses){
+//        portataList.addAll(secondCourses);
 //    }
-
-    public void addToPortataList(List<SecondCourses> secondCourses) {
+    public List<Portata> addAllToPortataList(){
+        portataList.addAll(beverages);
+//        portataList.addAll(firstCourses);
         portataList.addAll(secondCourses);
+//        portataList.addAll(appetizers);
+//        portataList.addAll(desserts);
+        return portataList;
     }
 
-    public void printPortataList(List<Portata> portataList) {
-        for (Portata portata : portataList) {
-            System.out.println(portata);
-        }
-    }
 
 
     //TODO ognuno inserirà la propria lista qui dentro , il metodo per gestirla, e il metodo per stamparla
     //TODO e poi ci sarà un metodo per la stampa globale
 
-    public void addToMenuAppetizers(Appetizers appetizer) {
-        appetizers.add(appetizer);
-    }
-
+    public void addToMenuAppetizers(Appetizers  appetizer) {appetizers.add(appetizer);}
     public void printMenuAppetizers() {
         System.out.println("""
                 --------------------------------
                 Appetizers:\s
                 --------------------------------"""
         );
-        for (Appetizers appetizer : appetizers) {
+        for (Appetizers appetizer: appetizers) {
             System.out.println(appetizer);
         }
     }
-
-    public void addToMenuFirstCourses(FirstCourses firstCourse) {
-        firstCourses.add(firstCourse);
-    }
-
+    public void addToMenuFirstCourses(FirstCourses  firstCourse) {firstCourses.add(firstCourse);}
     public void printMenuFirstCourses() {
         System.out.println("""
                 --------------------------------
                 First Courses:\s
                 --------------------------------"""
         );
-        for (FirstCourses course : firstCourses) {
+        for (FirstCourses course: firstCourses) {
             //TODO si chiama sempre il metodo sull'oggetto
 //            System.out.println(course);
             course.printPortata();
 //            course.printInfo();
         }
     }
-
     public void addToMenuSecondCourses(SecondCourses secondCourse) {
         secondCourses.add(secondCourse);
     }
 
     public void printMenuSecondCourses() {
 
-        for (SecondCourses course : secondCourses) {
+        for (SecondCourses course: secondCourses) {
             course.printMenuSecondCourses();
         }
     }
@@ -118,7 +109,6 @@ public class Menu {
             System.out.println(dessert);
         }
     }
-
     public void printMenuBeverages() {
         System.out.println("""
                 --------------------------------
@@ -128,5 +118,18 @@ public class Menu {
         for (Beverage beverage : beverages) {
             System.out.println(beverage);
         }
+    }
+    
+    // provo a vedere se sta cosa funziona
+    
+    public List<Portata> selectPortataList (List<Portata> portataList){
+        List<Portata> portsSelected = new ArrayList<Portata>();
+        for (Portata portata : portataList){
+            portata.getPortataType(Portate.BEVERAGES);
+            {
+                portsSelected.add(portata);
+            }
+        }
+        return portsSelected;
     }
 }
