@@ -1,9 +1,7 @@
 package pietanze;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Menu {
 
@@ -29,28 +27,28 @@ public class Menu {
         printMenuFirstCourses();
         printMenuSecondCourses();
         printMenuDesserts();
-
     }
 
 
-//    public Menu() {
-//        portataList = new ArrayList<>();
-//        beverages = new ArrayList<>();
-//        firstCourses = new ArrayList<>();
-//        secondCourses = new ArrayList<>();
-//        desserts = new ArrayList<>();
+    public Menu() {
+        portataList = new ArrayList<>();
+        beverages = new ArrayList<>();
+        firstCourses = new ArrayList<>();
+        secondCourses = new ArrayList<>();
+        desserts = new ArrayList<>();
+    }
+
+//    public void addToPortataList (List<SecondCourses> secondCourses){
+//        portataList.addAll(secondCourses);
 //    }
-
-    public void addToPortataList (List<SecondCourses> secondCourses){
+    public List<Portata> addAllToPortataList(){
+        portataList.addAll(beverages);
+//        portataList.addAll(firstCourses);
         portataList.addAll(secondCourses);
+//        portataList.addAll(appetizers);
+//        portataList.addAll(desserts);
+        return portataList;
     }
-
-    public void printPortataList (List<Portata> portataList ){
-        for (Portata portata : portataList) {
-            System.out.println(portata);
-        }
-    }
-
 
 
 
@@ -120,5 +118,18 @@ public class Menu {
         for (Beverage beverage : beverages) {
             System.out.println(beverage);
         }
+    }
+    
+    // provo a vedere se sta cosa funziona
+    
+    public List<Portata> selectPortataList (List<Portata> portataList){
+        List<Portata> portsSelected = new ArrayList<Portata>();
+        for (Portata portata : portataList){
+            portata.getPortataType(Portate.BEVERAGES);
+            {
+                portsSelected.add(portata);
+            }
+        }
+        return portsSelected;
     }
 }

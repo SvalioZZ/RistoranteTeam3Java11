@@ -5,6 +5,7 @@ public class Beverage extends Portata {
     public Beverage(String name, String capacity, double price) {
         super(name, price);
         this.capacity = capacity;
+        Portate type = Portate.BEVERAGES;
     }
     public Beverage(String name, double price) {
         super(name,price);
@@ -12,6 +13,7 @@ public class Beverage extends Portata {
     
     @Override
     public void printMenuPortata() {
-        super.printMenuPortata();
+        System.out.println(super.getName() + ": " + this.capacity + " - " + super.getPrice());
     }
+    
 }
