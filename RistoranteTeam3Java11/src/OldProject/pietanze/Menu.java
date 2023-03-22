@@ -1,4 +1,4 @@
-package pietanze;
+package OldProject.pietanze;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,7 +123,7 @@ public class Menu {
     // provo a vedere se sta cosa funziona
     
     public List<Portata> selectPortataList (List<Portata> portataList){
-        List<Portata> portsSelected = new ArrayList<Portata>();
+        List<Portata> portsSelected = new ArrayList<>();
         for (Portata portata : portataList){
             portata.getPortataType(Portate.BEVERAGES);
             {

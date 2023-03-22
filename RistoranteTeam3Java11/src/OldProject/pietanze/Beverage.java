@@ -1,4 +1,4 @@
-package pietanze;
+package OldProject.pietanze;
 
 public class Beverage extends Portata {
     private String capacity;
@@ -10,15 +10,20 @@ public class Beverage extends Portata {
     public Beverage(String name, double price) {
         super(name,price);
     }
-    
+
+    public void setType(String type) {
+
+        type = String.valueOf(Portate.BEVERAGES);
+    }
     @Override
     public void printMenuPortata() {
         System.out.println(super.getName() + ": " + this.capacity + " - " + super.getPrice());
     }
-    
-    @Override
-    public String getPortataType(Portate type) {
-        type = Portate.BEVERAGES;
-        return super.getPortataType(type);
-    }
+
+
+//    @Override
+//    public String getPortataType(Portate type) {
+//
+//        return super.getPortataType(type);
+//    }
 }
