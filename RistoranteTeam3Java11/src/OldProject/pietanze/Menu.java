@@ -21,6 +21,8 @@ public class Menu {
         );
     }
 
+    //TODO cleaning code, non si legge bene questa classe
+
     public void printMenu() {
         printMenuBeverages();
 //        printMenuAppetizers();
@@ -30,26 +32,23 @@ public class Menu {
     }
 
 
-    public Menu() {
+    //TODO rivedere
+
+    public Menu(String nome, TypeEnum type) {
+
+
         portataList = new ArrayList<>();
-        beverages = new ArrayList<>();
-        firstCourses = new ArrayList<>();
-        secondCourses = new ArrayList<>();
-        desserts = new ArrayList<>();
+
+
     }
 
 //    public void addToPortataList (List<SecondCourses> secondCourses){
 //        portataList.addAll(secondCourses);
 //    }
-    public List<Portata> addAllToPortataList(){
-        portataList.addAll(beverages);
-//        portataList.addAll(firstCourses);
-        portataList.addAll(secondCourses);
-//        portataList.addAll(appetizers);
-//        portataList.addAll(desserts);
-        return portataList;
-    }
 
+    public void addPortata(Portata portata) {
+        portataList.add(portata);
+    }
 
 
     //TODO ognuno inserirà la propria lista qui dentro , il metodo per gestirla, e il metodo per stamparla
@@ -125,7 +124,7 @@ public class Menu {
     public List<Portata> selectPortataList (List<Portata> portataList){
         List<Portata> portsSelected = new ArrayList<>();
         for (Portata portata : portataList){
-            portata.getPortataType(Portate.BEVERAGES);
+            portata.getPortataType(PortateTypeEnum.BEVERAGES);
             {
                 portsSelected.add(portata);
             }

@@ -30,7 +30,7 @@ public class Portata {
         System.out.println(name + " - " + price);
     }
     
-    public String getPortataType(Portate type) {
+    public String getPortataType(PortateTypeEnum type) {
         return type.name();
     }
 }

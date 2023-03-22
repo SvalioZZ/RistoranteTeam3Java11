@@ -11,7 +11,7 @@ package OldProject.pietanze;
  * i setter e i getter per le variabili stanziate in precedenza.
  */
 
-    public class FirstCourses {
+    public class FirstCourses  {
         private String name;
         private double price;
 
