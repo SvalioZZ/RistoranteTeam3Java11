@@ -1,16 +1,10 @@
 package pietanze;
 
-
-
 public class SecondCourses extends Portata {
-
+    private PortateTypeEnum type;
 
     public SecondCourses(String name, double price) {
         super(name, price);
-
-    }
-
-    public void printMenuSecondCourses() {
-        System.out.println(super.getName() + " - " + super.getPrice());
+        this.type = PortateTypeEnum.SECOND;
     }
 }
