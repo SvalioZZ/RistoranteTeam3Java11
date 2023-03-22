@@ -5,8 +5,7 @@ public class Main {
     
     public static void main(String[] args) {
 
-
-        Menu menu = new Menu("GinoBiscottino", MEAT);
+        Menu menu = new Menu("GinoBiscottino", TypeEnumMenu.MEAT);
     
         System.out.println("Meat Based Menu:");
     
@@ -24,7 +23,6 @@ public class Main {
         menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
     
         // Daniele out
-    
     
         menu.addPortata(new SecondCourses("Scallops with white wine", 15.00));
         menu.addPortata(new SecondCourses("Fillet with porcine mushrooms", 24.99));
@@ -51,10 +49,7 @@ public class Main {
 //        appetizers.add(new Appetizers("Chicken wings", 21.00));
 //        appetizers.add(new Appetizers("Golden cheese", 120.00));
 //        appetizers.add(new Appetizers("A whole boar", 23.99));
-    
-    
 
-
-    
+        menu.printPortata();
     }
 }

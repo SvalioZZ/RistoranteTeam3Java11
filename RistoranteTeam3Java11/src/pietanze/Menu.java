@@ -11,37 +11,24 @@ public class Menu {
 
 
     private String name;
-    private TypeEnum type;
+    private TypeEnumMenu type;
 
 
+    public Menu(String nome, TypeEnumMenu type) {
 
-    //TODO cleaning code, non si legge bene questa classe
-
-
-
-    //TODO rivedere
-
-    public Menu(String nome, TypeEnum type) {
-
-
+        this.name = nome;
+        this.type = type;
         portataList = new ArrayList<>();
 
     }
-
 
     public void addPortata(Portata portata) {
         portataList.add(portata);
     }
 
-
-    public List<Portata> selectPortataList(List<Portata> portataList) {
-        List<Portata> portsSelected = new ArrayList<>();
+    public void printPortata() {
         for (Portata portata : portataList) {
-            portata.getPortataType(PortateTypeEnum.BEVERAGES);
-            {
-                portsSelected.add(portata);
-            }
+            portata.printMenuPortata();
         }
-        return portsSelected;
     }
 }
