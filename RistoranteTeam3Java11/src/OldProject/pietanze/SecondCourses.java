@@ -1,6 +1,4 @@
-package pietanze;
-
-import java.net.PortUnreachableException;
+package OldProject.pietanze;
 
 /**
  * Bisogna creare due parametri per classe Second_Courses
