@@ -1,10 +1,4 @@
-package OldProject;
-
-import OldProject.pietanze.*;
-
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import pietanze.*;
 
 
 public class Main {

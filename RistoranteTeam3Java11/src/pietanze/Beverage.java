@@ -1,4 +1,4 @@
-package OldProject.pietanze;
+package pietanze;
 
 public class Beverage extends Portata {
     private String capacity;

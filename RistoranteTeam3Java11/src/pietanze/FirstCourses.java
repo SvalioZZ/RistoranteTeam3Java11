@@ -1,4 +1,4 @@
-package OldProject.pietanze;
+package pietanze;
 
 /**
  * Bisogna creare due parametri per classe First_Courses

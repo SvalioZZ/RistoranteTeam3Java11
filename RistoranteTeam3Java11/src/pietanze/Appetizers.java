@@ -1,4 +1,4 @@
-package OldProject.pietanze;
+package pietanze;
 
 public class Appetizers {
     private String name;
