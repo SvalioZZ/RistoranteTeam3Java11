@@ -12,38 +12,18 @@ package OldProject.pietanze;
  */
 
 
-public class Desserts  {
+public class Desserts extends Portata{
     private String name;
     private double price;
 
     public Desserts(String name, double price) {
-        this.name = name;
-        this.price = price;
+        super(name, price);
+
     }
 
-    public Desserts() {
-    }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void getName(String name) {
-        this.name = name;
-    }
-    public void getPrice(double price){
-        this.price = price;
-    }
-
-    public void printMenu() {
+    public void printMenuDessert() {
         System.out.println(name + " - " + price);
     }
-    @Override
-    public String toString() {
-        return name + ":" + price;
-    }
+
 }

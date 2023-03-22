@@ -10,8 +10,9 @@ import java.util.Scanner;
 public class Main {
     
     public static void main(String[] args) {
-    
-        Menu menu = new Menu();
+
+
+        Menu menu = new Menu("GinoBiscottino", MEAT);
     
         System.out.println("Meat Based Menu:");
     
@@ -23,10 +24,10 @@ public class Main {
     
         // Valerio out
     
-        menu.addToMenuFirstCourses(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
-        menu.addToMenuFirstCourses(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
-        menu.addToMenuFirstCourses(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
-        menu.addToMenuFirstCourses(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
+        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
+        menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
     
         // Daniele out
     
@@ -40,11 +41,11 @@ public class Main {
         // Giovanni ha frnut (he finished)
     
         menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00));
-        menu.addToMenuDesserts(new Desserts("Chocolate Cheesecake", 8.00));
-        menu.addToMenuDesserts(new Desserts("Tiramisù", 10.00));
-        menu.addToMenuDesserts(new Desserts("Apple Pie", 6.00));
-        menu.addToMenuDesserts(new Desserts("Red Velvet Cake", 8.00));
-        menu.addToMenuDesserts(new Desserts("Brownie", 5.00));
+        menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00));
+        menu.addPortata(new Desserts("Tiramisù", 10.00));
+        menu.addPortata(new Desserts("Apple Pie", 6.00));
+        menu.addPortata(new Desserts("Red Velvet Cake", 8.00));
+        menu.addPortata(new Desserts("Brownie", 5.00));
     
         // Stefano out
 
@@ -58,35 +59,8 @@ public class Main {
 //        appetizers.add(new Appetizers("A whole boar", 23.99));
     
     
-        System.out.println("Choose what you rather");
-    
-        Scanner scanner = new Scanner(System.in);
-    
-        List<Portata> ports = menu.addAllToPortataList();
-    
-        String input;
-        do {
-            input = scanner.nextLine();
-            PortateTypeEnum portate = PortateTypeEnum.valueOf(input.toUpperCase());
-            List<Portata> newSelectedPortataList;
-            switch (portate) {
-                case BEVERAGES:
-                    newSelectedPortataList = menu.selectPortataList(ports);
-                    for (Portata beverage : newSelectedPortataList) {
-                        beverage.printMenuPortata();
-                    }
-                    input = scanner.nextLine();
-                    break;
-                default:
-                    System.out.println("Please enter a valid value");
-            }
-        
-        } while (!Objects.equals(String.valueOf(input), "exit"));
 
-//                case SECOND -> {
-//                    menu.printMenuSecondCourses();
-//                    input = scanner.nextLine();
-//                }
+
     
     }
 }

@@ -11,14 +11,14 @@ package OldProject.pietanze;
  * i setter e i getter per le variabili stanziate in precedenza.
  */
 
-    public class FirstCourses  {
+    public class FirstCourses extends Portata{
         private String name;
         private double price;
 
-        public FirstCourses(String name, double price ) {
-            this.name = name;
-            this.price = price;
-        }
+    public FirstCourses(String name, double price) {
+        super(name, price);
+    }
+
 
     public String getName() {
         return name;
