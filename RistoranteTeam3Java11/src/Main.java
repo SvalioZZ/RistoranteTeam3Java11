@@ -15,10 +15,10 @@ public class Main {
     
         // Valerio out
     
-        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
+        /*menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
         menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
         menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
-        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));*/
     
         // Daniele out
     

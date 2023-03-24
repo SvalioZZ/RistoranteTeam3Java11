@@ -4,8 +4,11 @@ public enum PortateTypeEnum {
 
     //TODO inseriamo tutti i tipi e poi ci potete mettere una descrizione ecc ecc
     BEVERAGES("Bevande", 1),
-    SECOND("Secondi Piatti", 3);
-
+    APPETIZERS("Antipasti", 2),
+    FIRST("Primi Piatti", 3),
+    SECOND("Secondi Piatti", 4),
+    DESSERT("Dessert", 5);
+    
     private final String nome;
     private final int key;
 
