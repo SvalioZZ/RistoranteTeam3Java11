@@ -2,11 +2,9 @@ package pietanze;
 
 public class Beverage extends Portata {
     private String capacity;
-    private PortateTypeEnum type;
     public Beverage(String name, String capacity, double price) {
-        super(name, price);
+        super(name, price, PortateTypeEnum.BEVERAGES);
         this.capacity = capacity;
-        this.type = PortateTypeEnum.BEVERAGES;
     }
 
     @Override

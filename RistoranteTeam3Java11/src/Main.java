@@ -7,8 +7,6 @@ public class Main {
 
         Menu menu = new Menu("GinoBiscottino", TypeEnumMenu.MEAT);
     
-        System.out.println("Meat Based Menu:");
-    
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99));
         menu.addPortata(new Beverage("Sprite", "33cl", 2.99));
         menu.addPortata(new Beverage("SevenUp", "33cl", 2.99));
@@ -17,10 +15,10 @@ public class Main {
     
         // Valerio out
     
-        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
+        /*menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
         menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
         menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
-        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));*/
     
         // Daniele out
     
@@ -43,13 +41,14 @@ public class Main {
 
 //        ArrayList<Appetizers> appetizers = new ArrayList<>();
     
-        //TODO per Kris devi modificare il metodo di aggiunta degli appetizers con "menu.addToMenu"
+        //TODO per Kris devi modificare il metodo di aggiunta degli appetizers
 //        appetizers.add(new Appetizers("Liver crouton", 10.00));
 //        appetizers.add(new Appetizers("Crouton with tomatoes", 9.99));
 //        appetizers.add(new Appetizers("Chicken wings", 21.00));
 //        appetizers.add(new Appetizers("Golden cheese", 120.00));
 //        appetizers.add(new Appetizers("A whole boar", 23.99));
 
+        System.out.println(menu);
         menu.printPortata();
     }
 }
