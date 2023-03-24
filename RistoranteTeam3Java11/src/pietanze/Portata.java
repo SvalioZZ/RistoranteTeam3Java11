@@ -1,4 +1,4 @@
-package OldProject.pietanze;
+package pietanze;
 
 public class Portata {
 
@@ -28,9 +28,5 @@ public class Portata {
 
     public void printMenuPortata() {
         System.out.println(name + " - " + price);
-    }
-    
-    public String getPortataType(PortateTypeEnum type) {
-        return type.name();
     }
 }
