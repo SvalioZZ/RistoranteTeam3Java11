@@ -3,6 +3,8 @@ package pietanze;
 import java.util.ArrayList;
 import java.util.List;
 
+import static jdk.jfr.internal.EventWriterKey.getKey;
+
 public class Menu {
     
     //TODO inserire nome tipo(enumerato: vegano ,carn, vegetariano), lista portate, prezzo medio
@@ -45,13 +47,30 @@ public class Menu {
     }
     
     public void printPortata() {
+
+        int prec = 0;
         for (Portata portata : portataList) {
-            switch (portata.getType()) {
-                case BEVERAGES -> {
-                    System.out.println(PortateTypeEnum.BEVERAGES.getNome());
-                    portata.printMenuPortata();
-                }
+
+
+            switch (portata.getType().getKey()){
+                case 1:
+                        if (prec != portata.getType().getKey()){
+                            System.out.println(PortateTypeEnum.BEVERAGES.getNome());
+                        }
+                    break;
+                case 4:
+                    if (prec != portata.getType().getKey()) {
+                    System.out.println(PortateTypeEnum.SECOND.getNome());
+                    }
+                    break;
+                case 5:
+                    if (prec != portata.getType().getKey()){
+                        System.out.println(PortateTypeEnum.DESSERT.getNome());
+                    }
+                    break;
             }
+            portata.printMenuPortata();
+            prec = portata.getType().getKey();
         }
     }
 }
