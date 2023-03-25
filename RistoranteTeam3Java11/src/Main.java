@@ -39,14 +39,14 @@ public class Main {
     
         // Stefano out
 
-//        ArrayList<Appetizers> appetizers = new ArrayList<>();
-    
-        //TODO per Kris devi modificare il metodo di aggiunta degli appetizers
-//        appetizers.add(new Appetizers("Liver crouton", 10.00));
-//        appetizers.add(new Appetizers("Crouton with tomatoes", 9.99));
-//        appetizers.add(new Appetizers("Chicken wings", 21.00));
-//        appetizers.add(new Appetizers("Golden cheese", 120.00));
-//        appetizers.add(new Appetizers("A whole boar", 23.99));
+        menu.addPortata(new Appetizers("Liver crouton", 10.00));
+        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99));
+        menu.addPortata(new Appetizers("Chicken wings", 21.00));
+        menu.addPortata(new Appetizers("Golden cheese", 120.00));
+        menu.addPortata(new Appetizers("A whole boar", 23.99));
+
+        // Kris out
+
 
         System.out.println(menu);
         menu.printPortata();
