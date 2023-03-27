@@ -14,6 +14,14 @@ public class Main {
         menu.addPortata(new Beverage("Still Water", "1,5l", 2.99));
     
         // Valerio out
+
+        menu.addPortata(new Appetizers("Liver crouton", 10.00));
+        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99));
+        menu.addPortata(new Appetizers("Chicken wings", 21.00));
+        menu.addPortata(new Appetizers("Golden cheese", 120.00));
+        menu.addPortata(new Appetizers("A whole boar", 23.99));
+
+        // Kris out
     
         menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
         menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
@@ -39,13 +47,7 @@ public class Main {
     
         // Stefano out
 
-        menu.addPortata(new Appetizers("Liver crouton", 10.00));
-        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99));
-        menu.addPortata(new Appetizers("Chicken wings", 21.00));
-        menu.addPortata(new Appetizers("Golden cheese", 120.00));
-        menu.addPortata(new Appetizers("A whole boar", 23.99));
 
-        // Kris out
 
 
         System.out.println(menu);
