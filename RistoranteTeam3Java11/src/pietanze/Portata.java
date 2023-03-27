@@ -33,8 +33,6 @@ public class Portata {
     }
 
     public void printMenuPortata() {
-        for (PortateTypeEnum type : PortateTypeEnum.values()) {
-            System.out.println(name + " - " + price);
-        }
+        System.out.println(name + " - " + price);
     }
 }

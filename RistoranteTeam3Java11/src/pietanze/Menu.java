@@ -50,27 +50,31 @@ public class Menu {
 
         int prec = 0;
         for (Portata portata : portataList) {
-
-
             switch (portata.getType().getKey()){
                 case 1:
                         if (prec != portata.getType().getKey()){
-                            System.out.println(PortateTypeEnum.BEVERAGES.getNome());
-                        }
-                    break;
+                            System.out.println("\n" +PortateTypeEnum.BEVERAGES.getNome());
+                        } break;
+                case 2:
+                    if (prec != portata.getType().getKey()) {
+                    System.out.println("\n" +PortateTypeEnum.APPETIZERS.getNome());
+                } break;
+                case 3:
+                    if (prec != portata.getType().getKey()) {
+                        System.out.println("\n" +PortateTypeEnum.FIRST.getNome());
+                    } break;
                 case 4:
                     if (prec != portata.getType().getKey()) {
-                    System.out.println(PortateTypeEnum.SECOND.getNome());
-                    }
-                    break;
+                    System.out.println("\n" +PortateTypeEnum.SECOND.getNome());
+                    } break;
                 case 5:
                     if (prec != portata.getType().getKey()){
-                        System.out.println(PortateTypeEnum.DESSERT.getNome());
-                    }
-                    break;
+                        System.out.println("\n" + PortateTypeEnum.DESSERT.getNome());
+                    } break;
             }
             portata.printMenuPortata();
             prec = portata.getType().getKey();
+
         }
     }
 }
