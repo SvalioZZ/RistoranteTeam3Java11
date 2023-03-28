@@ -1,15 +1,21 @@
 package pietanze;
 
-public  class Portata {
+public class Portata {
 
     private String name;
     private double price;
-
-    public Portata(String name, double price) {
+    private PortateTypeEnum type;
+    
+    public Portata(String name, double price, PortateTypeEnum type) {
         this.name = name;
         this.price = price;
+        this.type = type;
     }
-
+    
+    public PortateTypeEnum getType() {
+        return type;
+    }
+    
     public String getName() {
         return name;
     }
@@ -21,12 +27,12 @@ public  class Portata {
     public double getPrice() {
         return price;
     }
-
+    
     public void setName(String name) {
         this.name = name;
     }
 
-    public void printMenu() {
-        System.out.println(name + " - " + price );
+    public void printMenuPortata() {
+        System.out.println(name + " - " + price);
     }
 }
