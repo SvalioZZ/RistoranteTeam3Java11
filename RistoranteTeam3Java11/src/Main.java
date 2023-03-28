@@ -50,7 +50,7 @@ public class Main {
 
 
 
-        System.out.println(menu);
+        menu.printInfoMenu();
         menu.printPortata();
     }
 }

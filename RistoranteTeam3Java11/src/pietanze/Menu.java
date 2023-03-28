@@ -21,10 +21,10 @@ public class Menu {
         
     }
     
-    @Override
+    /*@Override
     public String toString() {
-        return "\n*** " + getName() + " ***" + "\n" + " Type of the Menu: " + getType() + "\n";
-    }
+        return "\n*** " + type.getNome() + " ***" + "\n" + " Type of the Menu: " + getType() + "\n";
+    }*/
     
     public String getName() {
         return name;
@@ -45,6 +45,16 @@ public class Menu {
     public void addPortata(Portata portata) {
         portataList.add(portata);
     }
+    public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
+    private static final String ANSI_BLACK_CHARS = "\u001B[30m";
+    private static final String ANSI_RESET = "\u001B[0m";
+    
+    public void printInfoMenu() {
+        System.out.println(ANSI_PURPLE_BACKGROUND + ANSI_BLACK_CHARS + "***" + this.getName() +
+                                   "***" + ANSI_RESET + "\n" + ANSI_PURPLE_BACKGROUND + ANSI_BLACK_CHARS +
+                                   "Type of the Menu: " + this.getType() + ANSI_RESET);
+    }
+    
     
     public void printPortata() {
 

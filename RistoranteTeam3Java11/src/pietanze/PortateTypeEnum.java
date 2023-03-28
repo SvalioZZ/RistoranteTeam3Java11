@@ -3,18 +3,25 @@ package pietanze;
 public enum PortateTypeEnum {
 
     //TODO inseriamo tutti i tipi e poi ci potete mettere una descrizione ecc ecc
-    BEVERAGES("Bevande", 1),
-    APPETIZERS("Antipasti", 2),
-    FIRST("Primi Piatti", 3),
-    SECOND("Secondi Piatti", 4),
-    DESSERT("Dessert", 5);
+    
+    
+    
+    BEVERAGES("------- BEVANDE -------", 1),
+    APPETIZERS("------- ANTIPASTI -------", 2),
+    FIRST("------- PRIMI PIATTI -------", 3),
+    SECOND("------- SECONDI PIATTI -------", 4),
+    DESSERT("------- DESSERTS -------", 5);
     
     private final String nome;
     private final int key;
+    private static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
+    private static final String ANSI_RESET = "\u001B[0m";
+    
+    private static final String ANSI_BLACK_CHARS = "\u001B[30m";
 
 
     PortateTypeEnum(String nome, int key) {
-        this.nome = nome;
+        this.nome = ANSI_BLACK_CHARS + ANSI_BLUE_BACKGROUND + nome + ANSI_RESET;
         this.key = key;
     }
 
