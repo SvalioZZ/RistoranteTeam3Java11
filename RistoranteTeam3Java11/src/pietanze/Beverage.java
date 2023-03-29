@@ -3,9 +3,6 @@ package pietanze;
 import static pietanze.AnsiUtility.*;
 
 public class Beverage extends Portata {
-    private enum alcolico {
-        ALCOLICO;
-    }
     
     private String capacity;
     private boolean isAlcoholic;
