@@ -4,23 +4,31 @@ import pietanze.*;
 public class Main {
     
     public static void main(String[] args) {
-
+    
         Menu menu = new Menu("GinoBiscottino", TypeEnumMenu.MEAT);
     
-        menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99));
-        menu.addPortata(new Beverage("Sprite", "33cl", 2.99));
-        menu.addPortata(new Beverage("SevenUp", "33cl", 2.99));
-        menu.addPortata(new Beverage("Sparkling Water", "1,5l", 2.99));
-        menu.addPortata(new Beverage("Still Water", "1,5l", 2.99));
+        menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, false));
+        menu.addPortata(new Beverage("Sprite", "33cl", 2.99, false));
+        menu.addPortata(new Beverage("SevenUp", "33cl", 2.99, false));
+        menu.addPortata(new Beverage("Ginger Beer", "66cl", 2.99, false));
+        menu.addPortata(new Beverage("Sparkling Water", "1,5l", 2.99, false));
+        menu.addPortata(new Beverage("Still Water", "1,5l", 2.99, false));
+    
+        menu.addPortata(new Beverage("Kozel Beer", "66cl", 6.99, true));
+        menu.addPortata(new Beverage("White Wine", "75cl", 12.99, true));
+        menu.addPortata(new Beverage("Red Wine", "75cl", 12.99, true));
+        menu.addPortata(new Beverage("Mirto", "30ml", 3.99, true));
+        menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, true));
+    
     
         // Valerio out
-
-        menu.addPortata(new Appetizers("Liver crouton", 10.00,0.4,false));
-        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99,0.05,false));
-        menu.addPortata(new Appetizers("Chicken wings", 21.00,1.4,true));
-        menu.addPortata(new Appetizers("Golden cheese", 120.00,0.1,false));
-        menu.addPortata(new Appetizers("A whole boar", 23.99,200,true));
-
+    
+        menu.addPortata(new Appetizers("Liver crouton", 10.00, 0.4, false));
+        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99, 0.05, false));
+        menu.addPortata(new Appetizers("Chicken wings", 21.00, 1.4, true));
+        menu.addPortata(new Appetizers("Golden cheese", 120.00, 0.1, false));
+        menu.addPortata(new Appetizers("A whole boar", 23.99, 200, true));
+    
         // Kris out
     
         menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
