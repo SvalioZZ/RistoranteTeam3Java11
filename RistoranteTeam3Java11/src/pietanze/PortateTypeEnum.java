@@ -1,8 +1,10 @@
 package pietanze;
 
+import static pietanze.AnsiUtility.*;
+
 public enum PortateTypeEnum {
-
-
+    
+    
     //TODO, prima l'id poi il nome e poi la descrizione
     BEVERAGES("------- BEVANDE -------", 1),
     APPETIZERS("------- ANTIPASTI -------", 2),
@@ -14,14 +16,10 @@ public enum PortateTypeEnum {
     private final int key;
 
     //TODO spostare in una classe utility
-    private static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
-    private static final String ANSI_RESET = "\u001B[0m";
-    
-    private static final String ANSI_BLACK_CHARS = "\u001B[30m";
 
 
     PortateTypeEnum(String nome, int key) {
-        this.nome = ANSI_BLACK_CHARS + ANSI_BLUE_BACKGROUND + nome + ANSI_RESET;
+        this.nome = ANSI_BLACK_CHARS + ANSI_RED_BACKGROUND + nome + ANSI_RESET;
         this.key = key;
     }
 
