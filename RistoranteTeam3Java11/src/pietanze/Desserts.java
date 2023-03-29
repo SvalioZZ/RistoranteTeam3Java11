@@ -2,8 +2,9 @@ package pietanze;
 
 /**
  * La classe Desserts crea un costruttore che è usato per istanziare tutti i desserts
- * con nome, prezzo, se ha glutine o lattasio, e ha 2 metodi void che si potrenno usare
+ * con nome, prezzo, se ha glutine o lattosio, e ha due metodi void che si potranno usare
  * per stampare i solo i dessert con o senza lattosio o solo i dessert con o senza glutine
+ *
  * @author "Stefano Devoti"
  */
 
@@ -18,23 +19,29 @@ public class Desserts extends Portata {
         this.isLactoseFree = isLactoseFree;
         this.isGlutenFree = isGlutenFree;
     }
-    public void printLactoseDesserts() {
+
+    public String printLactoseDesserts() {
         if (isLactoseFree) {
-            System.out.println("This dessert is lactose free");
+            return "lactose free";
         } else {
-            System.out.println("This dessert is with lactose");
+            return "with lactose";
         }
     }
-    public void printGlutenDesserts() {
+
+    public String printGlutenDesserts() {
         if (isGlutenFree) {
-            System.out.println("This dessert is gluten free");
+            return "gluten free";
         } else {
-            System.out.println("This dessert is with gluten");
+            return "with gluten";
         }
     }
+
     @Override
     public void printPortata() {
-        super.printPortata();
+        System.out.println(getAnsiBlackChars() + getAnsiCyanBackground()
+                + super.getName() + ": " + super.getPrice() +
+                " (" + printLactoseDesserts() + ", " + printGlutenDesserts() + ")" +
+                getAnsiReset());
     }
 }
 
