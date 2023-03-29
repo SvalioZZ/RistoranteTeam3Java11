@@ -30,11 +30,11 @@ public class Main {
     
         // Daniele out
     
-        menu.addPortata(new SecondCourses("Scallops with white wine", 15.00));
-        menu.addPortata(new SecondCourses("Fillet with porcine mushrooms", 24.99));
-        menu.addPortata(new SecondCourses("Sliced beef with rucola and grana", 18.99));
-        menu.addPortata(new SecondCourses("Dolphin Thread", 29.99));
-        menu.addPortata(new SecondCourses("Kobe's Thread (not Bryant)", 129.99));
+        menu.addPortata(new SecondCourses("Scallops with white wine", 15.00, false));
+        menu.addPortata(new SecondCourses("Fillet with porcine mushrooms", 24.99, true));
+        menu.addPortata(new SecondCourses("Sliced beef with rucola and grana", 18.99, false));
+        menu.addPortata(new SecondCourses("Dolphin Thread", 29.99, true));
+        menu.addPortata(new SecondCourses("Kobe's Thread (not Bryant)", 129.99, true));
     
         // Giovanni ha frnut (he finished)
     
