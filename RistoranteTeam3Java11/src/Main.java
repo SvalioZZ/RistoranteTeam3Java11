@@ -14,11 +14,11 @@ public class Main {
         menu.addPortata(new Beverage("Sparkling Water", "1,5l", 2.99, false));
         menu.addPortata(new Beverage("Still Water", "1,5l", 2.99, false));
     
-        menu.addPortata(new Beverage("Kozel Beer", "66cl", 6.99, true));
-        menu.addPortata(new Beverage("White Wine", "75cl", 12.99, true));
-        menu.addPortata(new Beverage("Red Wine", "75cl", 12.99, true));
-        menu.addPortata(new Beverage("Mirto", "30ml", 3.99, true));
-        menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, true));
+        menu.addPortata(new Beverage("Kozel Beer", "66cl", 6.99, true, 6));
+        menu.addPortata(new Beverage("White Wine", "75cl", 12.99, true, 12));
+        menu.addPortata(new Beverage("Red Wine", "75cl", 12.99, true, 12));
+        menu.addPortata(new Beverage("Mirto", "30ml", 3.99, true, 40));
+        menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, true, 40));
     
     
         // Valerio out

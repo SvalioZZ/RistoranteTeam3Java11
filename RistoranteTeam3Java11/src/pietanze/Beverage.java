@@ -3,6 +3,10 @@ package pietanze;
 import static pietanze.AnsiUtility.*;
 
 public class Beverage extends Portata {
+    private enum alcolico {
+        ALCOLICO;
+    }
+    
     private String capacity;
     private boolean isAlcoholic;
     private int alcoholPerc;
@@ -14,12 +18,19 @@ public class Beverage extends Portata {
         this.alcoholPerc = 0;
     }
     
+    public Beverage(String name, String capacity, double price, boolean isAlcoholic, int alcoholPerc) {
+        super(name, price, PortateTypeEnum.BEVERAGES);
+        this.capacity = capacity;
+        this.isAlcoholic = isAlcoholic;
+        this.alcoholPerc = alcoholPerc;
+    }
+    
     public void setAlcoholPerc(int alcoholPerc) {
         this.alcoholPerc = alcoholPerc;
     }
     
     private String printAlcoholic() {
-        return isAlcoholic ? "is Alcoholic " + alcoholPerc + "%" : "false";
+        return isAlcoholic ? "ALCOHOL: " + alcoholPerc + "%" : "false";
     }
     
     @Override
@@ -31,9 +42,10 @@ public class Beverage extends Portata {
                             " - " + super.getPrice() + ANSI_RESET
             );
         } else {
-            System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS +
-                                       super.getName() + ": " + this.capacity +
-                                       " - " + super.getPrice() + " (" + printAlcoholic() + ")" + ANSI_RESET);
+            System.out.println(
+                    ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS +
+                            super.getName() + ": " + this.capacity +
+                            " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND + printAlcoholic() + ANSI_RESET);
         }
     }
 }
