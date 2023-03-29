@@ -2,7 +2,10 @@ package pietanze;
 
 public enum TypeEnumMenu {
     //TODO mettiamo gli altri tipi
-    MEAT ("Meat Based Menu");
+    MEAT("Meat Based Menu"),
+    VEGAN("No Meat Menu"),
+    GLUTENFREE("No Gluten Menu"),
+    LACTOSEFREE("No Lactose Menu");
 
     //TODO enum del tipo di menu
 

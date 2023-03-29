@@ -68,6 +68,12 @@ public class Menu {
                 portata.printPortata();
             }
         }
+        System.out.println("\n" +PortateTypeEnum.DESSERT.getNome());
+        for (Portata portata : portataList) {
+            if (portata.getType() == PortateTypeEnum.DESSERT){
+                portata.printPortata();
+            }
+        }
 
 
 
