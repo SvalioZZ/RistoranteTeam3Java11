@@ -15,11 +15,11 @@ public class Main {
     
         // Valerio out
 
-        menu.addPortata(new Appetizers("Liver crouton", 10.00));
-        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99));
-        menu.addPortata(new Appetizers("Chicken wings", 21.00));
-        menu.addPortata(new Appetizers("Golden cheese", 120.00));
-        menu.addPortata(new Appetizers("A whole boar", 23.99));
+        menu.addPortata(new Appetizers("Liver crouton", 10.00,0.4,false));
+        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99,0.05,false));
+        menu.addPortata(new Appetizers("Chicken wings", 21.00,1.4,true));
+        menu.addPortata(new Appetizers("Golden cheese", 120.00,0.1,false));
+        menu.addPortata(new Appetizers("A whole boar", 23.99,200,true));
 
         // Kris out
     

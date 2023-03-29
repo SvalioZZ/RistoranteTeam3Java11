@@ -5,7 +5,8 @@ public enum TypeEnumMenu {
     MEAT("Meat Based Menu"),
     VEGAN("No Meat Menu"),
     GLUTENFREE("No Gluten Menu"),
-    LACTOSEFREE("No Lactose Menu");
+    LACTOSEFREE("No Lactose Menu"),
+    EXPLOSIVE("Maybe your final menu");
 
     //TODO enum del tipo di menu
 
