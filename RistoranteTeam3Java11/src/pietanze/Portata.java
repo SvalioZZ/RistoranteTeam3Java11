@@ -2,7 +2,7 @@ package pietanze;
 
 public class Portata {
     
-    
+    //TODO classe utility
     private static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
     private static final String ANSI_BLACK_CHARS = "\u001B[30m";
     private static final String ANSI_RESET = "\u001B[0m";
@@ -44,12 +44,13 @@ public class Portata {
     public static String getAnsiReset() {
         return ANSI_RESET;
     }
-    
+
+    //TODO facciamo una classe utility o un enumerato per gli Ansi
     public static String getAnsiBlackChars() {
         return ANSI_BLACK_CHARS;
     }
     
-    public void printMenuPortata() {
+    public void printPortata() {
         System.out.println(ANSI_BLACK_CHARS + ANSI_CYAN_BACKGROUND + name + " - " + price + ANSI_RESET);
     }
 }

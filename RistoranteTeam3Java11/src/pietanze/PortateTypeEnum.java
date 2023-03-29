@@ -2,10 +2,8 @@ package pietanze;
 
 public enum PortateTypeEnum {
 
-    //TODO inseriamo tutti i tipi e poi ci potete mettere una descrizione ecc ecc
-    
-    
-    
+
+    //TODO, prima l'id poi il nome e poi la descrizione
     BEVERAGES("------- BEVANDE -------", 1),
     APPETIZERS("------- ANTIPASTI -------", 2),
     FIRST("------- PRIMI PIATTI -------", 3),
@@ -14,6 +12,8 @@ public enum PortateTypeEnum {
     
     private final String nome;
     private final int key;
+
+    //TODO spostare in una classe utility
     private static final String ANSI_BLUE_BACKGROUND = "\u001B[44m";
     private static final String ANSI_RESET = "\u001B[0m";
     
@@ -32,4 +32,6 @@ public enum PortateTypeEnum {
     public int getKey() {
         return key;
     }
+
+
 }

@@ -3,8 +3,6 @@ package pietanze;
 import java.util.ArrayList;
 import java.util.List;
 
-import static jdk.jfr.internal.EventWriterKey.getKey;
-
 public class Menu {
     
     //TODO inserire nome tipo(enumerato: vegano ,carn, vegetariano), lista portate, prezzo medio
@@ -17,7 +15,7 @@ public class Menu {
         
         this.name = nome;
         this.type = type;
-        portataList = new ArrayList<>();
+        this.portataList = new ArrayList<>();
         
     }
     
@@ -55,36 +53,24 @@ public class Menu {
                                    "Type of the Menu: " + this.getType() + ANSI_RESET);
     }
     
-    
+    //TODO pensiamo come poter
     public void printPortata() {
 
-        int prec = 0;
+        System.out.println("\n" +PortateTypeEnum.BEVERAGES.getNome());
         for (Portata portata : portataList) {
-            switch (portata.getType().getKey()){
-                case 1:
-                        if (prec != portata.getType().getKey()){
-                            System.out.println("\n" +PortateTypeEnum.BEVERAGES.getNome());
-                        } break;
-                case 2:
-                    if (prec != portata.getType().getKey()) {
-                    System.out.println("\n" +PortateTypeEnum.APPETIZERS.getNome());
-                } break;
-                case 3:
-                    if (prec != portata.getType().getKey()) {
-                        System.out.println("\n" +PortateTypeEnum.FIRST.getNome());
-                    } break;
-                case 4:
-                    if (prec != portata.getType().getKey()) {
-                    System.out.println("\n" +PortateTypeEnum.SECOND.getNome());
-                    } break;
-                case 5:
-                    if (prec != portata.getType().getKey()){
-                        System.out.println("\n" + PortateTypeEnum.DESSERT.getNome());
-                    } break;
+            if (portata.getType() == PortateTypeEnum.BEVERAGES){
+                portata.printPortata();
             }
-            portata.printMenuPortata();
-            prec = portata.getType().getKey();
-
         }
+        System.out.println("\n" +PortateTypeEnum.APPETIZERS.getNome());
+        for (Portata portata : portataList) {
+            if (portata.getType() == PortateTypeEnum.APPETIZERS){
+                portata.printPortata();
+            }
+        }
+
+
+
+
     }
 }

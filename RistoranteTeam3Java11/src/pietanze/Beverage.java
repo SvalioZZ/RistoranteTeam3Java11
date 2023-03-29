@@ -10,7 +10,7 @@ public class Beverage extends Portata {
     }
     
     @Override
-    public void printMenuPortata() {
+    public void printPortata() {
         System.out.println(
                 getAnsiBlackChars() +
                         getAnsiCyanBackground() +

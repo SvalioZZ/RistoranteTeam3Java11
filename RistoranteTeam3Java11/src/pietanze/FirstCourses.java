@@ -9,8 +9,8 @@ package pietanze;
 
 
     @Override
-        public void printMenuPortata() {
-            super.printMenuPortata();
+        public void printPortata() {
+            super.printPortata();
         }
     }
 
