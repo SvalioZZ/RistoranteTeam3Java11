@@ -1,5 +1,7 @@
 package pietanze;
 
+import static pietanze.AnsiUtility.*;
+
 /**
  * La classe Desserts crea un costruttore che è usato per istanziare tutti i desserts
  * con nome, prezzo, se ha glutine o lattosio, e ha due metodi void che si potranno usare
@@ -38,10 +40,10 @@ public class Desserts extends Portata {
 
     @Override
     public void printPortata() {
-        System.out.println(getAnsiBlackChars() + getAnsiCyanBackground()
+        System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
                 + super.getName() + ": " + super.getPrice() +
                 " (" + printLactoseDesserts() + ", " + printGlutenDesserts() + ")" +
-                getAnsiReset());
+                ANSI_RESET);
     }
 }
 

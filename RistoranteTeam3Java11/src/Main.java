@@ -48,6 +48,6 @@ public class Main {
         // Stefano out
 
         menu.printInfoMenu();
-        menu.printPortata();
+        menu.printMenu();
     }
 }

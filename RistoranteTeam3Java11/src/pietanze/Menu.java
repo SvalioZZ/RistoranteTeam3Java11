@@ -1,7 +1,11 @@
 package pietanze;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+
+import static pietanze.AnsiUtility.*;
 
 public class Menu {
     
@@ -18,11 +22,6 @@ public class Menu {
         this.portataList = new ArrayList<>();
         
     }
-    
-    /*@Override
-    public String toString() {
-        return "\n*** " + type.getNome() + " ***" + "\n" + " Type of the Menu: " + getType() + "\n";
-    }*/
     
     public String getName() {
         return name;
@@ -43,9 +42,6 @@ public class Menu {
     public void addPortata(Portata portata) {
         portataList.add(portata);
     }
-    public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
-    private static final String ANSI_BLACK_CHARS = "\u001B[30m";
-    private static final String ANSI_RESET = "\u001B[0m";
     
     public void printInfoMenu() {
         System.out.println(ANSI_PURPLE_BACKGROUND + ANSI_BLACK_CHARS + "***" + this.getName() +
@@ -54,29 +50,17 @@ public class Menu {
     }
     
     //TODO pensiamo come poter
-    public void printPortata() {
-
-        System.out.println("\n" +PortateTypeEnum.BEVERAGES.getNome());
+    public void printMenu() {
+        portataList.sort(Comparator.comparing(Portata::getType));
+        PortateTypeEnum currentType = null;
         for (Portata portata : portataList) {
-            if (portata.getType() == PortateTypeEnum.BEVERAGES){
-                portata.printPortata();
+            if (portata.getType() != currentType) {
+                System.out.println("\n" + portata.getType().getNome());
+                currentType = portata.getType();
             }
+            portata.printPortata();
         }
-        System.out.println("\n" +PortateTypeEnum.APPETIZERS.getNome());
-        for (Portata portata : portataList) {
-            if (portata.getType() == PortateTypeEnum.APPETIZERS){
-                portata.printPortata();
-            }
-        }
-        System.out.println("\n" +PortateTypeEnum.DESSERT.getNome());
-        for (Portata portata : portataList) {
-            if (portata.getType() == PortateTypeEnum.DESSERT){
-                portata.printPortata();
-            }
-        }
-
-
-
-
+        
+        
     }
 }

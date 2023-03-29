@@ -1,5 +1,7 @@
 package pietanze;
 
+import static pietanze.AnsiUtility.*;
+
 public class Beverage extends Portata {
     private String capacity;
     
@@ -12,10 +14,9 @@ public class Beverage extends Portata {
     @Override
     public void printPortata() {
         System.out.println(
-                getAnsiBlackChars() +
-                        getAnsiCyanBackground() +
+                ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS +
                         super.getName() + ": " + this.capacity +
-                        " - " + super.getPrice() + getAnsiReset()
+                        " - " + super.getPrice() + ANSI_RESET
         );
     }
     
