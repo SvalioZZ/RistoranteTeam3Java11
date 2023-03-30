@@ -29,8 +29,8 @@ public class SecondCourses extends Portata {
     @Override
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
-                + super.getName() + ": " + super.getPrice() +
-                " (" + printProteinValue() + ")" +
+                + super.getName() + ": " + super.getPrice() + " " + ANSI_PURPLE_BACKGROUND +
+                "(" + printProteinValue() + ")" +
                 ANSI_RESET);
     }
 }

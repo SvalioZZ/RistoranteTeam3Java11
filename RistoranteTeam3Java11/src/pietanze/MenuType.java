@@ -3,7 +3,7 @@ package pietanze;
 public enum MenuType {
     //TODO mettiamo gli altri tipi
     MEAT("Meat Based Menu"),
-    VEGAN("No Meat Menu"),
+    VEGAN("Vegan Based Menu"),
     GLUTENFREE("No Gluten Menu"),
     LACTOSEFREE("No Lactose Menu"),
     EXPLOSIVE("Maybe your final menu");
