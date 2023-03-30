@@ -44,5 +44,6 @@ public class Beverage extends Portata {
                             super.getName() + ": " + this.capacity +
                             " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND + printAlcoholic() + ANSI_RESET);
         }
+    
     }
 }
