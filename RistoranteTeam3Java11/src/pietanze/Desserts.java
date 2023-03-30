@@ -17,7 +17,7 @@ public class Desserts extends Portata {
     private final boolean isGlutenFree;
 
     public Desserts(String name, double price, boolean isLactoseFree, boolean isGlutenFree) {
-        super(name, price, PortateTypeEnum.DESSERT);
+        super(name, price, EnumPortate.DESSERT);
         this.isLactoseFree = isLactoseFree;
         this.isGlutenFree = isGlutenFree;
     }

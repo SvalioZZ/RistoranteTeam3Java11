@@ -9,21 +9,21 @@ public class Beverage extends Portata {
     private int alcoholPerc;
     
     public Beverage(String name, String capacity, double price, boolean isAlcoholic) {
-        super(name, price, PortateTypeEnum.BEVERAGES);
+        super(name, price, EnumPortate.BEVERAGES);
         this.capacity = capacity;
-        this.isAlcoholic = isAlcoholic;
+        this.isAlcoholic = false;
         this.alcoholPerc = 0;
     }
     
-    public Beverage(String name, String capacity, double price, boolean isAlcoholic, int alcoholPerc) {
-        super(name, price, PortateTypeEnum.BEVERAGES);
+    public Beverage(String name, String capacity, double price, int alcoholPerc) {
+        super(name, price, EnumPortate.BEVERAGES);
         this.capacity = capacity;
-        this.isAlcoholic = isAlcoholic;
+        this.isAlcoholic = true;
         this.alcoholPerc = alcoholPerc;
     }
     
-    public void setAlcoholPerc(int alcoholPerc) {
-        this.alcoholPerc = alcoholPerc;
+    public int getAlcoholPerc() {
+        return alcoholPerc;
     }
     
     private String printAlcoholic() {

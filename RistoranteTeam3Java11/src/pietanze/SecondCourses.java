@@ -6,7 +6,7 @@ public class SecondCourses extends Portata {
 
     private boolean HighProteinValue;
     public SecondCourses(String name, double price, boolean HighProteinValue) {
-        super(name, price, PortateTypeEnum.SECOND);
+        super(name, price, EnumPortate.SECOND);
         this.HighProteinValue = HighProteinValue;
     }
 

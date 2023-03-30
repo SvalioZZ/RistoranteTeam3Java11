@@ -8,15 +8,17 @@ public class Portata {
     
     private String name;
     private double price;
-    private PortateTypeEnum type;
+    private EnumPortate type;
     
-    public Portata(String name, double price, PortateTypeEnum type) {
+    private String description;
+    
+    public Portata(String name, double price, EnumPortate type) {
         this.name = name;
         this.price = price;
         this.type = type;
     }
     
-    public PortateTypeEnum getType() {
+    public EnumPortate getType() {
         return type;
     }
     

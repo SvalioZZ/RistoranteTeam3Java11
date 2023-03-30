@@ -4,7 +4,7 @@ package pietanze;
 
     public FirstCourses(String name, double price) {
 
-        super(name, price, PortateTypeEnum.FIRST);
+        super(name, price, EnumPortate.FIRST);
     }
 
 

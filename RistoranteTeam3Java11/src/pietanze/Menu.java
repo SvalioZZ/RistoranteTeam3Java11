@@ -1,7 +1,6 @@
 package pietanze;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -13,9 +12,9 @@ public class Menu {
     
     private List<Portata> portataList;
     private String name;
-    private TypeEnumMenu type;
+    private MenuType type;
     
-    public Menu(String nome, TypeEnumMenu type) {
+    public Menu(String nome, MenuType type) {
         
         this.name = nome;
         this.type = type;
@@ -31,11 +30,11 @@ public class Menu {
         this.name = name;
     }
     
-    public TypeEnumMenu getType() {
+    public MenuType getType() {
         return type;
     }
     
-    public void setType(TypeEnumMenu type) {
+    public void setType(MenuType type) {
         this.type = type;
     }
     
@@ -52,7 +51,7 @@ public class Menu {
     //TODO pensiamo come poter
     public void printMenu() {
         portataList.sort(Comparator.comparing(Portata::getType));
-        PortateTypeEnum currentType = null;
+        EnumPortate currentType = null;
         for (Portata portata : portataList) {
             if (portata.getType() != currentType) {
                 System.out.println("\n" + portata.getType().getNome());

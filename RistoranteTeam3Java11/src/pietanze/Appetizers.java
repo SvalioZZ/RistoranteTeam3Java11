@@ -7,8 +7,8 @@ public class Appetizers extends Portata{
     private double weightAppetizerKg;
     private boolean canExplode;
     public Appetizers(String name, double price,double weightAppetizer,boolean canExplode) {
-        super(name, price, PortateTypeEnum.APPETIZERS);
-        this.weightAppetizerKg= weightAppetizerKg;
+        super(name, price, EnumPortate.APPETIZERS);
+        this.weightAppetizerKg = weightAppetizerKg;
         this.canExplode= canExplode;
     }
 

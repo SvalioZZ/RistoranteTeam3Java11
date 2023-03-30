@@ -2,7 +2,7 @@ package pietanze;
 
 import static pietanze.AnsiUtility.*;
 
-public enum PortateTypeEnum {
+public enum EnumPortate {
     
     
     //TODO, prima l'id poi il nome e poi la descrizione
@@ -16,9 +16,9 @@ public enum PortateTypeEnum {
     private final int key;
 
     //TODO spostare in una classe utility
-
-
-    PortateTypeEnum(String nome, int key) {
+    
+    
+    EnumPortate(String nome, int key) {
         this.nome = ANSI_BLACK_CHARS + ANSI_RED_BACKGROUND + nome + ANSI_RESET;
         this.key = key;
     }
