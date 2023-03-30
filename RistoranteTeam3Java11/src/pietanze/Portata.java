@@ -29,7 +29,7 @@ public class Portata {
     public void setPrice(double price) {
         this.price = price;
     }
-
+    
     public double getPrice() {
         return price;
     }
@@ -38,8 +38,10 @@ public class Portata {
         this.name = name;
     }
     
-   
-
+    public String askWaitress() {
+        return "For every question about price adjustments ask the waiter/ress";
+    }
+    
     //TODO facciamo una classe utility o un enumerato per gli Ansi
     
     
