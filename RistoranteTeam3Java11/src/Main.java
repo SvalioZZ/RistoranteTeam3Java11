@@ -47,12 +47,12 @@ public class Main {
     
         // Giovanni ha frnut (he finished)
     
-        menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false, false));
-        menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00, false, false));
-        menu.addPortata(new Desserts("Tiramisù", 10.00, false, false));
-        menu.addPortata(new Desserts("Apple Pie", 6.00, true, false));
-        menu.addPortata(new Desserts("Red Velvet Cake", 8.00, true, false));
-        menu.addPortata(new Desserts("Brownie", 5.00, true, true));
+        menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false, false, true));
+        menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00, false, false, true));
+        menu.addPortata(new Desserts("Tiramisù", 10.00, false, false, true));
+        menu.addPortata(new Desserts("Apple Pie", 6.00, true, false, false));
+        menu.addPortata(new Desserts("Red Velvet Cake", 8.00, true, false, false));
+        menu.addPortata(new Desserts("Brownie", 5.00, true, true, false));
     
         // Stefano out
 
