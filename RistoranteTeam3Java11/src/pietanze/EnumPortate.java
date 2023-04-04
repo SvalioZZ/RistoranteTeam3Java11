@@ -6,11 +6,11 @@ public enum EnumPortate {
     
     
     //TODO, prima l'id poi il nome e poi la descrizione
-    BEVERAGES("------- BEVANDE -------", 1),
-    APPETIZERS("------- ANTIPASTI -------", 2),
-    FIRST("------- PRIMI PIATTI -------", 3),
-    SECOND("------- SECONDI PIATTI -------", 4),
-    DESSERT("------- DESSERTS -------", 5);
+    BEVERAGES(1, "------- BEVANDE -------"),
+    APPETIZERS(2, "------- ANTIPASTI -------"),
+    FIRST(3, "------- PRIMI PIATTI -------"),
+    SECOND(4, "------- SECONDI PIATTI -------"),
+    DESSERT(5, "------- DESSERTS -------");
     
     private final String nome;
     private final int key;
@@ -18,7 +18,7 @@ public enum EnumPortate {
     //TODO spostare in una classe utility
     
     
-    EnumPortate(String nome, int key) {
+    EnumPortate(int key, String nome) {
         this.nome = ANSI_BLACK_CHARS + ANSI_RED_BACKGROUND + nome + ANSI_RESET;
         this.key = key;
     }

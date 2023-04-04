@@ -32,10 +32,11 @@ public class Main {
     
         // Kris out
     
-        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50));
-        menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50));
-        menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50));
-        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00));
+        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50,false ,429.7, 1));
+        menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50,false,241.0,1.5));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50,false ,205.8,1));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00,false ,250.0,0.5));
+        menu.addPortata(new FirstCourses("PastaPasticciata", 10,false ,400.0,1));
     
         // Daniele out
     
