@@ -4,8 +4,8 @@ import static pietanze.AnsiUtility.*;
 
 /**
  * La classe Desserts crea un costruttore che è usato per istanziare tutti i desserts
- * con nome, prezzo, se ha glutine o lattosio, e ha due metodi void che si potranno usare
- * per stampare i solo i dessert con o senza lattosio o solo i dessert con o senza glutine
+ * con nome, prezzo, se ha glutine o lattosio, e ha due metodi che si potranno usare
+ * per stampare solo i dessert con o senza lattosio o solo i dessert con o senza glutine
  *
  * @author "Stefano Devoti"
  */
@@ -35,7 +35,7 @@ public class Desserts extends Portata {
         return containFrozenIngredients;
     }
 
-    public String printLactoseDesserts() {
+    public String getLactoseDesserts() {
         if (isLactoseFree) {
             return "lactose free";
         } else {
@@ -43,8 +43,7 @@ public class Desserts extends Portata {
         }
     }
 
-    //TODO come si chiama questo metodo? print o get? quindi che devo fare nel corpo stampare o ritornare un valore?
-    public String printGlutenDesserts() {
+    public String getGlutenDesserts() {
         if (isGlutenFree) {
             return "gluten free";
         } else {
@@ -52,22 +51,20 @@ public class Desserts extends Portata {
         }
     }
 
-    public String printFrozenIngredients() {
+    public String getFrozenIngredients() {
         if (containFrozenIngredients) {
             return "*may contain frozen ingredients";
+        } else {
+            return "*fresh ingredients";
         }
-        return "";
     }
 
     @Override
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
                 + super.getName() + ": " + super.getPrice() +
-                " " + ANSI_YELLOW_BACKGROUND + "(" + printLactoseDesserts() + ", " + printGlutenDesserts() + ")" +
-                " " + ANSI_WHITE_BACKGROUND + printFrozenIngredients() + ANSI_RESET);
-
-        printGlutenDesserts();
-
+                " " + ANSI_YELLOW_BACKGROUND + "(" + getLactoseDesserts() + ", " + getGlutenDesserts() + ")" +
+                " " + ANSI_WHITE_BACKGROUND + getFrozenIngredients() + ANSI_RESET);
     }
 }
 
