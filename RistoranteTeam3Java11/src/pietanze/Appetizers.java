@@ -1,9 +1,10 @@
 package pietanze;
 
+import static pietanze.AnsiUtility.*;
+import static pietanze.AnsiUtility.ANSI_RESET;
+
 public class Appetizers extends Portata{
 
-    //TODO dobbiamo iniziare a inserire personalizzazioni delle classi, un campo tipo antipasto, rustico,campano,
-    //oppure inserire un campo che dice se contiene glutine
     private double weightAppetizerKg;
     private boolean canExplode;
     public Appetizers(String name, double price,double weightAppetizerKg,boolean canExplode) {
@@ -12,14 +13,37 @@ public class Appetizers extends Portata{
         this.canExplode= canExplode;
     }
 
-    //TODO inserire getter e setter
+    public boolean getCanExplode() {
+        return canExplode;
+    }
+
+    public void setWeightAppetizerKg(double weightAppetizerKg) {
+        this.weightAppetizerKg = weightAppetizerKg;
+    }
+    public void setCanExplode(boolean canExplode) {
+        this.canExplode = canExplode;
+    }
     public double getWeightAppetizerKg() {
         return weightAppetizerKg;
     }
 
-    //TODO però quando andiamo a ridefinire un metodo nel figlio vanno poi inseriti anche i field del figlio weightAppetizerKg
+    public String isExplosive() {
+        if(canExplode){
+            return "This can be your last meal. No pressure";
+        } else {
+        return "No explosive agents found here";
+        }
+    }
+//    public double totalWeight(){
+//        return weightAppetizerKg;
+//    }
+
     @Override
     public void printPortata() {
-        super.printPortata();
+        System.out.println( ANSI_GREEN_BACKGROUND + ANSI_BLACK_CHARS
+                + super.getName() + ": " + super.getPrice() + "€ " + " - "
+                + ANSI_WHITE_BACKGROUND + getWeightAppetizerKg() + " - "
+                + ANSI_RED_BACKGROUND + "(" + isExplosive() + ")" + " - "
+                + ANSI_RESET);
     }
 }
