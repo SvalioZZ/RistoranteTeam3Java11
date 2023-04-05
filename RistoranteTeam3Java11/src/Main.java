@@ -1,29 +1,25 @@
 import pietanze.*;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
 
 public class Main {
 
     public static void main(String[] args) {
-
+    
         Menu menu = new Menu("GinoBiscottino", MenuType.MEAT);
     
-        menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, false));
-        menu.addPortata(new Beverage("Sprite", "33cl", 2.99, false));
-        menu.addPortata(new Beverage("SevenUp", "33cl", 2.99, false));
-        menu.addPortata(new Beverage("Ginger Beer", "66cl", 2.99, false));
-        menu.addPortata(new Beverage("Sparkling Water", "1,5l", 2.99, false));
-        menu.addPortata(new Beverage("Still Water", "1,5l", 2.99, false));
+        menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
+        menu.addPortata(new Beverage("Sprite", "33cl", 2.99, 0, false));
+        menu.addPortata(new Beverage("SevenUp", "33cl", 2.99, 0, false));
+        menu.addPortata(new Beverage("Ginger Beer", "66cl", 2.99, 0, false));
+        menu.addPortata(new Beverage("Sparkling Water", "1,5l", 2.99, 0, false));
+        menu.addPortata(new Beverage("Still Water", "1,5l", 2.99, 0, false));
     
-        menu.addPortata(new Beverage("Kozel Beer, anche alla spina", "66cl", 6.99, 6));
-        menu.addPortata(new Beverage("MA.MA, anche alla spina", "66cl", 9.99, 9));
-        menu.addPortata(new Beverage("White Wine", "75cl", 12.99, 12));
-        menu.addPortata(new Beverage("Red Wine", "75cl", 12.99, 12));
-        menu.addPortata(new Beverage("Mirto", "30ml", 3.99, 40));
-        menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, 40));
+        menu.addPortata(new Beverage("Kozel Beer, anche alla spina", "66cl", 6.99, 6, true));
+        menu.addPortata(new Beverage("MA.MA, anche alla spina", "66cl", 9.99, 9, true));
+        menu.addPortata(new Beverage("White Wine", "75cl", 12.99, 12, true));
+        menu.addPortata(new Beverage("Red Wine", "75cl", 12.99, 12, true));
+        menu.addPortata(new Beverage("Mirto", "30ml", 3.99, 40, true));
+        menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, 40, true));
     
     
         // Valerio out
