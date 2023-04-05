@@ -12,7 +12,6 @@ import static pietanze.AnsiUtility.*;
 
 public class Desserts extends Portata {
 
-    //TODO Stefano mettici un po di iniziativa
     private final boolean isLactoseFree;
     private final boolean isGlutenFree;
     private final boolean containFrozenIngredients;
@@ -44,6 +43,7 @@ public class Desserts extends Portata {
         }
     }
 
+    //TODO come si chiama questo metodo? print o get? quindi che devo fare nel corpo stampare o ritornare un valore?
     public String printGlutenDesserts() {
         if (isGlutenFree) {
             return "gluten free";
@@ -65,6 +65,8 @@ public class Desserts extends Portata {
                 + super.getName() + ": " + super.getPrice() +
                 " " + ANSI_YELLOW_BACKGROUND + "(" + printLactoseDesserts() + ", " + printGlutenDesserts() + ")" +
                 " " + ANSI_WHITE_BACKGROUND + printFrozenIngredients() + ANSI_RESET);
+
+        printGlutenDesserts();
 
     }
 }

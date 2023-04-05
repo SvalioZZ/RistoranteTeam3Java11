@@ -4,8 +4,6 @@ import static pietanze.AnsiUtility.*;
 
 public class Portata {
     
-    //TODO classe utility
-    
     private String name;
     private double price;
     private EnumPortate type;
@@ -42,9 +40,7 @@ public class Portata {
         return "For every question about price adjustments ask the waiter/ress";
     }
     
-    //TODO facciamo una classe utility o un enumerato per gli Ansi
-    
-    
+
     public void printPortata() {
         System.out.println(ANSI_BLACK_CHARS + ANSI_CYAN_BACKGROUND + name + " - " + price + ANSI_RESET);
     }

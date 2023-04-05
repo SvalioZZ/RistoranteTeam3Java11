@@ -3,12 +3,16 @@ package pietanze;
 import static pietanze.AnsiUtility.*;
 
 public class Beverage extends Portata {
+
+    //TODO potresti inserire tutti i field che vuoi senza problemi
+
+    //TODO fare solo un costruttore
     
     private String capacity;
     private boolean isAlcoholic;
     private int alcoholPerc;
     
-    public Beverage(String name, String capacity, double price, boolean isAlcoholic) {
+    public Beverage(String name, String capacity, double price) {
         super(name, price, EnumPortate.BEVERAGES);
         this.capacity = capacity;
         this.isAlcoholic = false;

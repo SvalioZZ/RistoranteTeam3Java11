@@ -19,12 +19,12 @@ public enum EnumPortate {
     
     
     EnumPortate(int key, String nome) {
-        this.nome = ANSI_BLACK_CHARS + ANSI_RED_BACKGROUND + nome + ANSI_RESET;
+        this.nome =  nome ;
         this.key = key;
     }
 
     public String getNome() {
-        return nome;
+        return ANSI_BLACK_CHARS + ANSI_RED_BACKGROUND + nome + ANSI_RESET;
     }
 
     public int getKey() {

@@ -8,8 +8,6 @@ import static pietanze.AnsiUtility.*;
 
 public class Menu {
     
-    //TODO inserire nome tipo(enumerato: vegano ,carn, vegetariano), lista portate, prezzo medio
-    
     private List<Portata> portataList;
     private String name;
     private MenuType type;

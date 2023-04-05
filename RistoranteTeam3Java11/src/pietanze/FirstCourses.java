@@ -7,6 +7,8 @@ import static pietanze.AnsiUtility.ANSI_RESET;
 
 public class FirstCourses extends Portata {
     private boolean glutenFree;
+
+    //TODO gli stessi di stefano, e poi si chiamano le variabili
     private double KCal;
     private double salePrice;
 
