@@ -1,10 +1,14 @@
 import pietanze.*;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 
 public class Main {
-    
+
     public static void main(String[] args) {
-    
+
         Menu menu = new Menu("GinoBiscottino", MenuType.MEAT);
     
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, false));
@@ -59,5 +63,22 @@ public class Main {
 
         menu.printInfoMenu();
         menu.printMenu();
+
+        System.out.println("What portata you want to add to the order?");
+
+//        Ordine ordine = new Ordine();
+//
+//        Scanner scanner = new Scanner(System.in);
+//        String input = scanner.nextLine();
+
+
+//        ordine.addPortataToOrder();
+
+
+
+
+
+
+
     }
 }

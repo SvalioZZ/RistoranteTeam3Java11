@@ -4,22 +4,22 @@ import static pietanze.AnsiUtility.*;
 
 public class SecondCourses extends Portata {
 
-    private boolean HighProteinValue;
-    public SecondCourses(String name, double price, boolean HighProteinValue) {
+    private boolean highProteinValue;
+    public SecondCourses(String name, double price, boolean highProteinValueParameter) {
         super(name, price, EnumPortate.SECOND);
-        this.HighProteinValue = HighProteinValue;
+        this.highProteinValue = highProteinValueParameter;
     }
 
     public boolean isHighProteinValue() {
-        return HighProteinValue;
+        return highProteinValue;
     }
 
-    public void setHighProteinValue(boolean highProteinValue) {
-        HighProteinValue = highProteinValue;
+    public void setHighProteinValue(boolean highProteinValueParameter) {
+        highProteinValue = highProteinValueParameter;
     }
 
-    public String printProteinValue() {
-        if (HighProteinValue) {
+    public String returnProteinValue() {
+        if (highProteinValue) {
             return "Contains more than 20gr of protein per 100gr";
         } else {
             return "Contains less than 20gr of protein per 100gr";
@@ -30,7 +30,7 @@ public class SecondCourses extends Portata {
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
                 + super.getName() + ": " + super.getPrice() + " " + ANSI_PURPLE_BACKGROUND +
-                "(" + printProteinValue() + ")" +
+                "(" + returnProteinValue() + ")" +
                 ANSI_RESET);
     }
 }

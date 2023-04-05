@@ -12,12 +12,12 @@ public class Ordine {
     public Map<String, Double> ordine = new HashMap();
 
 
-    public void addPortataToOrder (Portata portata){
+    public void addPortataToOrder(Portata portata){
 
         if (ordine.containsKey(portata.getName())){
             ordine.put(portata.getName(), portata.getPrice()*2);
-        }else
-        ordine.put(portata.getName(), portata.getPrice());
+        } else
+            ordine.put(portata.getName(), portata.getPrice());
     }
 
     public void removePortataInOrder (String name){
