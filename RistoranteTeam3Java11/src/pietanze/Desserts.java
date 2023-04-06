@@ -1,5 +1,7 @@
 package pietanze;
 
+import java.util.Set;
+
 import static pietanze.AnsiUtility.*;
 
 /**
@@ -11,46 +13,46 @@ import static pietanze.AnsiUtility.*;
  */
 
 public class Desserts extends Portata {
-
-    private final boolean isLactoseFree;
-    private final boolean isGlutenFree;
     private final boolean containFrozenIngredients;
+    private Set<EnumIngredienti> ingredienti;
 
-    public Desserts(String name, double price, boolean isLactoseFree, boolean isGlutenFree, boolean containFrozenIngredients) {
+    public Desserts(String name, double price, boolean containFrozenIngredients, Set<EnumIngredienti> ingredienti) {
         super(name, price, EnumPortate.DESSERT);
-        this.isLactoseFree = isLactoseFree;
-        this.isGlutenFree = isGlutenFree;
         this.containFrozenIngredients = containFrozenIngredients;
+        this.ingredienti = ingredienti;
     }
 
-    public boolean isLactoseFree() {
-        return isLactoseFree;
+    public Set<EnumIngredienti> getIngredienti() {
+        return ingredienti;
     }
 
-    public boolean isGlutenFree() {
-        return isGlutenFree;
+    public void setIngredienti(Set<EnumIngredienti> ingredienti) {
+        this.ingredienti = ingredienti;
     }
 
     public boolean isContainFrozenIngredients() {
         return containFrozenIngredients;
     }
 
-    public String getLactoseDesserts() {
-        if (isLactoseFree) {
-            return "lactose free";
-        } else {
-            return "with lactose";
-        }
-    }
+    /* LAVORI IN CORSO XD
 
-    //TODO come si chiama questo metodo? print o get? quindi che devo fare nel corpo stampare o ritornare un valore?
-    public String getGlutenDesserts() {
-        if (isGlutenFree) {
-            return "gluten free";
-        } else {
-            return "with gluten";
+    public String cannotEat() {
+        for (EnumIngredienti i : EnumIngredienti.values()) {
+            if (i.getAllergen().contains("lactose")) {
+                return "not suitable for lactose intolerant";
+            }
+            else if (i.getAllergen().contains("gluten")) {
+                return "not suitable for gluten intolerant";
+            }
+            else if (i.getAllergen().contains("IgE")) {
+                return ("not suitable for IgE intolerant");
+            }
         }
+        return "";
     }
+*/
+    //TODO come si chiama questo metodo? print o get? quindi che devo fare nel corpo stampare o ritornare un valore?
+
 
     public String getFrozenIngredients() {
         if (containFrozenIngredients) {
@@ -59,14 +61,14 @@ public class Desserts extends Portata {
             return "*fresh ingredients";
         }
     }
+
     @Override
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
                 + super.getName() + ": " + super.getPrice() +
-                " " + ANSI_YELLOW_BACKGROUND + "(" + getLactoseDesserts() + ", " + getGlutenDesserts() + ")" +
+                " " + ANSI_YELLOW_BACKGROUND + "()" +
                 " " + ANSI_WHITE_BACKGROUND + getFrozenIngredients() + ANSI_RESET);
 
     }
 }
-
 
