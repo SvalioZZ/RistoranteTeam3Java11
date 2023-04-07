@@ -38,12 +38,12 @@ public class Desserts extends Portata {
         for (EnumIngredienti i : ingredienti) {
             if (i.getAllergen().contains("lactose")) {
                 return "not suitable for lactose intolerant";
-            }
-            else if (i.getAllergen().contains("gluten")) {
+            } else if (i.getAllergen().contains("gluten")) {
                 return "not suitable for gluten intolerant";
-            }
-            else if (i.getAllergen().contains("IgE")) {
+            } else if (i.getAllergen().contains("IgE")) {
                 return ("not suitable for IgE intolerant");
+            } else if (i.getAllergen().contains("lisozima")) {
+                return ("not suitable for lisozima/eggs intolerant");
             }
         }
         return "";

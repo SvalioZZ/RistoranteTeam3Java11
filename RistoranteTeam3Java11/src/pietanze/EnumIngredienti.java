@@ -1,18 +1,34 @@
 package pietanze;
 
+import java.util.List;
+
 public enum EnumIngredienti {
-    STRAWBERRIES(1, "Fragole", ""), CHOCALATE(2, "Cioccolato", "IgE"), COCOA(3, "Cacao", ""), COFFEE(4, "Caffè", ""),
-    BUTTER(5, "Burro", "lactose"), MILK(6, "Latte", "lactose"), EGGS(7, "Uova", "lisozima"), SUGAR(8, "Zucchero", ""),
-    YEAST(9, "Lievito", ""), MILK_CREAM(10, "Panna", "lactose"), CREAM_CHEESE(11, "Formaggio spalmabile", "lactose"),
-    MASCARPONE_CHEESE(12, "Mascarpone", "lactose"), FLOUR(13, "Farina", "gluten"), APPLES(14, "Mele", ""),
-    DRY_BISCUITS(15, "Biscotti secchi", "gluten"), SAVOIARDI_BISCUITS(16, "Savoiardi", "gluten"), HAZELNUTS(17, "Nocciole", "IgE"),
-    SALT(18, "Sale", ""), RED_FOOD_COLORING(19, "Colorante alimentare rosso", ""), VANILLA(20, "Vaniglia", "");
+    STRAWBERRIES(1, "Fragole", List.of()),
+    CHOCALATE(2, "Cioccolato", List.of("IgE")),
+    COCOA(3, "Cacao", List.of()),
+    COFFEE(4, "Caffè", List.of()),
+    BUTTER(5, "Burro", List.of("lactose")),
+    MILK(6, "Latte", List.of()),
+    EGGS(7, "Uova", List.of("lisozima")),
+    SUGAR(8, "Zucchero", List.of()),
+    YEAST(9, "Lievito", List.of()),
+    MILK_CREAM(10, "Panna", List.of("lactose")),
+    CREAM_CHEESE(11, "Formaggio spalmabile", List.of("lactose")),
+    MASCARPONE_CHEESE(12, "Mascarpone", List.of("lactose")),
+    FLOUR(13, "Farina", List.of("gluten")),
+    APPLES(14, "Mele", List.of()),
+    DRY_BISCUITS(15, "Biscotti secchi", List.of("lactose", "gluten")),
+    SAVOIARDI_BISCUITS(16, "Savoiardi", List.of("gluten")),
+    HAZELNUTS(17, "Nocciole", List.of("IgE")),
+    SALT(18, "Sale", List.of()),
+    RED_FOOD_COLORING(19, "Colorante alimentare rosso", List.of()),
+    VANILLA(20, "Vaniglia", List.of());
 
     private int id;
     private String name;
-    private String allergen;
+    private List<String> allergen;
 
-    EnumIngredienti(int id, String name, String allergen) {
+    EnumIngredienti(int id, String name, List<String> allergen) {
         this.id = id;
         this.name = name;
         this.allergen = allergen;
@@ -34,11 +50,11 @@ public enum EnumIngredienti {
         this.name = name;
     }
 
-    public String getAllergen() {
+    public List<String> getAllergen() {
         return allergen;
     }
 
-    public void setAllergen(String allergen) {
+    public void setAllergen(List<String> allergen) {
         this.allergen = allergen;
     }
 }
