@@ -1,5 +1,6 @@
 package pietanze;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static pietanze.AnsiUtility.*;
@@ -7,24 +8,21 @@ import static pietanze.AnsiUtility.ANSI_RESET;
 
 public class FirstCourses extends Portata {
     private boolean glutenFree;
-
-    //TODO gli stessi di stefano, e poi si chiamano le variabili
-    private double KCal;
+    private double kCal;
     private double salePrice;
 
-    public FirstCourses(String name, double price, boolean glutenFree, double KCal, double salePrice) {
+    public FirstCourses(String name, double price, boolean glutenFree, double kCal, double salePrice) {
         super(name, price, EnumPortate.FIRST);
         this.glutenFree = glutenFree;
-        this.KCal = KCal;
+        this.kCal = kCal;
         this.salePrice = salePrice;
     }
-
     public boolean glutenFree() {
         return glutenFree;
     }
 
-    public double KCal() {
-        return KCal;
+    public double kCal() {
+        return kCal;
     }
 
     public double salePrice() {
@@ -40,12 +38,12 @@ public class FirstCourses extends Portata {
         this.glutenFree = glutenFree;
     }
 
-    public double getKCal() {
-        return KCal;
+    public double getkCal() {
+        return kCal;
     }
 
-    public void setKCal(double KCal) {
-        this.KCal = KCal;
+    public void setkCal(double kCal) {
+        this.kCal = kCal;
     }
 
     // Metodi
@@ -57,14 +55,14 @@ public class FirstCourses extends Portata {
         }
     }
 
-    public String printKCal() {
-        if (KCal >= 0) {
-            return "KCal for 100 gr: " + KCal;
+    public String getKCal() {
+        if (kCal >= 0) {
+            return "KCal for 100 gr: " + kCal;
         } else {
-            return null;
+            return "Not Important. Think about eating!g ";
         }
     }
-    public double printSalePrice() {
+    public double getSalePrice() {
         if (salePrice == 1) {
             return getPrice();
         } else if (salePrice == 1.5) {
@@ -80,8 +78,8 @@ public class FirstCourses extends Portata {
         System.out.println( ANSI_GREEN_BACKGROUND + ANSI_BLACK_CHARS
                 + super.getName() + ": " + super.getPrice() + "€ " + " - "
                 + ANSI_WHITE_BACKGROUND + printGlutenFree() + " - "
-                + ANSI_RED_BACKGROUND + "(" + printKCal() + ")" + " - "
-                + ANSI_PURPLE_BACKGROUND + printSalePrice() + "€ "
+                + ANSI_RED_BACKGROUND + "(" + getKCal() + ")" + " - "
+                + ANSI_PURPLE_BACKGROUND + getSalePrice() + "€ "
                 + ANSI_RESET);
     }
 
