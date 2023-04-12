@@ -36,7 +36,7 @@ public class Desserts extends Portata {
         return containFrozenIngredients;
     }
 
-    public String cannotEat() {
+    /*public String cannotEat() {
         for (EnumIngredienti i : ingredienti) {
             if (i.getAllergen().contains("lactose")) {
                 return "not suitable for lactose intolerant";
@@ -49,7 +49,7 @@ public class Desserts extends Portata {
             }
         }
         return "";
-    }
+    }*/
 
     //TODO come si chiama questo metodo? print o get? quindi che devo fare nel corpo stampare o ritornare un valore?
 
@@ -64,9 +64,11 @@ public class Desserts extends Portata {
     @Override
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
-                + super.getName() + ": " + super.getPrice() +
-                " " + ANSI_YELLOW_BACKGROUND + "(" + cannotEat() + ")" +
-                " " + ANSI_WHITE_BACKGROUND + getFrozenIngredients() + ANSI_RESET);
+                                   + super.getName() + ": " + super.getPrice() +
+                                   " " + ANSI_YELLOW_BACKGROUND + "( " +
+                                   // cannotEat() +
+                                   " )" +
+                                   " " + ANSI_WHITE_BACKGROUND + getFrozenIngredients() + ANSI_RESET);
 
     }
 }
