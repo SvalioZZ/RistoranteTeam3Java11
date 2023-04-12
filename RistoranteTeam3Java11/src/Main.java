@@ -52,12 +52,18 @@ public class Main {
     
         // Giovanni ha frnut (he finished)
     
-        menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false, Set.of(EnumIngredienti.STRAWBERRIES, EnumIngredienti.EGGS, EnumIngredienti.CREAM_CHEESE, EnumIngredienti.BUTTER, EnumIngredienti.DRY_BISCUITS, EnumIngredienti.SUGAR)));
-        menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00, false, Set.of(EnumIngredienti.CHOCALATE,EnumIngredienti.EGGS, EnumIngredienti.CREAM_CHEESE, EnumIngredienti.BUTTER, EnumIngredienti.DRY_BISCUITS, EnumIngredienti.SUGAR )));
-        menu.addPortata(new Desserts("Tiramisù", 10.00, false, Set.of(EnumIngredienti.COFFEE, EnumIngredienti.EGGS, EnumIngredienti.MASCARPONE_CHEESE, EnumIngredienti.SAVOIARDI_BISCUITS, EnumIngredienti.SUGAR, EnumIngredienti.COCOA)));
-        menu.addPortata(new Desserts("Apple Pie", 6.00, true, Set.of(EnumIngredienti.FLOUR, EnumIngredienti.APPLES, EnumIngredienti.EGGS, EnumIngredienti.SUGAR, EnumIngredienti.YEAST, EnumIngredienti.BUTTER, EnumIngredienti.VANILLA)));
-        menu.addPortata(new Desserts("Red Velvet Cake", 8.00, true, Set.of(EnumIngredienti.FLOUR, EnumIngredienti.EGGS, EnumIngredienti.BUTTER, EnumIngredienti.SUGAR, EnumIngredienti.MILK_CREAM, EnumIngredienti.RED_FOOD_COLORING)));
-        menu.addPortata(new Desserts("Hazelnuts and chocolate Brownies", 5.00, true, Set.of(EnumIngredienti.CHOCALATE, EnumIngredienti.HAZELNUTS, EnumIngredienti.COCOA, EnumIngredienti.SUGAR, EnumIngredienti.EGGS, EnumIngredienti.YEAST)));
+        menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false,
+                Set.of(EnumIngredienti.STRAWBERRIES, EnumIngredienti.EGGS, EnumIngredienti.CREAM_CHEESE, EnumIngredienti.BUTTER, EnumIngredienti.DRY_BISCUITS, EnumIngredienti.SUGAR)));
+        menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00, false,
+                Set.of(EnumIngredienti.CHOCALATE,EnumIngredienti.EGGS, EnumIngredienti.CREAM_CHEESE, EnumIngredienti.BUTTER, EnumIngredienti.DRY_BISCUITS, EnumIngredienti.SUGAR )));
+        menu.addPortata(new Desserts("Tiramisù", 10.00, false,
+                Set.of(EnumIngredienti.COFFEE, EnumIngredienti.EGGS, EnumIngredienti.MASCARPONE_CHEESE, EnumIngredienti.SAVOIARDI_BISCUITS, EnumIngredienti.SUGAR, EnumIngredienti.COCOA)));
+        menu.addPortata(new Desserts("Apple Pie", 6.00, true,
+                Set.of(EnumIngredienti.FLOUR, EnumIngredienti.APPLES, EnumIngredienti.EGGS, EnumIngredienti.SUGAR, EnumIngredienti.YEAST, EnumIngredienti.BUTTER, EnumIngredienti.VANILLA)));
+        menu.addPortata(new Desserts("Red Velvet Cake", 8.00, true,
+                Set.of(EnumIngredienti.FLOUR, EnumIngredienti.EGGS, EnumIngredienti.BUTTER, EnumIngredienti.SUGAR, EnumIngredienti.MILK_CREAM, EnumIngredienti.RED_FOOD_COLORING)));
+        menu.addPortata(new Desserts("Hazelnuts and chocolate Brownies", 5.00, true,
+                Set.of(EnumIngredienti.CHOCALATE, EnumIngredienti.HAZELNUTS, EnumIngredienti.COCOA, EnumIngredienti.SUGAR, EnumIngredienti.EGGS, EnumIngredienti.YEAST)));
     
         // Stefano out
 
