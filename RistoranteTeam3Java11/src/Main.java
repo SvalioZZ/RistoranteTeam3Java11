@@ -63,22 +63,6 @@ public class Main {
 
         menu.printInfoMenu();
         menu.printMenu();
-
-        System.out.println("What portata you want to add to the order?");
-
-//        Ordine ordine = new Ordine();
-//
-//        Scanner scanner = new Scanner(System.in);
-//        String input = scanner.nextLine();
-
-
-//        ordine.addPortataToOrder();
-
-
-
-
-
-
-
+        
     }
 }

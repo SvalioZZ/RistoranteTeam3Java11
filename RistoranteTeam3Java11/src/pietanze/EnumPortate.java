@@ -4,8 +4,6 @@ import static pietanze.AnsiUtility.*;
 
 public enum EnumPortate {
     
-    
-    //TODO, prima l'id poi il nome e poi la descrizione
     BEVERAGES(1, "------- BEVANDE -------"),
     APPETIZERS(2, "------- ANTIPASTI -------"),
     FIRST(3, "------- PRIMI PIATTI -------"),
@@ -14,9 +12,6 @@ public enum EnumPortate {
     
     private final String nome;
     private final int key;
-
-    //TODO spostare in una classe utility
-    
     
     EnumPortate(int key, String nome) {
         this.nome =  nome ;

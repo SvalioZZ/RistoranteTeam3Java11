@@ -3,10 +3,6 @@ package pietanze;
 import static pietanze.AnsiUtility.*;
 
 public class Beverage extends Portata {
-
-    //TODO potresti inserire tutti i field che vuoi senza problemi
-
-    //TODO fare solo un costruttore
     
     private String capacity;
     private boolean isAlcoholic;

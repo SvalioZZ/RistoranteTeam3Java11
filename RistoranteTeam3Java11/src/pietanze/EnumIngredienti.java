@@ -3,6 +3,9 @@ package pietanze;
 import java.util.List;
 
 public enum EnumIngredienti {
+    
+    //probabile ci farà togliere il list.of all'interno della classe, chiedere
+    
     STRAWBERRIES(1, "Fragole", List.of()),
     CHOCALATE(2, "Cioccolato", List.of("IgE")),
     COCOA(3, "Cacao", List.of()),

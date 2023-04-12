@@ -45,7 +45,10 @@ public enum Ingredient {
     public void setDescription(String description) {
         this.description = description;
     }
-    public void isAllergenic() {
+    
+    //chiedere a michele se va bene come ragionamento
+    
+    /*public void isAllergenic() {
         List<Ingredient> allergens = Arrays.asList(
                 Ingredient.LATTOSIO,
                 Ingredient.GLUTINE,
@@ -65,7 +68,7 @@ public enum Ingredient {
                 System.out.println(ingredient.getName() + " è un allergene");
             }
         }
-    }
+    }*/
     public List<Ingredient> getIngredients() {
         return ingredients;
     }
