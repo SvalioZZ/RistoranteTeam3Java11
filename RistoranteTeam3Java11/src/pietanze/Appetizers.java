@@ -7,6 +7,9 @@ public class Appetizers extends Portata{
 
     private double weightAppetizerKg;
     private boolean canExplode;
+
+
+    //TODO km0?
     public Appetizers(String name, double price,double weightAppetizerKg,boolean canExplode) {
         super(name, price, EnumPortate.APPETIZERS);
         this.weightAppetizerKg = weightAppetizerKg;

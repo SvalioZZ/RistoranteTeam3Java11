@@ -16,6 +16,8 @@ public class Desserts extends Portata {
     private final boolean containFrozenIngredients;
     private Set<EnumIngredienti> ingredienti;
 
+    //TODO livello di dolcezza? un emumerato?
+
     public Desserts(String name, double price, boolean containFrozenIngredients, Set<EnumIngredienti> ingredienti) {
         super(name, price, EnumPortate.DESSERT);
         this.containFrozenIngredients = containFrozenIngredients;

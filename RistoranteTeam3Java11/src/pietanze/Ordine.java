@@ -3,6 +3,8 @@ package pietanze;
 import java.util.HashMap;
 import java.util.Map;
 
+
+//TODO parliamone la prossima volta
 public class Ordine {
 
     private final int perc1 = 15;

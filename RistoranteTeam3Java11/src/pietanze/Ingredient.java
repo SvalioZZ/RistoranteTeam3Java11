@@ -3,6 +3,8 @@ package pietanze;
 import java.util.Arrays;
 import java.util.List;
 
+
+//TODO forse erano gli allergeni?
 public enum Ingredient {
     LATTOSIO(1,"Latte", "This courses countains milk and derivatives"),
     GLUTINE(2,"Grano", "This courses countains gluten and derivatives"),

@@ -1,5 +1,7 @@
 package pietanze;
 
+import java.util.List;
+
 import static pietanze.AnsiUtility.*;
 
 public class Portata {
@@ -7,6 +9,8 @@ public class Portata {
     private String name;
     private double price;
     private EnumPortate type;
+
+    private List<AllergeniciEnum> allergen;
     
     private String description;
     

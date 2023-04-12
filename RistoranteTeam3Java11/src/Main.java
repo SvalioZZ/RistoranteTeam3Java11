@@ -2,14 +2,12 @@ import pietanze.*;
 
 import java.util.Set;
 
-import javax.print.attribute.standard.JobKOctets;
-
 
 public class Main {
 
     public static void main(String[] args) {
     
-        Menu menu = new Menu("GinoBiscottino", MenuType.MEAT);
+        Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
     
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
         menu.addPortata(new Beverage("Sprite", "33cl", 2.99, 0, false));

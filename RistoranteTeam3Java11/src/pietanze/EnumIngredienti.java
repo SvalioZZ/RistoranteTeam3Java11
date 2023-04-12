@@ -29,7 +29,7 @@ public enum EnumIngredienti {
 
     private int id;
     private String name;
-    private List<String> allergen;
+
 
     EnumIngredienti(int id, String name, List<String> allergen) {
         this.id = id;

@@ -1,5 +1,7 @@
 package pietanze;
 
+
+//TODO fare un enumerato così abbiamo più elesticità
 public class AnsiUtility {
     
     public static final String ANSI_BLACK_BACKGROUND = "\u001B[40m";

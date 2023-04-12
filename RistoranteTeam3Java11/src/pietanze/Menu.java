@@ -7,12 +7,13 @@ import java.util.List;
 import static pietanze.AnsiUtility.*;
 
 public class Menu {
-    
+
+    //TODO menù del giorno o la portata dello cuoco
     private List<Portata> portataList;
     private String name;
-    private MenuType type;
+    private TypeEnum type;
     
-    public Menu(String nome, MenuType type) {
+    public Menu(String nome, TypeEnum type) {
         
         this.name = nome;
         this.type = type;
@@ -28,11 +29,11 @@ public class Menu {
         this.name = name;
     }
     
-    public MenuType getType() {
+    public TypeEnum getType() {
         return type;
     }
     
-    public void setType(MenuType type) {
+    public void setType(TypeEnum type) {
         this.type = type;
     }
     

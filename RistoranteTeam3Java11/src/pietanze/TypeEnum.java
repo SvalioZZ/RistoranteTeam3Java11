@@ -1,9 +1,11 @@
 package pietanze;
 
-public enum MenuType {
+public enum TypeEnum {
     //TODO mettiamo gli altri tipi
     MEAT("Meat Based Menu"),
     VEGAN("Vegan Based Menu"),
+
+    //TODO gli enum so gratis se ve ne serve un altro fatelo non accorpiamo logiche di cose diverse
     GLUTENFREE("No Gluten Menu"),
     LACTOSEFREE("No Lactose Menu"),
     EXPLOSIVE("Maybe your final menu");
@@ -13,7 +15,7 @@ public enum MenuType {
     
     private final String description;
     
-    MenuType(String description) {
+    TypeEnum(String description) {
         this.description = description;
     }
     
