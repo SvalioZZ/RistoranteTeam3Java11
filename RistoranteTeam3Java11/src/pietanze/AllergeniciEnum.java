@@ -1,13 +1,11 @@
 package pietanze;
 
-import java.util.Arrays;
 import java.util.List;
 
 
-//TODO forse erano gli allergeni?
-public enum Ingredient {
-    LATTOSIO(1,"Latte", "This courses countains milk and derivatives"),
-    GLUTINE(2,"Grano", "This courses countains gluten and derivatives"),
+public enum AllergeniciEnum {
+    LATTOSIO(1, "Latte", "This courses countains milk and derivatives"),
+    GLUTINE(2, "Grano", "This courses countains gluten and derivatives"),
     ARACHIDI(3, "Arachidi", "This courses countains arach and derivatives"),
     FRUTTA_A_GUSCIO(4, "Frutta a guscio", "This courses countains Walnuts and derivatives nuts"),
     SOIA(5, "Soia", "This courses countains Soia and derivatives"),
@@ -15,18 +13,20 @@ public enum Ingredient {
     PESCE(7, "Pesce", "This courses countains fish and derivatives"),
     CROSTACEI(8, "Crostacei", "This courses countains shellfish and derivatives"),
     SENAPE(9, "Senape", "This courses countains mustard and derivatives"),
-    SESAMO(10,"Sesamo","This courses countains sesame and derivatives"),
+    SESAMO(10, "Sesamo", "This courses countains sesame and derivatives"),
     SOLFITI(11, "Solfiti", "This courses countains sulfites and derivatives");
-
-    private List<Ingredient> ingredients;
+    
+    private List<AllergeniciEnum> ingredients;
     private String name;
     private String description;
     private int id;
-    Ingredient(int id , String name, String description) {
+    
+    AllergeniciEnum(int id, String name, String description) {
         this.name = name;
         this.id = id;
         this.description = description;
     }
+    
     public String getName() {
         return name;
     }
@@ -71,7 +71,7 @@ public enum Ingredient {
             }
         }
     }*/
-    public List<Ingredient> getIngredients() {
+    public List<AllergeniciEnum> getIngredients() {
         return ingredients;
     }
 }
