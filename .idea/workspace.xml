@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b5d932d-be23-4deb-9edb-f58c46afdb2a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="develop" />
+    <option name="OPTIONS">
+      <set>
+        <option value="INTERACTIVE" />
+      </set>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="try" />
+        <option name="rewordedMessage" value="try&#10;&#10;&#10;Update Beverages - Valerio Corallini - Update ToString&#10;&#10;&#10;Update Beverages - Valerio Corallini - Update ToString&#10;&#10;&#10;Update General Menu Instances&#10;&#10;&#10;Revert &quot;Update Beverages - Valerio Corallini - Update ToString&quot;&#10;&#10;This reverts commit 40d5afd64c2679c2ae5918a08c15ac78cecc6c78.&#10;&#10;&#10;Update Beverages - Valerio Corallini - Update ToString&#10;&#10;&#10;Revert &quot;try&quot;&#10;&#10;This reverts commit 8583404cbba6a8bf205ca4771197e354c9d681e7.&#10;&#10;&#10;Revert &quot;FirstCourse_Update2&quot;&#10;&#10;This reverts commit 8fc68e06&#10;&#10;&#10;Revert &quot;Update Beverages - Valerio Corallini - Update ToString&quot;&#10;&#10;This reverts commit 40d5afd64c2679c2ae5918a08c15ac78cecc6c78." />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="8fc68e06f2b1aed4a39f51343a36626a02a88f39" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Lm2OGHfRvPZ49fVQMrtwmX6xOX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vales/Desktop/RistoranteTeam3Java11&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;
+  }
+}</component>
+  <component name="Push.Settings">
+    <force-push-targets>
+      <force-push-target remote-path="origin" branch="develop" />
+    </force-push-targets>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vales\Desktop\RistoranteTeam3Java11\ristoranteJava" />
+      <recent name="C:\Users\vales\Desktop\RistoranteTeam3Java11" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RistoranteTeam3Java11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="OldProject.Main" />
+      <module name="RistoranteTeam3Java11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b5d932d-be23-4deb-9edb-f58c46afdb2a" name="Changes" comment="" />
+      <created>1676461903859</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676461903859</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Revert &quot;FirstCourse_Update2&quot;&#10;&#10;This reverts commit 8fc68e06">
+      <created>1678805498583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678805498583</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update Beverage class - Added some instances of Beverages in main">
+      <created>1680110397976</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680110397976</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update Beverage class - Added some methods and reviewing other stuff">
+      <created>1680111438123</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680111438123</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update Beverage class - Added some methods and reviewing other stuff">
+      <created>1680111540392</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680111540392</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update Beverage class - Refactoring of both Menu and Portate enum classes + others">
+      <created>1680189817042</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680189817042</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update Beverage class - Updating beverages class and parameters">
+      <created>1680191320148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680191320148</updated>
+    </task>
+    <task id="LOCAL-00007" summary="From here all okay">
+      <created>1680191712213</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680191712213</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Committing changes in class beverage">
+      <created>1680192516891</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680192516891</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Committing changes in class beverage _ new instance of Object Beverages Type">
+      <created>1680192898944</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680192898944</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Cleaning Code for class main(Beverages instances) and beverages">
+      <created>1680703807546</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680703807546</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Cleaning Code for Enums in general">
+      <created>1681298131383</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681298131383</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Cleaning code in General">
+      <created>1681298623275</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681298623275</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="afb49415-3315-4dcf-a9a0-d022b3a067c7">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="afb49415-3315-4dcf-a9a0-d022b3a067c7" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/develop" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="SHOW_PATCH_IN_EXPLORER" value="false" />
+    <MESSAGE value="Revert &quot;FirstCourse_Update2&quot;&#10;&#10;This reverts commit 8fc68e06" />
+    <MESSAGE value="Various Updates on the menu of team 3 java 11 - 2" />
+    <MESSAGE value="Update Beverage class - Added some instances of Beverages in main" />
+    <MESSAGE value="Update Beverage class - Added some methods and reviewing other stuff" />
+    <MESSAGE value="Update Beverage class - Refactoring of both Menu and Portate enum classes + others" />
+    <MESSAGE value="Update Beverage class - Updating beverages class and parameters" />
+    <MESSAGE value="From here all okay" />
+    <MESSAGE value="Committing changes in class beverage" />
+    <MESSAGE value="Committing changes in class beverage _ new instance of Object Beverages Type" />
+    <MESSAGE value="Cleaning Code for class main(Beverages instances) and beverages" />
+    <MESSAGE value="Cleaning Code for Enums in general" />
+    <MESSAGE value="Cleaning code in General" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning code in General" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
