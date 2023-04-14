@@ -1,7 +1,7 @@
 package pietanze;
 
-import static pietanze.AnsiUtility.*;
 
+import static pietanze.AnsiUtility.*;
 public class SecondCourses extends Portata {
 
     private boolean highProteinValue;

@@ -1,6 +1,8 @@
 import pietanze.*;
 
+import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 
 public class Main {
@@ -8,7 +10,10 @@ public class Main {
     public static void main(String[] args) {
     
         Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
-    
+
+        Ristorante ristorante = new Ristorante ("Gianfrancos Rosticceries", "Via dalle palle sudate");
+
+
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
         menu.addPortata(new Beverage("Sprite", "33cl", 2.99, 0, false));
         menu.addPortata(new Beverage("SevenUp", "33cl", 2.99, 0, false));
@@ -65,8 +70,22 @@ public class Main {
     
         // Stefano out
 
+
+        Map<Integer, Integer> mappaTavoli = new TreeMap<>();
+
         menu.printInfoMenu();
         menu.printMenu();
-        
+
+        ristorante.aggiungiEnumAMappa(mappaTavoli);
+
+        System.out.println(mappaTavoli);
+
+        mappaTavoli = ristorante.prenotaTavolo(4, mappaTavoli);
+
+        mappaTavoli = ristorante.prenotaTavolo(2, mappaTavoli);
+
+        System.out.println(mappaTavoli);
+
+
     }
 }
