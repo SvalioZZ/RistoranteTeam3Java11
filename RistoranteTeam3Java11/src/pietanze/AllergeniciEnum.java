@@ -15,8 +15,6 @@ public enum AllergeniciEnum {
     SENAPE(9, "Senape", "This courses countains mustard and derivatives"),
     SESAMO(10, "Sesamo", "This courses countains sesame and derivatives"),
     SOLFITI(11, "Solfiti", "This courses countains sulfites and derivatives");
-    
-    private List<AllergeniciEnum> ingredients;
     private String name;
     private String description;
     private int id;
@@ -48,7 +46,5 @@ public enum AllergeniciEnum {
         this.description = description;
     }
     
-    public List<AllergeniciEnum> getIngredients() {
-        return ingredients;
-    }
+
 }

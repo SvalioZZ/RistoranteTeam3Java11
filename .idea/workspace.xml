@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5d932d-be23-4deb-9edb-f58c46afdb2a" name="Changes" comment="" />
+    <list default="true" id="77f7bc68-565b-4ce6-a089-be35b604daff" name="Changes" comment="agg stats proj">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/AllergeniciEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/AllergeniciEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/FirstCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/FirstCourses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/Portata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/AllergeniciEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/AllergeniciEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/TypeEnumMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/TypeEnumMenu.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
