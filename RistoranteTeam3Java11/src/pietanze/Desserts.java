@@ -14,13 +14,15 @@ import static pietanze.AnsiUtility.*;
 
 public class Desserts extends Portata {
     private final boolean containFrozenIngredients;
+    private EnumSapidita dolcezza;
     private Set<EnumIngredienti> ingredienti;
 
     //TODO livello di dolcezza? un emumerato?
 
-    public Desserts(String name, double price, boolean containFrozenIngredients, Set<EnumIngredienti> ingredienti) {
+    public Desserts(String name, double price, boolean containFrozenIngredients, EnumSapidita dolcezza, Set<EnumIngredienti> ingredienti) {
         super(name, price, EnumPortate.DESSERT);
         this.containFrozenIngredients = containFrozenIngredients;
+        this.dolcezza = dolcezza;
         this.ingredienti = ingredienti;
     }
 
@@ -34,6 +36,14 @@ public class Desserts extends Portata {
 
     public boolean isContainFrozenIngredients() {
         return containFrozenIngredients;
+    }
+
+    public EnumSapidita getDolcezza() {
+        return dolcezza;
+    }
+
+    public void setDolcezza(EnumSapidita dolcezza) {
+        this.dolcezza = dolcezza;
     }
 
     /*public String cannotEat() {
