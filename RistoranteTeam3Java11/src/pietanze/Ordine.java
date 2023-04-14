@@ -13,7 +13,6 @@ public class Ordine {
 
     public Map<String, Double> ordine = new HashMap();
 
-
     public void addPortataToOrder(Portata portata){
 
         if (ordine.containsKey(portata.getName())){
