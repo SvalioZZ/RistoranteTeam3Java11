@@ -1,0 +1,44 @@
+<changelist name="Uncommitted_changes_before_Update_at_14_04_2023_15_18_[Changes]" date="1681478296517" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_04_2023_15_18_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 14/04/2023 15:18 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/Appetizers.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/Menu.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/TypeEnumMenu.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/Portata.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/PortateTypeEnum.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/Beverage.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/FirstCourses.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/RistoranteTeam3Java11/pietanze/Desserts.class" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>

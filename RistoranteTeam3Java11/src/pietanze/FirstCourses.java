@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import static pietanze.AnsiUtility.*;
 import static pietanze.AnsiUtility.ANSI_RESET;
-
 public class FirstCourses extends Portata {
     private boolean glutenFree;
     private double kCal;

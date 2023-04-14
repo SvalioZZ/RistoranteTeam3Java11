@@ -5,21 +5,28 @@ import java.util.List;
 import static pietanze.AnsiUtility.*;
 
 public class Portata {
-    
+
     private String name;
     private double price;
     private EnumPortate type;
-
-    private List<AllergeniciEnum> allergen;
-    
+    //private List<AllergeniciEnum> allergen;
     private String description;
     
     public Portata(String name, double price, EnumPortate type) {
         this.name = name;
         this.price = price;
         this.type = type;
+        // this.allergen = allergen;
     }
-    
+
+//    public List<AllergeniciEnum> getAllergen() {
+//        return allergen;
+//    }
+//
+//    public void setAllergen(List<AllergeniciEnum> allergen) {
+//        this.allergen = allergen;
+//    }
+
     public EnumPortate getType() {
         return type;
     }
