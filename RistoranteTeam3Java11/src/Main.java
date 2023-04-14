@@ -18,9 +18,9 @@ public class Main {
     
         menu.addPortata(new Beverage("Kozel Beer, anche alla spina", "66cl", 6.99, 6, true));
         menu.addPortata(new Beverage("MA.MA, anche alla spina", "66cl", 9.99, 9, true));
-        menu.addPortata(new Beverage("White Wine", "75cl", 12.99, 12, true));
-        menu.addPortata(new Beverage("Red Wine", "75cl", 12.99, 12, true));
-        menu.addPortata(new Beverage("Mirto", "30ml", 3.99, 40, true));
+        menu.addPortata(new Beverage("Capiroska", "50cl", 7.99, 15, true));
+        menu.addPortata(new Beverage("Aperol Spritz", "50cl", 7.99, 12, true));
+        menu.addPortata(new Beverage("Moscow Mule", "50cl", 7.99, 14, true));
         menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, 40, true));
     
     
