@@ -48,29 +48,6 @@ public enum AllergeniciEnum {
         this.description = description;
     }
     
-    //chiedere a michele se va bene come ragionamento
-    
-    /*public void isAllergenic() {
-        List<Ingredient> allergens = Arrays.asList(
-                Ingredient.LATTOSIO,
-                Ingredient.GLUTINE,
-                Ingredient.ARACHIDI,
-                Ingredient.FRUTTA_A_GUSCIO,
-                Ingredient.SOIA,
-                Ingredient.UOVA,
-                Ingredient.PESCE,
-                Ingredient.CROSTACEI,
-                Ingredient.SENAPE,
-                Ingredient.SESAMO,
-                Ingredient.SOLFITI
-        );
-
-        for (Ingredient ingredient : ingredients) {
-            if (allergens.contains(ingredient)) {
-                System.out.println(ingredient.getName() + " è un allergene");
-            }
-        }
-    }*/
     public List<AllergeniciEnum> getIngredients() {
         return ingredients;
     }
