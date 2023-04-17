@@ -6,28 +6,43 @@ import static pietanze.AnsiUtility.*;
 
 /**
  * La classe Desserts crea un costruttore che è usato per istanziare tutti i desserts
- * con nome, prezzo, se ha glutine o lattosio, e ha due metodi void che si potranno usare
- * per stampare i solo i dessert con o senza lattosio o solo i dessert con o senza glutine
+ * con nome, prezzo, tutti gli ingredienti del piatto se esso contiene glutine e lattosio. Ha tre metodi che verranno poi
+ * usati nel metodo di stampa per fornire tutte le informazioni necessarie per ogni piatto.
  *
  * @author "Stefano Devoti"
  */
 
 public class Desserts extends Portata {
     private final boolean containFrozenIngredients;
+    private final boolean glutenFree;
+    private final boolean lactoseFree;
     private EnumSapidita dolcezza;
     private Set<EnumIngredienti> ingredienti;
 
-    //TODO livello di dolcezza? un emumerato?
+    /**
+     * costruttore
+     */
 
-    public Desserts(String name, double price, boolean containFrozenIngredients, EnumSapidita dolcezza, Set<EnumIngredienti> ingredienti) {
+    public Desserts(String name, double price, boolean containFrozenIngredients, boolean glutenFree, boolean lactoseFree,
+                    EnumSapidita dolcezza, Set<EnumIngredienti> ingredienti) {
         super(name, price, EnumPortate.DESSERT);
         this.containFrozenIngredients = containFrozenIngredients;
+        this.glutenFree = glutenFree;
+        this.lactoseFree = lactoseFree;
         this.dolcezza = dolcezza;
         this.ingredienti = ingredienti;
     }
 
-    public Set<EnumIngredienti> getIngredienti() {
-        return ingredienti;
+    /**
+     * getter e setter
+     */
+
+    public boolean isGlutenFree() {
+        return glutenFree;
+    }
+
+    public boolean isLactoseFree() {
+        return lactoseFree;
     }
 
     public void setIngredienti(Set<EnumIngredienti> ingredienti) {
@@ -46,39 +61,39 @@ public class Desserts extends Portata {
         this.dolcezza = dolcezza;
     }
 
-    /*public String cannotEat() {
-        for (EnumIngredienti i : ingredienti) {
-            if (i.getAllergen().contains("lactose")) {
-                return "not suitable for lactose intolerant";
-            } else if (i.getAllergen().contains("gluten")) {
-                return "not suitable for gluten intolerant";
-            } else if (i.getAllergen().contains("IgE")) {
-                return ("not suitable for IgE intolerant");
-            } else if (i.getAllergen().contains("lisozima")) {
-                return ("not suitable for lisozima/eggs intolerant");
-            }
-        }
-        return "";
-    }*/
+    public Set<EnumIngredienti> getIngredienti() {
+        return ingredienti;
+    }
 
-    //TODO come si chiama questo metodo? print o get? quindi che devo fare nel corpo stampare o ritornare un valore?
+    /**
+     * Metodi che verranno utilizzati nella stampa successiva
+     **/
 
     public String getFrozenIngredients() {
         if (containFrozenIngredients) {
             return "*may contain frozen ingredients";
-        } else {
-            return "*fresh ingredients";
-        }
+        } else return "*fresh ingredients";
     }
 
+    public String infoLactose() {
+        if (isLactoseFree()) {
+            return "suitable for lactose intolerance";
+        } else return "not suitable for lactose intolerance";
+    }
+
+    public String infoGluten() {
+        if (isGlutenFree()) {
+            return "suitable fot gluten intolerance";
+        } else return "not suitable for gluten intolerance";
+    }
+
+    /* metodo di stampa che usa i metodi precedenti e aggiunge qualche colore*/
     @Override
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
-                                   + super.getName() + ": " + super.getPrice() +
-                                   " " + ANSI_YELLOW_BACKGROUND.getColor() + "( " +
-                                   // cannotEat() +
-                                   " )" +
-                                   " " + ANSI_WHITE_BACKGROUND.getColor() + getFrozenIngredients() + ANSI_RESET.getColor());
+                + super.getName() + ": " + super.getPrice()
+                + ANSI_YELLOW_BACKGROUND.getColor() + " (" + infoLactose() + ", " + infoGluten() +
+                ") " + ANSI_WHITE_BACKGROUND.getColor() + getFrozenIngredients() + ANSI_RESET.getColor());
 
     }
 }
