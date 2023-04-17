@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77f7bc68-565b-4ce6-a089-be35b604daff" name="Changes" comment="agg stats proj">
+    <list default="true" id="1b5d932d-be23-4deb-9edb-f58c46afdb2a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/km0.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/AllergeniciEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/AllergeniciEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/FirstCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/FirstCourses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/Portata.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/Portata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/AllergeniciEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/AllergeniciEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/TypeEnumMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RistoranteTeam3Java11/pietanze/TypeEnumMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/Appetizers.java" beforeDir="false" afterPath="$PROJECT_DIR$/RistoranteTeam3Java11/src/pietanze/Appetizers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +20,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -241,6 +239,11 @@
         <entry key="afb49415-3315-4dcf-a9a0-d022b3a067c7">
           <value>
             <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
               <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
               <option name="FILTERS">
                 <map>

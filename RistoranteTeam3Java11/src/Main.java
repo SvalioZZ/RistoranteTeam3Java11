@@ -20,31 +20,31 @@ public class Main {
         menu.addPortata(new Beverage("Ginger Beer", "66cl", 2.99, 0, false));
         menu.addPortata(new Beverage("Sparkling Water", "1,5l", 2.99, 0, false));
         menu.addPortata(new Beverage("Still Water", "1,5l", 2.99, 0, false));
-    
+
         menu.addPortata(new Beverage("Kozel Beer, anche alla spina", "66cl", 6.99, 6, true));
         menu.addPortata(new Beverage("MA.MA, anche alla spina", "66cl", 9.99, 9, true));
         menu.addPortata(new Beverage("Capiroska", "50cl", 7.99, 15, true));
         menu.addPortata(new Beverage("Aperol Spritz", "50cl", 7.99, 12, true));
         menu.addPortata(new Beverage("Moscow Mule", "50cl", 7.99, 14, true));
         menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, 40, true));
-    
-    
+
+
         // Valerio out
-    
-        menu.addPortata(new Appetizers("Liver crouton", 10.00, 0.4, false));
-        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99, 0.05, false));
-        menu.addPortata(new Appetizers("Chicken wings", 21.00, 1.4, true));
-        menu.addPortata(new Appetizers("Golden cheese", 120.00, 0.1, false));
-        menu.addPortata(new Appetizers("A whole boar", 23.99, 200, true));
-    
+
+        menu.addPortata(new Appetizers("Liver crouton", 10.00, 0.4, false, 10));
+        menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99, 0.05, false, 5));
+        menu.addPortata(new Appetizers("Chicken wings", 21.00, 1.4, true, 32));
+        menu.addPortata(new Appetizers("Golden cheese", 120.00, 0.1, false, 220));
+        menu.addPortata(new Appetizers("A whole boar", 23.99, 200, true, 1));
+
         // Kris out
-    
-        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50,false ,429.7, 1));
-        menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50,false,241.0,1.5));
-        menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50,false ,205.8,1));
-        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00,false ,250.0,0.5));
-        menu.addPortata(new FirstCourses("PastaPasticciata", 10,false ,400.0,1));
-    
+
+        menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50, false, 429.7, 1));
+        menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50, false, 241.0, 1.5));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Bolognese sauce", 12.50, false, 205.8, 1));
+        menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00, false, 250.0, 0.5));
+        menu.addPortata(new FirstCourses("PastaPasticciata", 10, false, 400.0, 1));
+
         // Daniele out
     
         menu.addPortata(new SecondCourses("Scallops with white wine", 15.00, false));

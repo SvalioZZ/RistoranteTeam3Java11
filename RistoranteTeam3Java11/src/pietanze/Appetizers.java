@@ -1,19 +1,18 @@
 package pietanze;
 
 import static pietanze.AnsiUtility.*;
-import static pietanze.AnsiUtility.ANSI_RESET;
 
-public class Appetizers extends Portata{
+public class Appetizers extends Portata implements km0 {
 
     private double weightAppetizerKg;
     private boolean canExplode;
+    private int distanceFromOrigin;
 
-
-    //TODO km0?
-    public Appetizers(String name, double price,double weightAppetizerKg,boolean canExplode) {
+    public Appetizers(String name, double price, double weightAppetizerKg, boolean canExplode, int distanceFromOrigin) {
         super(name, price, EnumPortate.APPETIZERS);
         this.weightAppetizerKg = weightAppetizerKg;
-        this.canExplode= canExplode;
+        this.canExplode = canExplode;
+        this.distanceFromOrigin = distanceFromOrigin;
     }
 
     public boolean getCanExplode() {
@@ -23,18 +22,28 @@ public class Appetizers extends Portata{
     public void setWeightAppetizerKg(double weightAppetizerKg) {
         this.weightAppetizerKg = weightAppetizerKg;
     }
+
     public void setCanExplode(boolean canExplode) {
         this.canExplode = canExplode;
     }
+
     public double getWeightAppetizerKg() {
         return weightAppetizerKg;
     }
 
+    public int getDistanceFromOrigin() {
+        return distanceFromOrigin;
+    }
+
+    public void setDistanceFromOrigin(int distanceFromOrigin) {
+        this.distanceFromOrigin = distanceFromOrigin;
+    }
+
     public String isExplosive() {
-        if(canExplode){
+        if (canExplode) {
             return "This can be your last meal. No pressure";
         } else {
-        return "No explosive agents found here";
+            return "No explosive agents found here";
         }
     }
 //    public double totalWeight(){
@@ -43,10 +52,19 @@ public class Appetizers extends Portata{
 
     @Override
     public void printPortata() {
-        System.out.println( ANSI_GREEN_BACKGROUND + ANSI_BLACK_CHARS
+        System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK_CHARS
                 + super.getName() + ": " + super.getPrice() + "€ " + " - "
                 + ANSI_WHITE_BACKGROUND + getWeightAppetizerKg() + " - "
                 + ANSI_RED_BACKGROUND + "(" + isExplosive() + ")" + " - "
+                + ANSI_BLUE_BACKGROUND + "(" + origin() + ")" + " - "
                 + ANSI_RESET);
+    }
+
+    @Override
+    public String origin() {
+        if (distanceFromOrigin < 50) {
+            return "This appetizer is km0";
+        } else
+            return "This appetizer is not km0";
     }
 }
