@@ -42,9 +42,9 @@ public class Menu {
     }
     
     public void printInfoMenu() {
-        System.out.println(ANSI_PURPLE_BACKGROUND + ANSI_BLACK_CHARS + "***" + this.getName() +
-                                   "***" + ANSI_RESET + "\n" + ANSI_PURPLE_BACKGROUND + ANSI_BLACK_CHARS +
-                                   "Type of the Menu: " + this.getType() + ANSI_RESET);
+        System.out.println(ANSI_PURPLE_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() + "***" + this.getName() +
+                                   "***" + ANSI_RESET.getColor() + "\n" + ANSI_PURPLE_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
+                                   "Type of the Menu: " + this.getType() + ANSI_RESET.getColor());
     }
     
     //TODO pensiamo come poter

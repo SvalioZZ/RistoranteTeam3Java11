@@ -73,12 +73,12 @@ public class Desserts extends Portata {
 
     @Override
     public void printPortata() {
-        System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS
+        System.out.println(ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
                                    + super.getName() + ": " + super.getPrice() +
-                                   " " + ANSI_YELLOW_BACKGROUND + "( " +
+                                   " " + ANSI_YELLOW_BACKGROUND.getColor() + "( " +
                                    // cannotEat() +
                                    " )" +
-                                   " " + ANSI_WHITE_BACKGROUND + getFrozenIngredients() + ANSI_RESET);
+                                   " " + ANSI_WHITE_BACKGROUND.getColor() + getFrozenIngredients() + ANSI_RESET.getColor());
 
     }
 }

@@ -74,12 +74,12 @@ public class FirstCourses extends Portata {
     // Metodo di stampa
     @Override
     public void printPortata() {
-        System.out.println( ANSI_GREEN_BACKGROUND + ANSI_BLACK_CHARS
+        System.out.println( ANSI_GREEN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
                 + super.getName() + ": " + super.getPrice() + "€ " + " - "
-                + ANSI_WHITE_BACKGROUND + printGlutenFree() + " - "
-                + ANSI_RED_BACKGROUND + "(" + getKCal() + ")" + " - "
-                + ANSI_PURPLE_BACKGROUND + getSalePrice() + "€ "
-                + ANSI_RESET);
+                + ANSI_WHITE_BACKGROUND.getColor() + printGlutenFree() + " - "
+                + ANSI_RED_BACKGROUND.getColor() + "(" + getKCal() + ")" + " - "
+                + ANSI_PURPLE_BACKGROUND.getColor() + getSalePrice() + "€ "
+                + ANSI_RESET.getColor());
     }
 
 }

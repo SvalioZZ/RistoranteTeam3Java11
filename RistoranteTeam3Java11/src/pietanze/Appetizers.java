@@ -52,12 +52,12 @@ public class Appetizers extends Portata implements km0 {
 
     @Override
     public void printPortata() {
-        System.out.println(ANSI_GREEN_BACKGROUND + ANSI_BLACK_CHARS
+        System.out.println(ANSI_GREEN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
                 + super.getName() + ": " + super.getPrice() + "€ " + " - "
-                + ANSI_WHITE_BACKGROUND + getWeightAppetizerKg() + " - "
-                + ANSI_RED_BACKGROUND + "(" + isExplosive() + ")" + " - "
-                + ANSI_BLUE_BACKGROUND + "(" + origin() + ")" + " - "
-                + ANSI_RESET);
+                + ANSI_WHITE_BACKGROUND.getColor() + getWeightAppetizerKg() + " - "
+                + ANSI_RED_BACKGROUND.getColor() + "(" + isExplosive() + ")" + " - "
+                + ANSI_BLUE_BACKGROUND.getColor() + "(" + origin() + ")" + " - "
+                + ANSI_RESET.getColor());
     }
 
     @Override

@@ -47,23 +47,23 @@ public class Beverage extends Portata {
     public void printPortata() {
         if (!isAlcoholic) {
             System.out.println(
-                    ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS +
+                    ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
                             super.getName() + ": " + this.capacity +
-                            " - " + super.getPrice() + ANSI_RESET
+                            " - " + super.getPrice() + ANSI_RESET.getColor()
             );
         } else {
             String newCapacity = "Small: 33cl - Medium: 50cl - Large: 89cl";
             if (!super.getName().contains("alla spina")) {
-                System.out.println(ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS +
+                System.out.println(ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
                                            super.getName() + ": " + this.capacity +
-                                           " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND + printAlcoholic() + ANSI_RESET);
+                                           " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND.getColor() + printAlcoholic() + ANSI_RESET.getColor());
             } else {
                 System.out.println(
-                        ANSI_CYAN_BACKGROUND + ANSI_BLACK_CHARS +
+                        ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
                                 super.getName() + ": " + this.capacity +
-                                " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND + printAlcoholic() + ANSI_RESET +
-                                "\n" + ANSI_BLACK_BACKGROUND + newCapacity + ANSI_RESET +
-                                "\n" + ANSI_BLACK_BACKGROUND + askWaitress() + ANSI_RESET
+                                " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND.getColor() + printAlcoholic() + ANSI_RESET.getColor() +
+                                "\n" + ANSI_BLACK_BACKGROUND.getColor() + newCapacity + ANSI_RESET.getColor() +
+                                "\n" + ANSI_BLACK_BACKGROUND.getColor() + askWaitress() + ANSI_RESET.getColor()
                 );
             }
         }

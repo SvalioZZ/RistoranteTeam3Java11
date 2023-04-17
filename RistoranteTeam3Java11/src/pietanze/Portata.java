@@ -53,7 +53,7 @@ public class Portata {
     
 
     public void printPortata() {
-        System.out.println(ANSI_BLACK_CHARS + ANSI_CYAN_BACKGROUND + name + " - " + price + ANSI_RESET);
+        System.out.println(ANSI_BLACK_CHARS.getColor() + ANSI_CYAN_BACKGROUND.getColor() + name + " - " + price + ANSI_RESET.getColor());
     }
 }
 
