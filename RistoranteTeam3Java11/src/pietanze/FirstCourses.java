@@ -1,10 +1,8 @@
 package pietanze;
 
-import java.util.List;
-import java.util.Scanner;
+import pietanze.enumerati.EnumPortate;
 
-import static pietanze.AnsiUtility.*;
-import static pietanze.AnsiUtility.ANSI_RESET;
+import static pietanze.enumerati.AnsiUtility.*;
 public class FirstCourses extends Portata {
     private boolean glutenFree;
     private double kCal;

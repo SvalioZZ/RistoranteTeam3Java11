@@ -1,4 +1,4 @@
-package pietanze;
+package pietanze.enumerati;
 
 public enum EnumPrenotazioniAsporti {
     PRENOTAZIONI_ASPORTI_1( 1, 4, 20.00),

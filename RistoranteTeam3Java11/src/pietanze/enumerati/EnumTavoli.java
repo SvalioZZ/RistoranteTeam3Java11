@@ -1,10 +1,14 @@
-package pietanze;
+package pietanze.enumerati;
 
 public enum EnumTavoli {
-    TAVOLO_1( 1, 4, "Tavolo per 2 persone"),
-    TAVOLO_2( 2, 4, "Tavolo per 4 persone"),
-    TAVOLO_3( 3, 2, "Tavolo per 6 persone"),
-    TAVOLO_4( 4, 2, "Tavolo per 10 persone");
+
+
+    //TODO riparlarne
+
+    TAVOLO_MEDIO(1, 4, "Tavolo per 2 persone"),
+    TAVOLO_2(2, 4, "Tavolo per 4 persone"),
+    TAVOLO_3(3, 2, "Tavolo per 6 persone"),
+    TAVOLO_4(4, 2, "Tavolo per 10 persone");
 
     private int disponibilitaTable;
     private String description;

@@ -1,5 +1,5 @@
 package pietanze;
 
-public interface km0 {
+public interface KmZeroInterface {
     public abstract String origin();
 }

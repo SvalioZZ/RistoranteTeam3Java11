@@ -1,6 +1,6 @@
-package pietanze;
+package pietanze.enumerati;
 
-import static pietanze.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtility.*;
 
 public enum EnumPortate {
     

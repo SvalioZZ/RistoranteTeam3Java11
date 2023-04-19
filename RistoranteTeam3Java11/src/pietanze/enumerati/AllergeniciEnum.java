@@ -1,7 +1,4 @@
-package pietanze;
-
-import java.util.List;
-
+package pietanze.enumerati;
 
 public enum AllergeniciEnum {
     LATTOSIO(1, "Latte", "This courses countains milk and derivatives"),

@@ -1,6 +1,8 @@
 package pietanze;
 
-import static pietanze.AnsiUtility.*;
+import pietanze.enumerati.EnumPortate;
+
+import static pietanze.enumerati.AnsiUtility.*;
 
 public class Beverage extends Portata {
     

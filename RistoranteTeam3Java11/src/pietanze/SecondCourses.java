@@ -1,7 +1,9 @@
 package pietanze;
 
 
-import static pietanze.AnsiUtility.*;
+import pietanze.enumerati.EnumPortate;
+
+import static pietanze.enumerati.AnsiUtility.*;
 public class SecondCourses extends Portata {
 
     private boolean highProteinValue;

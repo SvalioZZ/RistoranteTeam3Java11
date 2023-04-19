@@ -1,4 +1,6 @@
 import pietanze.*;
+import pietanze.enumerati.EnumIngredienti;
+import pietanze.enumerati.EnumSapidita;
 
 import java.util.Map;
 import java.util.Set;
@@ -77,6 +79,7 @@ public class Main {
         // Stefano out
 
 
+        //TODO usare un unica mappa
         Map<Integer, Integer> mappaTavoli = new TreeMap<>();
 
         menu.printInfoMenu();

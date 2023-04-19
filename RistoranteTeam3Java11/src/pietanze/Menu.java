@@ -1,10 +1,12 @@
 package pietanze;
 
+import pietanze.enumerati.EnumPortate;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static pietanze.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtility.*;
 
 public class Menu {
 

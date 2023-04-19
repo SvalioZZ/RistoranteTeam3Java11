@@ -1,8 +1,10 @@
 package pietanze;
 
-import static pietanze.AnsiUtility.*;
+import pietanze.enumerati.EnumPortate;
 
-public class Appetizers extends Portata implements km0 {
+import static pietanze.enumerati.AnsiUtility.*;
+
+public class Appetizers extends Portata implements KmZeroInterface {
 
     private double weightAppetizerKg;
     private boolean canExplode;
