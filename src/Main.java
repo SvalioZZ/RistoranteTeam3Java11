@@ -85,13 +85,10 @@ public class Main {
         menu.printInfoMenu();
         menu.printMenu();
 
-        ristorante.aggiungiEnumAMappa(mappaTavoli);
+        ristorante.aggiungiEnumAMappa();
 
         System.out.println(mappaTavoli);
 
-        mappaTavoli = ristorante.prenotaTavolo(4, mappaTavoli);
-
-        mappaTavoli = ristorante.prenotaTavolo(2, mappaTavoli);
 
         System.out.println(mappaTavoli);
 
