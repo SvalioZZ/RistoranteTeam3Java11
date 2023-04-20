@@ -1,6 +1,7 @@
 package pietanze;
 
 import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.TypeEnum;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,4 +1,4 @@
-package pietanze;
+package pietanze.enumerati;
 
 public enum TypeEnum {
     MEAT("Meat Based Menu"),

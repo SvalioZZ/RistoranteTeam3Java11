@@ -1,6 +1,7 @@
 import pietanze.*;
 import pietanze.enumerati.EnumIngredienti;
 import pietanze.enumerati.EnumSapidita;
+import pietanze.enumerati.TypeEnum;
 
 import java.util.Map;
 import java.util.Set;
