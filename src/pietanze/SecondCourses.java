@@ -5,12 +5,29 @@ import pietanze.enumerati.PortateEnum;
 
 import static pietanze.enumerati.AnsiUtilityEnum.*;
 
-/*
-La classe Second Courses stabilisce i secondi piatti
+/**
+ * Classe SecondCourses dove troviamo i metodi ereditati dalla classe Portata, presenti i getter and setter.
+ * Tramite questi parametri. Creiamo nel main oggetti di tipo SecondCourses.
+ * Inseriti nel printPortata valori enum per il colore dei caratteri.
+ *
+ * @author Giovanni Mauro
+ * @version 1.0
+ * @see pietanze.Portata
+ *
  */
 public class SecondCourses extends Portata {
 
+    /**
+     * Questo è il corpo della classe SecondCourses:
+     *
+     * @param name The name of the portata
+     * @param price The price of the portata
+     * @param highProteinValueParameter the value of the protein contained in the portata
+     *
+     * @return Ritorna una stringa contenente nome - prezzo - proteinValue
+     */
     private boolean highProteinValue;
+
     public SecondCourses(String name, double price, boolean highProteinValueParameter) {
         super(name, price, PortateEnum.SECOND);
         this.highProteinValue = highProteinValueParameter;
@@ -24,6 +41,11 @@ public class SecondCourses extends Portata {
         highProteinValue = highProteinValueParameter;
     }
 
+    /**
+     *
+     * @return Prendendo un valore booleano come input, restituisce "Contains more than 20gr of protein per 100gr"
+     * se True o "Contains less than 20gr of protein per 100gr" se falso
+     */
     public String returnProteinValue() {
         if (highProteinValue) {
             return "Contains more than 20gr of protein per 100gr";
@@ -32,6 +54,9 @@ public class SecondCourses extends Portata {
         }
     }
 
+    /**
+     * @return Il metodo di stampa della portata
+     */
     @Override
     public void printPortata() {
         System.out.println(ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
