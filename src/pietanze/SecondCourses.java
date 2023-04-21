@@ -4,6 +4,10 @@ package pietanze;
 import pietanze.enumerati.PortateEnum;
 
 import static pietanze.enumerati.AnsiUtilityEnum.*;
+
+/*
+La classe Second Courses stabilisce i secondi piatti
+ */
 public class SecondCourses extends Portata {
 
     private boolean highProteinValue;

@@ -10,11 +10,11 @@ public class Ristorante {
     //TODO inserire il tipo
     private String name;
     private String address;
-    
-    
-    //TODO sistemare
+
     private Map<Integer, Integer> mappaTavoli;
-    
+
+    //TODO sistemare
+
     public Ristorante(String name, String address) {
         this.name = name;
         this.address = address;
