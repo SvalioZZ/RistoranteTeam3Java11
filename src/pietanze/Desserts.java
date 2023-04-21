@@ -1,12 +1,12 @@
 package pietanze;
 
-import pietanze.enumerati.EnumIngredienti;
-import pietanze.enumerati.EnumPortate;
-import pietanze.enumerati.EnumSapidita;
+import pietanze.enumerati.IngredientiEnum;
+import pietanze.enumerati.PortateEnum;
+import pietanze.enumerati.SapiditaEnum;
 
 import java.util.Set;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 /**
  * La classe Desserts crea un costruttore che è usato per istanziare tutti i desserts
@@ -20,16 +20,16 @@ public class Desserts extends Portata {
     private final boolean containFrozenIngredients;
     private final boolean glutenFree;
     private final boolean lactoseFree;
-    private EnumSapidita dolcezza;
-    private Set<EnumIngredienti> ingredienti;
+    private SapiditaEnum dolcezza;
+    private Set<IngredientiEnum> ingredienti;
 
     /**
      * costruttore
      */
 
     public Desserts(String name, double price, boolean containFrozenIngredients, boolean glutenFree, boolean lactoseFree,
-                    EnumSapidita dolcezza, Set<EnumIngredienti> ingredienti) {
-        super(name, price, EnumPortate.DESSERT);
+                    SapiditaEnum dolcezza, Set<IngredientiEnum> ingredienti) {
+        super(name, price, PortateEnum.DESSERT);
         this.containFrozenIngredients = containFrozenIngredients;
         this.glutenFree = glutenFree;
         this.lactoseFree = lactoseFree;
@@ -49,7 +49,7 @@ public class Desserts extends Portata {
         return lactoseFree;
     }
 
-    public void setIngredienti(Set<EnumIngredienti> ingredienti) {
+    public void setIngredienti(Set<IngredientiEnum> ingredienti) {
         this.ingredienti = ingredienti;
     }
 
@@ -57,15 +57,15 @@ public class Desserts extends Portata {
         return containFrozenIngredients;
     }
 
-    public EnumSapidita getDolcezza() {
+    public SapiditaEnum getDolcezza() {
         return dolcezza;
     }
 
-    public void setDolcezza(EnumSapidita dolcezza) {
+    public void setDolcezza(SapiditaEnum dolcezza) {
         this.dolcezza = dolcezza;
     }
 
-    public Set<EnumIngredienti> getIngredienti() {
+    public Set<IngredientiEnum> getIngredienti() {
         return ingredienti;
     }
 

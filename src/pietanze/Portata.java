@@ -1,18 +1,18 @@
 package pietanze;
 
-import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.PortateEnum;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class Portata {
 
     private String name;
     private double price;
-    private EnumPortate type;
+    private PortateEnum type;
     //private List<AllergeniciEnum> allergen;
     private String description;
     
-    public Portata(String name, double price, EnumPortate type) {
+    public Portata(String name, double price, PortateEnum type) {
         this.name = name;
         this.price = price;
         this.type = type;
@@ -27,7 +27,7 @@ public class Portata {
 //        this.allergen = allergen;
 //    }
 
-    public EnumPortate getType() {
+    public PortateEnum getType() {
         return type;
     }
     

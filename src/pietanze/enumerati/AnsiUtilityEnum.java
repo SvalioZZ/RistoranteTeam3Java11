@@ -1,6 +1,6 @@
 package pietanze.enumerati;
 
-public enum AnsiUtility {
+public enum AnsiUtilityEnum {
 
     ANSI_BLACK_BACKGROUND("\u001B[40m", "sfondo nero"),
     ANSI_RED_BACKGROUND("\u001B[41m", "sfondo rosso"),
@@ -15,7 +15,7 @@ public enum AnsiUtility {
     private String color;
     private String description;
 
-    AnsiUtility(String color, String description) {
+    AnsiUtilityEnum(String color, String description) {
         this.color = color;
         this.description = description;
     }

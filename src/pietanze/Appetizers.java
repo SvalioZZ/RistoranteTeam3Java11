@@ -1,8 +1,8 @@
 package pietanze;
 
-import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.PortateEnum;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class Appetizers extends Portata implements KmZeroInterface {
 
@@ -11,7 +11,7 @@ public class Appetizers extends Portata implements KmZeroInterface {
     private int distanceFromOrigin;
 
     public Appetizers(String name, double price, double weightAppetizerKg, boolean canExplode, int distanceFromOrigin) {
-        super(name, price, EnumPortate.APPETIZERS);
+        super(name, price, PortateEnum.APPETIZERS);
         this.weightAppetizerKg = weightAppetizerKg;
         this.canExplode = canExplode;
         this.distanceFromOrigin = distanceFromOrigin;

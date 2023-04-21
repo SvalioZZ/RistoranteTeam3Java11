@@ -1,15 +1,15 @@
 package pietanze;
 
-import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.PortateEnum;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 public class FirstCourses extends Portata {
     private boolean glutenFree;
     private double kCal;
     private double salePrice;
 
     public FirstCourses(String name, double price, boolean glutenFree, double kCal, double salePrice) {
-        super(name, price, EnumPortate.FIRST);
+        super(name, price, PortateEnum.FIRST);
         this.glutenFree = glutenFree;
         this.kCal = kCal;
         this.salePrice = salePrice;

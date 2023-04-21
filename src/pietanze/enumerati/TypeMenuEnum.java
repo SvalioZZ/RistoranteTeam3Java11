@@ -1,6 +1,6 @@
 package pietanze.enumerati;
 
-public enum TypeEnumMenu {
+public enum TypeMenuEnum {
     
     MEAT("Meat Based Menu"),
     VEGAN("Vegan Based Menu"),
@@ -9,7 +9,7 @@ public enum TypeEnumMenu {
     EXPLOSIVE("Maybe your final menu");
     
     private final String nome;
-    TypeEnumMenu(String nome) {
+    TypeMenuEnum(String nome) {
         this.nome = nome;
     }
 

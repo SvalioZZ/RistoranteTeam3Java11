@@ -1,8 +1,8 @@
 package pietanze.enumerati;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
-public enum EnumPortate {
+public enum PortateEnum {
     
     BEVERAGES(1, "------- BEVANDE -------"),
     APPETIZERS(2, "------- ANTIPASTI -------"),
@@ -13,7 +13,7 @@ public enum EnumPortate {
     private final String nome;
     private final int key;
     
-    EnumPortate(int key, String nome) {
+    PortateEnum(int key, String nome) {
         this.nome =  nome ;
         this.key = key;
     }

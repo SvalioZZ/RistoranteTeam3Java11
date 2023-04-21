@@ -1,6 +1,6 @@
 package pietanze.enumerati;
 
-public enum EnumIngredienti {
+public enum IngredientiEnum {
     
     //probabile ci farà togliere il list.of all'interno della classe, chiedere
     
@@ -29,7 +29,7 @@ public enum EnumIngredienti {
     private String name;
     
     
-    EnumIngredienti(int id, String name) {
+    IngredientiEnum(int id, String name) {
         this.id = id;
         this.name = name;
         

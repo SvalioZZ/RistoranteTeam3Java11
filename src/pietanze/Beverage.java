@@ -1,8 +1,8 @@
 package pietanze;
 
-import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.PortateEnum;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class Beverage extends Portata {
     
@@ -11,7 +11,7 @@ public class Beverage extends Portata {
     private int alcoholPerc;
     
     public Beverage(String name, String capacity, double price, int alcoholPerc, boolean isAlcoholic) {
-        super(name, price, EnumPortate.BEVERAGES);
+        super(name, price, PortateEnum.BEVERAGES);
         this.capacity = capacity;
         this.isAlcoholic = isAlcoholic;
         this.alcoholPerc = alcoholPerc;

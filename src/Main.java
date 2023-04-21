@@ -1,6 +1,6 @@
 import pietanze.*;
-import pietanze.enumerati.EnumIngredienti;
-import pietanze.enumerati.EnumSapidita;
+import pietanze.enumerati.IngredientiEnum;
+import pietanze.enumerati.SapiditaEnum;
 import pietanze.enumerati.TypeEnum;
 
 import java.util.Map;
@@ -59,23 +59,23 @@ public class Main {
         // Giovanni ha frnut (he finished)
     
         menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false, false, false,
-                EnumSapidita.DOLCE, Set.of(EnumIngredienti.STRAWBERRIES, EnumIngredienti.EGGS, EnumIngredienti.CREAM_CHEESE,
-                EnumIngredienti.BUTTER, EnumIngredienti.DRY_BISCUITS, EnumIngredienti.SUGAR)));
+                SapiditaEnum.DOLCE, Set.of(IngredientiEnum.STRAWBERRIES, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
+                IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR)));
         menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00, false, false, false,
-                EnumSapidita.DOLCE, Set.of(EnumIngredienti.CHOCALATE,EnumIngredienti.EGGS, EnumIngredienti.CREAM_CHEESE,
-                EnumIngredienti.BUTTER, EnumIngredienti.DRY_BISCUITS, EnumIngredienti.SUGAR )));
+                SapiditaEnum.DOLCE, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
+                IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR )));
         menu.addPortata(new Desserts("Tiramisù", 10.00, false, false, false,
-                EnumSapidita.DOLCE, Set.of(EnumIngredienti.COFFEE, EnumIngredienti.EGGS, EnumIngredienti.MASCARPONE_CHEESE,
-                EnumIngredienti.SAVOIARDI_BISCUITS, EnumIngredienti.SUGAR, EnumIngredienti.COCOA)));
+                SapiditaEnum.DOLCE, Set.of(IngredientiEnum.COFFEE, IngredientiEnum.EGGS, IngredientiEnum.MASCARPONE_CHEESE,
+                IngredientiEnum.SAVOIARDI_BISCUITS, IngredientiEnum.SUGAR, IngredientiEnum.COCOA)));
         menu.addPortata(new Desserts("Apple Pie", 6.00, true, false, false,
-                EnumSapidita.AGRODOLCE, Set.of(EnumIngredienti.FLOUR, EnumIngredienti.APPLES, EnumIngredienti.EGGS,
-                EnumIngredienti.SUGAR, EnumIngredienti.YEAST, EnumIngredienti.BUTTER, EnumIngredienti.VANILLA)));
+                SapiditaEnum.AGRODOLCE, Set.of(IngredientiEnum.FLOUR, IngredientiEnum.APPLES, IngredientiEnum.EGGS,
+                IngredientiEnum.SUGAR, IngredientiEnum.YEAST, IngredientiEnum.BUTTER, IngredientiEnum.VANILLA)));
         menu.addPortata(new Desserts("Red Velvet Cake", 8.00, true, false, false,
-                EnumSapidita.DOLCISSIMO, Set.of(EnumIngredienti.FLOUR, EnumIngredienti.EGGS, EnumIngredienti.BUTTER,
-                EnumIngredienti.SUGAR, EnumIngredienti.MILK_CREAM, EnumIngredienti.RED_FOOD_COLORING)));
+                SapiditaEnum.DOLCISSIMO, Set.of(IngredientiEnum.FLOUR, IngredientiEnum.EGGS, IngredientiEnum.BUTTER,
+                IngredientiEnum.SUGAR, IngredientiEnum.MILK_CREAM, IngredientiEnum.RED_FOOD_COLORING)));
         menu.addPortata(new Desserts("Hazelnuts and chocolate Brownies", 5.00, true, true, true,
-                EnumSapidita.AMARO, Set.of(EnumIngredienti.CHOCALATE, EnumIngredienti.HAZELNUTS, EnumIngredienti.COCOA,
-                EnumIngredienti.SUGAR, EnumIngredienti.EGGS, EnumIngredienti.YEAST)));
+                SapiditaEnum.AMARO, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.HAZELNUTS, IngredientiEnum.COCOA,
+                IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST)));
     
         // Stefano out
 
@@ -86,7 +86,7 @@ public class Main {
         menu.printInfoMenu();
         menu.printMenu();
 
-        ristorante.aggiungiEnumAMappa();
+//        ristorante.aggiungiEnumAMappa();
 
         System.out.println(mappaTavoli);
 

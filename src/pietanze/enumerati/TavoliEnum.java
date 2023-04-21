@@ -1,6 +1,6 @@
 package pietanze.enumerati;
 
-public enum EnumTavoli {
+public enum TavoliEnum {
 
 
     //TODO riparlarne
@@ -14,7 +14,7 @@ public enum EnumTavoli {
     private String description;
     private int id;
 
-    EnumTavoli(int id, int disponibilitaTable, String description) {
+    TavoliEnum(int id, int disponibilitaTable, String description) {
         this.disponibilitaTable = disponibilitaTable;
         this.id = id;
         this.description = description;

@@ -1,14 +1,14 @@
 package pietanze;
 
 
-import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.PortateEnum;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 public class SecondCourses extends Portata {
 
     private boolean highProteinValue;
     public SecondCourses(String name, double price, boolean highProteinValueParameter) {
-        super(name, price, EnumPortate.SECOND);
+        super(name, price, PortateEnum.SECOND);
         this.highProteinValue = highProteinValueParameter;
     }
 

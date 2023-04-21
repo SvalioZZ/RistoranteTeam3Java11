@@ -1,6 +1,6 @@
 package pietanze.enumerati;
 
-public enum EnumPrenotazioniAsporti {
+public enum PrenotazioniAsportiEnum {
     PRENOTAZIONI_ASPORTI_1( 1, 4, 20.00),
     PRENOTAZIONI_ASPORTI_2( 2, 4, 21.00),
     PRENOTAZIONI_ASPORTI_3( 3, 4, 22.00),
@@ -10,7 +10,7 @@ public enum EnumPrenotazioniAsporti {
     private double orario;
     private int id;
 
-    EnumPrenotazioniAsporti(int id, int ordinazioniPossibili, double orario) {
+    PrenotazioniAsportiEnum(int id, int ordinazioniPossibili, double orario) {
         this.ordinazioniPossibili = ordinazioniPossibili;
         this.id = id;
         this.orario = orario;

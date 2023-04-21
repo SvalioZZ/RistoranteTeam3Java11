@@ -1,6 +1,6 @@
 package pietanze;
 
-import pietanze.enumerati.EnumTavoli;
+import pietanze.enumerati.TavoliEnum;
 
 import java.util.Map;
 
@@ -21,7 +21,7 @@ public class Ristorante {
     }
     
     public void aggiungiEnumAMappa() {
-        for (EnumTavoli tavolo : EnumTavoli.values()) {
+        for (TavoliEnum tavolo : TavoliEnum.values()) {
             mappaTavoli.put(tavolo.getId(), tavolo.getDisponibilitaTable());
         }
     }

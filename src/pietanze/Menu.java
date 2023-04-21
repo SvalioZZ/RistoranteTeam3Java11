@@ -1,13 +1,13 @@
 package pietanze;
 
-import pietanze.enumerati.EnumPortate;
+import pietanze.enumerati.PortateEnum;
 import pietanze.enumerati.TypeEnum;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static pietanze.enumerati.AnsiUtility.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class Menu {
 
@@ -53,7 +53,7 @@ public class Menu {
     //TODO pensiamo come poter
     public void printMenu() {
         portataList.sort(Comparator.comparing(Portata::getType));
-        EnumPortate currentType = null;
+        PortateEnum currentType = null;
         for (Portata portata : portataList) {
             if (portata.getType() != currentType) {
                 System.out.println("\n" + portata.getType().getNome());
