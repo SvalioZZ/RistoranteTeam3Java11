@@ -5,7 +5,7 @@ import pietanze.enumerati.PortateEnum;
 import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 /**
- * Questa è la classe beverage, all'interno troviamo tutti i metodi che erdita
+ * Questa è la classe beverage, all'interno troviamo tutti i metodi che eredita
  * dalla classe padre Portata, inseriti getter e setter di default, tramite questa classe
  * posso creare istanze di tipo Beverage (field a sé) all'interno del main.
  *
