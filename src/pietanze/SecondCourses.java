@@ -42,9 +42,9 @@ public class SecondCourses extends Portata {
     }
 
     /**
-     *
-     * @return Prendendo un valore booleano come input, restituisce "Contains more than 20gr of protein per 100gr"
-     * se True o "Contains less than 20gr of protein per 100gr" se falso
+     *  Prendendo un valore booleano come input, restituisce "Contains more than 20gr of protein per 100gr"
+     *      * se True o "Contains less than 20gr of protein per 100gr" se falso
+     * @return una stringa se contiene più o meno di 20gr di proteine
      */
     public String returnProteinValue() {
         if (highProteinValue) {
@@ -55,7 +55,8 @@ public class SecondCourses extends Portata {
     }
 
     /**
-     * @return Il metodo di stampa della portata
+     * Il metodo di stampa della portata
+     * @return Portata
      */
     @Override
     public void printPortata() {
