@@ -1,6 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/out/
 
 # User-specific stuff
 .idea/**/workspace.xml
