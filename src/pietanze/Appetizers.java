@@ -77,6 +77,8 @@ public class Appetizers extends Portata implements KmZeroInterface {
     /**
      * metodo ereditato da Portata che serve a stampare il menù utilizzando i colori
      */
+
+
     @Override
     public void printPortata() {
         System.out.println(ANSI_GREEN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()

@@ -1,5 +1,6 @@
 package pietanze;
 
+import pietanze.enumerati.AnsiUtilityEnum;
 import pietanze.enumerati.PortateEnum;
 
 import static pietanze.enumerati.AnsiUtilityEnum.*;
@@ -54,5 +55,10 @@ public class Portata {
 
     public void printPortata() {
         System.out.println(ANSI_BLACK_CHARS.getColor() + ANSI_CYAN_BACKGROUND.getColor() + name + " - " + price + ANSI_RESET.getColor());
+    }
+
+    //TODO guardare e chiedere ai tutor di rivedere l'overloaded
+    public void printPortata(AnsiUtilityEnum ansiUtilityEnum1,AnsiUtilityEnum ansiUtilityEnum2 ) {
+        System.out.println(ansiUtilityEnum1.getColor() + ansiUtilityEnum2.getColor() + name + " - " + price + ANSI_RESET.getColor());
     }
 }
