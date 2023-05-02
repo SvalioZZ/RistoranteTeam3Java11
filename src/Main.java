@@ -86,7 +86,8 @@ public class Main {
         menu.printInfoMenu();
         menu.printMenu();
 
-//        ristorante.aggiungiEnumAMappa();
+        ristorante.aggiungiEnumAMappa();
+
 
         System.out.println(mappaTavoli);
 

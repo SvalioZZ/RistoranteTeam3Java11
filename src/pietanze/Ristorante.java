@@ -26,14 +26,14 @@ public class Ristorante {
         }
     }
 
-//    public Map<Integer, Integer> prenotaTavolo(Integer idTavolo) {
-//
-//
-//        for (EnumTavoli enumTavoli : EnumTavoli.values()) {
-//            if (idTavolo == enumTavoli.getId()) {
-//                this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
-//            }
-//        }
+    public Map<Integer, Integer> prenotaTavolo(Integer idTavolo) {
+
+        for (TavoliEnum enumTavoli : TavoliEnum.values()) {
+            if (idTavolo == enumTavoli.getId()) {
+                this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
+            }
+        }
+
 //
 //        switch (idTavolo) {
 //
@@ -56,7 +56,7 @@ public class Ristorante {
 //
 //         return newMappaTavoli;
 //     }
-//}
+}
 
     public String getName() {
         return name;
