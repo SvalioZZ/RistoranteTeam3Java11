@@ -14,7 +14,7 @@ public class Main {
     
         Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
 
-        Ristorante ristorante = new Ristorante ("Gianfrancos Rosticceries", "Via dalle palle sudate");
+        Ristorante ristorante = new Ristorante ("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
 
 
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
@@ -78,21 +78,13 @@ public class Main {
                 IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST)));
     
         // Stefano out
-
-
-        //TODO usare un unica mappa
-        Map<Integer, Integer> mappaTavoli = new TreeMap<>();
-
+        
+        TreeMap<Integer, Integer> mappaTavoli = ristorante.aggiungiEnumAMappa();
+        
         menu.printInfoMenu();
         menu.printMenu();
-
-//        ristorante.aggiungiEnumAMappa();
-
-        System.out.println(mappaTavoli);
-
-
-        System.out.println(mappaTavoli);
-
-
+        
+        ristorante.prenotaTavolo(4);
+        System.out.println(ristorante);
     }
 }
