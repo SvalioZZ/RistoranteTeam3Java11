@@ -1,5 +1,6 @@
 package pietanze;
 
+import pietanze.enumerati.AnsiUtilityEnum;
 import pietanze.enumerati.TavoliEnum;
 import pietanze.enumerati.TypeEnum;
 
@@ -60,16 +61,18 @@ public class Ristorante {
 
 
     public void prenotaTavolo(Integer idTavolo) {
-        System.out.println();
-        printMappaTavoli();
-        System.out.println();
-        if (idTavolo > 4) System.out.println("Il tavolo selezionato non esiste");
-        else for (TavoliEnum enumTavoli : TavoliEnum.values()) {
-            if (idTavolo == enumTavoli.getId()) {
-                this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
+       
+            if (idTavolo > TavoliEnum.values().length) System.out.println("Il tavolo selezionato non esiste");
+            else for (TavoliEnum enumTavoli : TavoliEnum.values()) {
+                if (idTavolo == enumTavoli.getId()) {
+                    if (this.mappaTavoli.get(idTavolo) == 0) System.out.println(AnsiUtilityEnum.ANSI_BRIGHT_YELLOW_BACKGROUND.getCodice() +
+                                                                                        AnsiUtilityEnum.ANSI_BLACK.getCodice() +
+                                                                                        "Non è possibile prenotare il tavolo selezionato" +
+                                                                                        AnsiUtilityEnum.ANSI_RESET.getCodice());
+                    else this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
+                }
             }
-        }
-        printMappaTavoli();
+        
     }
 
     public void printMappaTavoli() {
@@ -77,11 +80,9 @@ public class Ristorante {
             System.out.print("Tavolo: " + entry.getKey() + " - Disponibilità: " + entry.getValue() + "\n");
         }
     }
-
-    @Override
-    public String toString() {
-        return "\nRistorante: " + getName() + "\n" +
-                "Tipo di Cucina: " + tipo.getDescription() + "\n" +
-                "Indirizzo: " + getAddress();
+    public void bigliettoDaVisita() {
+        System.out.println("\nRistorante: " + getName() + "\n" +
+                                   "Tipo di Cucina: " + tipo.getDescription() + "\n" +
+                                   "Indirizzo: " + getAddress());
     }
 }

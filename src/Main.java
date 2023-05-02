@@ -84,13 +84,12 @@ public class Main {
         menu.printInfoMenu();
         menu.printMenu();
 
+        ristorante.printMappaTavoli();
+        
         ristorante.prenotaTavolo(4);
-
-        ristorante.prenotaTavolo(4);
-
-        ristorante.prenotaTavolo(1);
-
-
-        System.out.println(ristorante);
+        
+        ristorante.printMappaTavoli();
+        
+        ristorante.bigliettoDaVisita();
     }
 }

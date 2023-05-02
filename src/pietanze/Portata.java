@@ -10,23 +10,14 @@ public class Portata {
     private String name;
     private double price;
     private PortateEnum type;
-    //private List<AllergeniciEnum> allergen;
+    
     private String description;
     
     public Portata(String name, double price, PortateEnum type) {
         this.name = name;
         this.price = price;
         this.type = type;
-        // this.allergen = allergen;
     }
-
-//    public List<AllergeniciEnum> getAllergen() {
-//        return allergen;
-//    }
-//
-//    public void setAllergen(List<AllergeniciEnum> allergen) {
-//        this.allergen = allergen;
-//    }
 
     public PortateEnum getType() {
         return type;
