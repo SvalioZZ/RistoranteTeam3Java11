@@ -85,6 +85,12 @@ public class Main {
         menu.printMenu();
         
         ristorante.prenotaTavolo(4);
+
+        ristorante.prenotaTavolo(4);
+
+        ristorante.prenotaTavolo(1);
+
+
         System.out.println(ristorante);
     }
 }
