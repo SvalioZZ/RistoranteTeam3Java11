@@ -19,44 +19,6 @@ public class Ristorante {
         this.mappaTavoli = new TreeMap<>();
         this.tipo = tipo;
     }
-    
-    public void aggiungiEnumAMappa() {
-        for (TavoliEnum tavolo : TavoliEnum.values()) {
-            mappaTavoli.put(tavolo.getId(), tavolo.getDisponibilitaTable());
-        }
-    }
-
-    public Map<Integer, Integer> prenotaTavolo(Integer idTavolo) {
-
-        for (TavoliEnum enumTavoli : TavoliEnum.values()) {
-            if (idTavolo == enumTavoli.getId()) {
-                this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
-            }
-        }
-
-//
-//        switch (idTavolo) {
-//
-//            case 1:
-//                newMappaTavoli.replace(1, newMappaTavoli.get(1) - 1);
-//                break;
-//            case 2:
-//                newMappaTavoli.replace(2, newMappaTavoli.get(2) - 1);
-//                break;
-//            case 3:
-//                newMappaTavoli.replace(3, newMappaTavoli.get(3) - 1);
-//                break;
-//            case 4:
-//                newMappaTavoli.replace(4, newMappaTavoli.get(4) - 1);
-//                break;
-//            default:
-//                 System.out.println("Statt accort");
-//                 break;
-//         }
-//
-//         return newMappaTavoli;
-//     }
-}
 
     public String getName() {
         return name;
