@@ -49,8 +49,6 @@ public class Menu {
                                    "***" + ANSI_RESET.getColor() + "\n" + ANSI_PURPLE_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
                                    "Type of the Menu: " + this.getType() + ANSI_RESET.getColor());
     }
-    
-    //TODO pensiamo come poter
     public void printMenu() {
         portataList.sort(Comparator.comparing(Portata::getType));
         PortateEnum currentType = null;
@@ -61,7 +59,5 @@ public class Menu {
             }
             portata.printPortata();
         }
-        
-        
     }
 }

@@ -1,13 +1,13 @@
 package pietanze.enumerati;
 
 public enum TypeEnum {
-    MEAT("Meat Based Menu"),
-    VEGAN("Vegan Based Menu"),
-    FISH ("Fish Based Menu"),
-    CHEF ("Chef Menu"),
-    HOUSE ("House Menu"),
-    DAY("Day Menu"),
-    TASTING ("Tasting Menu");
+    MEAT("A base di Carne"),
+    VEGAN("Vegano"),
+    FISH ("A base di Pesce"),
+    CHEF ("Menu dello Chef"),
+    HOUSE ("Menu della Casa"),
+    DAY("Menu del Giorno"),
+    TASTING ("Menu Degustazione");
 
     private final String description;
     
@@ -18,6 +18,4 @@ public enum TypeEnum {
     public String getDescription() {
         return description;
     }
-    
-    
 }
