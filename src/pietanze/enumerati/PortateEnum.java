@@ -19,7 +19,7 @@ public enum PortateEnum {
     }
 
     public String getNome() {
-        return ANSI_BLACK_CHARS.getColor() + ANSI_RED_BACKGROUND.getColor() + nome + ANSI_RESET.getColor();
+        return ANSI_BLACK_CHARS.getCodice() + ANSI_RED_BACKGROUND.getCodice() + nome + ANSI_RESET.getCodice();
     }
 
     public int getKey() {

@@ -167,12 +167,12 @@ public class FirstCourses extends Portata {
      */
     @Override
     public void printPortata() {
-        System.out.println( ANSI_GREEN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
+        System.out.println( ANSI_GREEN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice()
                 + super.getName() + ": " + super.getPrice() + "€ " + " - "
-                + ANSI_WHITE_BACKGROUND.getColor() + printGlutenFree() + " - "
-                + ANSI_RED_BACKGROUND.getColor() + "(" + getKCal() + ")" + " - "
-                + ANSI_PURPLE_BACKGROUND.getColor() + getSalePrice() + "€ "
-                + ANSI_RESET.getColor());
+                + ANSI_WHITE_BACKGROUND.getCodice() + printGlutenFree() + " - "
+                + ANSI_RED_BACKGROUND.getCodice() + "(" + getKCal() + ")" + " - "
+                + ANSI_PURPLE_BACKGROUND.getCodice() + getSalePrice() + "€ "
+                + ANSI_RESET.getCodice());
     }
 
 }

@@ -102,23 +102,23 @@ public class Beverage extends Portata {
     public void printPortata() {
         if (!isAlcoholic) {
             System.out.println(
-                    ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
+                    ANSI_CYAN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() +
                             super.getName() + ": " + this.capacity +
-                            " - " + super.getPrice() + ANSI_RESET.getColor()
+                            " - " + super.getPrice() + ANSI_RESET.getCodice()
             );
         } else {
             String newCapacity = "Small: 33cl - Medium: 50cl - Large: 89cl";
             if (!super.getName().contains("alla spina")) {
-                System.out.println(ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
+                System.out.println(ANSI_CYAN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() +
                                            super.getName() + ": " + this.capacity +
-                                           " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND.getColor() + printAlcoholic() + ANSI_RESET.getColor());
+                                           " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND.getCodice() + printAlcoholic() + ANSI_RESET.getCodice());
             } else {
                 System.out.println(
-                        ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
+                        ANSI_CYAN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() +
                                 super.getName() + ": " + this.capacity +
-                                " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND.getColor() + printAlcoholic() + ANSI_RESET.getColor() +
-                                "\n" + ANSI_BLACK_BACKGROUND.getColor() + newCapacity + ANSI_RESET.getColor() +
-                                "\n" + ANSI_BLACK_BACKGROUND.getColor() + askWaitress() + ANSI_RESET.getColor()
+                                " - " + super.getPrice() + " - " + ANSI_PURPLE_BACKGROUND.getCodice() + printAlcoholic() + ANSI_RESET.getCodice() +
+                                "\n" + ANSI_BLACK_BACKGROUND.getCodice() + newCapacity + ANSI_RESET.getCodice() +
+                                "\n" + ANSI_BLACK_BACKGROUND.getCodice() + askWaitress() + ANSI_RESET.getCodice()
                 );
             }
         }

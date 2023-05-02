@@ -3,7 +3,7 @@ import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.SapiditaEnum;
 import pietanze.enumerati.TypeEnum;
 
-import java.util.Map;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeMap;
 
@@ -11,10 +11,10 @@ import java.util.TreeMap;
 public class Main {
 
     public static void main(String[] args) {
-    
+
         Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
 
-        Ristorante ristorante = new Ristorante ("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
+        Ristorante ristorante = new Ristorante("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
 
 
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
@@ -49,21 +49,21 @@ public class Main {
         menu.addPortata(new FirstCourses("PastaPasticciata", 10, false, 400.0, 1));
 
         // Daniele out
-    
+
         menu.addPortata(new SecondCourses("Scallops with white wine", 15.00, false));
         menu.addPortata(new SecondCourses("Fillet with porcine mushrooms", 24.99, true));
         menu.addPortata(new SecondCourses("Sliced beef with rucola and grana", 18.99, false));
         menu.addPortata(new SecondCourses("Dolphin Thread", 29.99, true));
         menu.addPortata(new SecondCourses("Kobe's Thread (not Bryant)", 129.99, true));
-    
+
         // Giovanni ha frnut (he finished)
-    
+
         menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false, false, false,
                 SapiditaEnum.DOLCE, Set.of(IngredientiEnum.STRAWBERRIES, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
                 IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR)));
         menu.addPortata(new Desserts("Chocolate Cheesecake", 8.00, false, false, false,
                 SapiditaEnum.DOLCE, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
-                IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR )));
+                IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR)));
         menu.addPortata(new Desserts("Tiramisù", 10.00, false, false, false,
                 SapiditaEnum.DOLCE, Set.of(IngredientiEnum.COFFEE, IngredientiEnum.EGGS, IngredientiEnum.MASCARPONE_CHEESE,
                 IngredientiEnum.SAVOIARDI_BISCUITS, IngredientiEnum.SUGAR, IngredientiEnum.COCOA)));
@@ -76,14 +76,14 @@ public class Main {
         menu.addPortata(new Desserts("Hazelnuts and chocolate Brownies", 5.00, true, true, true,
                 SapiditaEnum.AMARO, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.HAZELNUTS, IngredientiEnum.COCOA,
                 IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST)));
-    
+
         // Stefano out
-        
+
         TreeMap<Integer, Integer> mappaTavoli = ristorante.aggiungiEnumAMappa();
-        
+
         menu.printInfoMenu();
         menu.printMenu();
-        
+
         ristorante.prenotaTavolo(4);
 
         ristorante.prenotaTavolo(4);

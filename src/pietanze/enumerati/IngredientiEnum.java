@@ -1,9 +1,6 @@
 package pietanze.enumerati;
 
 public enum IngredientiEnum {
-    
-    //probabile ci farà togliere il list.of all'interno della classe, chiedere
-    
     STRAWBERRIES(1, "Fragole"),
     CHOCALATE(2, "Cioccolato"),
     COCOA(3, "Cacao"),

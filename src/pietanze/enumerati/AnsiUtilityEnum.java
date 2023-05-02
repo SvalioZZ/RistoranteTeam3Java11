@@ -17,7 +17,7 @@ public enum AnsiUtilityEnum {
     ANSI_BRIGHT_BLACK_BACKGROUND("\u001B[100m", "sfondo nero chiaro"),
     ANSI_BRIGHT_RED_BACKGROUND("\u001B[101m", "sfondo rosso chiaro"),
     ANSI_BRIGHT_GREEN_BACKGROUND("\u001B[102m", "sfondo verde chiaro"),
-    ANSI_BRIGHT_YELLOW_BACKGROUN("\u001B[103m", "sfondo giallo chiaro"),
+    ANSI_BRIGHT_YELLOW_BACKGROUND("\u001B[103m", "sfondo giallo chiaro"),
     ANSI_BRIGHT_BLUE_BACKGROUND("\u001B[104m", "sfondo blue chiaro"),
     ANSI_BRIGHT_PURPLE_BACKGROUND("\u001B[105m", "sfondo viola chiaro"),
     ANSI_BRIGHT_CYAN_BACKGROUND("\u001B[106m", "sfondo azzurro chiaro"),
@@ -114,11 +114,11 @@ public enum AnsiUtilityEnum {
         this.description = description;
     }
 
-    public String getColor() {
+    public String getCodice() {
         return codice;
     }
 
-    public void setColor(String color) {
+    public void setCodice(String codice) {
         this.codice = codice;
     }
 

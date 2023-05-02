@@ -1,12 +1,24 @@
 package pietanze.enumerati;
 
 public enum SapiditaEnum {
-    AMARISSIMO(1), AMARO(2), DOLCE(3), DOLCISSIMO(4), SALATO(5), SALATISSIMO(6), SCIAPO(7), AGRODOLCE(8);
+    AMARISSIMO(1, "Amarissimo"), AMARO(2, "Amaro"), DOLCE(3, "Dolce"),
+    DOLCISSIMO(4, "Dolcissimo"), SALATO(5, "Salato"), SALATISSIMO(6, "Salatissimo"),
+    SCIAPO(7, "Senza Sale"), AGRODOLCE(8, "Agrodolce");
 
     private int id;
+    private String name;
 
-    SapiditaEnum(int id) {
+    SapiditaEnum(int id, String name) {
         this.id = id;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getId() {

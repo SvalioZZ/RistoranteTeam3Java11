@@ -45,9 +45,9 @@ public class Menu {
     }
     
     public void printInfoMenu() {
-        System.out.println(ANSI_PURPLE_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() + "***" + this.getName() +
-                                   "***" + ANSI_RESET.getColor() + "\n" + ANSI_PURPLE_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor() +
-                                   "Type of the Menu: " + this.getType() + ANSI_RESET.getColor());
+        System.out.println(ANSI_PURPLE_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() + "***" + this.getName() +
+                                   "***" + ANSI_RESET.getCodice() + "\n" + ANSI_PURPLE_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() +
+                                   "Type of the Menu: " + this.getType() + ANSI_RESET.getCodice());
     }
     public void printMenu() {
         portataList.sort(Comparator.comparing(Portata::getType));

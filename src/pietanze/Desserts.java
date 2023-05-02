@@ -4,7 +4,10 @@ import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.PortateEnum;
 import pietanze.enumerati.SapiditaEnum;
 
+import java.util.Arrays;
 import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static pietanze.enumerati.AnsiUtilityEnum.*;
 
@@ -26,14 +29,14 @@ public class Desserts extends Portata {
     private Set<IngredientiEnum> ingredienti;
 
     /**
+     * @param name                     valore stringa che indica il nome del piatto (super Portata)
+     * @param price                    valore intero che indica il prezzo del piatto (super Portata)
+     * @param containFrozenIngredients booleano che indica se nel piatto sono usati ingredienti che possono essere surgelati
+     * @param glutenFree               booleano che indica se il piatto contiene glutine
+     * @param lactoseFree              booleano che indica se il piatto è privo di lattosio
+     * @param dolcezza                 richiama la classe SapiditàEnum e indica il grado di dolcezza del piatto
+     * @param ingredienti              attraverso un List e la classe IngredientiEnum, elenca gli ingredienti del piatto
      * @constructor costruttore della classe
-     * @param name  valore stringa che indica il nome del piatto (super Portata)
-     * @param price  valore intero che indica il prezzo del piatto (super Portata)
-     * @param containFrozenIngredients  booleano che indica se nel piatto sono usati ingredienti che possono essere surgelati
-     * @param glutenFree  booleano che indica se il piatto contiene glutine
-     * @param lactoseFree  booleano che indica se il piatto è privo di lattosio
-     * @param dolcezza  richiama la classe SapiditàEnum e indica il grado di dolcezza del piatto
-     * @param ingredienti  attraverso un Set e la classe IngredientiEnum, elenca gli ingredienti del piatto
      */
 
     public Desserts(String name, double price, boolean containFrozenIngredients, boolean glutenFree, boolean lactoseFree,
@@ -48,6 +51,7 @@ public class Desserts extends Portata {
 
     /**
      * Getter per prendere il valore booleano glutenFree
+     *
      * @return glutenFree
      */
     public boolean isGlutenFree() {
@@ -56,6 +60,7 @@ public class Desserts extends Portata {
 
     /**
      * Getter per prendere il valore booleano lactoseFree
+     *
      * @return lactoseFree
      */
     public boolean isLactoseFree() {
@@ -64,6 +69,7 @@ public class Desserts extends Portata {
 
     /**
      * Setter per impostare gli ingredienti
+     *
      * @param ingredienti
      */
     public void setIngredienti(Set<IngredientiEnum> ingredienti) {
@@ -72,6 +78,7 @@ public class Desserts extends Portata {
 
     /**
      * Getter per prendere il valore booleano containFrozenIngredients
+     *
      * @return containFrozenIngredients
      */
     public boolean getContainFrozenIngredients() {
@@ -80,6 +87,7 @@ public class Desserts extends Portata {
 
     /**
      * Getter per prendere il valore dolcezza
+     *
      * @return dolcezza
      */
     public SapiditaEnum getDolcezza() {
@@ -88,6 +96,7 @@ public class Desserts extends Portata {
 
     /**
      * Setter per impostare il valore dolcezza
+     *
      * @param dolcezza
      */
     public void setDolcezza(SapiditaEnum dolcezza) {
@@ -96,6 +105,7 @@ public class Desserts extends Portata {
 
     /**
      * Getter per prendere il valore ingredienti
+     *
      * @return ingredienti
      */
     public Set<IngredientiEnum> getIngredienti() {
@@ -104,6 +114,7 @@ public class Desserts extends Portata {
 
     /**
      * Metodo che ritorna due stringhe differenti a seconda del caso che il valore sia true o false
+     *
      * @return true -> "*may contain frozen ingredients", false -> "*fresh ingredients"
      **/
     public String infoFrozenIngredients() {
@@ -114,6 +125,7 @@ public class Desserts extends Portata {
 
     /**
      * Metodo che ritorna due stringhe differenti a seconda del caso che il valore sia true o false
+     *
      * @return true -> "suitable for lactose intolerance", false -> "not suitable for lactose intolerance"
      */
     public String infoLactose() {
@@ -124,6 +136,7 @@ public class Desserts extends Portata {
 
     /**
      * Metodo che ritorna due stringhe differenti a seconda del caso che il valore sia true o false
+     *
      * @return true -> "suitable for gluten intolerance", false -> "not suitable for gluten intolerance"
      */
     public String infoGluten() {
@@ -135,14 +148,19 @@ public class Desserts extends Portata {
     /**
      * Metodo di stampa nel terminale ereditato dalla classe Portata che usa le stringhe ricavate dai metodi precedenti,
      * formatta, aggiunge qualche colore ai caratteri e gli sfondi ricavati dalla classe AnsiUtilityEnum.
+     *
      * @override metodo printPortata della classe Portata
      */
     @Override
     public void printPortata() {
-        System.out.println(ANSI_CYAN_BACKGROUND.getColor() + ANSI_BLACK_CHARS.getColor()
-                + super.getName() + ": " + super.getPrice()
-                + ANSI_YELLOW_BACKGROUND.getColor() + " (" + infoLactose() + ", " + infoGluten() +
-                ") " + ANSI_WHITE_BACKGROUND.getColor() + infoFrozenIngredients() + ANSI_RESET.getColor());
+        System.out.println(ANSI_CYAN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice()
+                + super.getName() + ": " + super.getPrice() + " " + ANSI_BRIGHT_YELLOW_BACKGROUND.getCodice()
+                + "(" + infoLactose() + ", " + infoGluten() + ")." + ANSI_RESET.getCodice());
+        System.out.println(ANSI_BRIGHT_WHITE_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice()
+                + "Ingredienti: " + getIngredienti() + " " + ANSI_WHITE_BACKGROUND.getCodice() + ANSI_ITALIC.getCodice()
+                + infoFrozenIngredients() + ANSI_RESET.getCodice());
+        System.out.println(ANSI_BRIGHT_GREEN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice()
+                + "Livello di dolcezza: " + getDolcezza().getName().toUpperCase() + ANSI_RESET.getCodice() + "\n");
 
     }
 }
