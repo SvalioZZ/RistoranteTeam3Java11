@@ -7,7 +7,8 @@ public enum TypeEnum {
     CHEF ("Menu dello Chef"),
     HOUSE ("Menu della Casa"),
     DAY("Menu del Giorno"),
-    TASTING ("Menu Degustazione");
+    TASTING ("Menu Degustazione"),
+    KID ("Menu Bambino");
 
     private final String description;
     

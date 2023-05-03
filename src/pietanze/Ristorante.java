@@ -15,8 +15,6 @@ public class Ristorante {
     //TODO dobbiamo passa un tavolo e  cliente
     private TreeMap<Integer, Integer> mappaTavoli;
 
-    //TODO inserire la capienza
-
     public Ristorante(String name, String address, TypeEnum tipo) {
         this.name = name;
         this.address = address;
@@ -83,6 +81,7 @@ public class Ristorante {
     }
 
     public void printMappaTavoli() {
+        System.out.println();
         for (Map.Entry<Integer, Integer> entry : mappaTavoli.entrySet()) {
             System.out.print("Tavolo: " + entry.getKey() + " - Disponibilità: " + entry.getValue() + "\n");
         }

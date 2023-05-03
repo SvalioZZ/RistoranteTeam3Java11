@@ -14,7 +14,7 @@ public class Main {
 
         Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
 
-        Ristorante ristorante = new Ristorante("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
+
 
 
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
@@ -32,15 +32,12 @@ public class Main {
         menu.addPortata(new Beverage("Amaro Del Capo", "30ml", 3.99, 40, true));
 
 
-        // Valerio out
-
         menu.addPortata(new Appetizers("Liver crouton", 10.00, 0.4, false, 10));
         menu.addPortata(new Appetizers("Crouton with tomatoes", 9.99, 0.05, false, 5));
         menu.addPortata(new Appetizers("Chicken wings", 21.00, 1.4, true, 32));
         menu.addPortata(new Appetizers("Golden cheese", 120.00, 0.1, false, 220));
         menu.addPortata(new Appetizers("A whole boar", 23.99, 200, true, 1));
 
-        // Kris out
 
         menu.addPortata(new FirstCourses("Pasta Pasta Rigatoni with Carbonara sauce", 14.50, false, 429.7, 1));
         menu.addPortata(new FirstCourses("Pasta Bucatini with Amatriciana sauce", 14.50, false, 241.0, 1.5));
@@ -48,7 +45,6 @@ public class Main {
         menu.addPortata(new FirstCourses("Pasta Spaghetti with Shrimp and Porcini Mushrooms", 18.00, false, 250.0, 0.5));
         menu.addPortata(new FirstCourses("PastaPasticciata", 10, false, 400.0, 1));
 
-        // Daniele out
 
         menu.addPortata(new SecondCourses("Scallops with white wine", 15.00, false));
         menu.addPortata(new SecondCourses("Fillet with porcine mushrooms", 24.99, true));
@@ -56,7 +52,6 @@ public class Main {
         menu.addPortata(new SecondCourses("Dolphin Thread", 29.99, true));
         menu.addPortata(new SecondCourses("Kobe's Thread (not Bryant)", 129.99, true));
 
-        // Giovanni ha frnut (he finished)
 
         menu.addPortata(new Desserts("Strawberries Cheesecake", 8.00, false, false, false,
                 SapiditaEnum.DOLCE, Set.of(IngredientiEnum.STRAWBERRIES, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
@@ -77,7 +72,8 @@ public class Main {
                 SapiditaEnum.AMARO, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.HAZELNUTS, IngredientiEnum.COCOA,
                 IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST)));
 
-        // Stefano out
+
+        Ristorante ristorante = new Ristorante("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
 
         TreeMap<Integer, Integer> mappaTavoli = ristorante.aggiungiEnumAMappa();
 

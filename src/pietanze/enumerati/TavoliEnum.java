@@ -3,8 +3,6 @@ package pietanze.enumerati;
 public enum TavoliEnum {
 
 
-    //TODO riparlarne
-
     TAVOLO_PER_DUE(1, 4, "Tavolo per 2 persone"),
     TAVOLO_PER_QUATTRO(2, 4, "Tavolo per 4 persone"),
     TAVOLO_PER_SEI(3, 2, "Tavolo per 6 persone"),
