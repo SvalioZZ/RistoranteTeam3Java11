@@ -12,7 +12,10 @@ public class Ristorante {
     private String name;
     private String address;
 
+    //TODO dobbiamo passa un tavolo e  cliente
     private TreeMap<Integer, Integer> mappaTavoli;
+
+    //TODO inserire la capienza
 
     public Ristorante(String name, String address, TypeEnum tipo) {
         this.name = name;
@@ -44,6 +47,7 @@ public class Ristorante {
     public void setTipo(TypeEnum tipo) {
         this.tipo = tipo;
     }
+
     public Map<Integer, Integer> getMappaTavoli() {
         return mappaTavoli;
     }
@@ -59,20 +63,23 @@ public class Ristorante {
         return this.mappaTavoli;
     }
 
-
+    //TODO rifattorizzare tutti i tipi primitivi come oggetti ovunque
     public void prenotaTavolo(Integer idTavolo) {
-       
-            if (idTavolo > TavoliEnum.values().length) System.out.println("Il tavolo selezionato non esiste");
-            else for (TavoliEnum enumTavoli : TavoliEnum.values()) {
-                if (idTavolo == enumTavoli.getId()) {
-                    if (this.mappaTavoli.get(idTavolo) == 0) System.out.println(AnsiUtilityEnum.ANSI_BRIGHT_YELLOW_BACKGROUND.getCodice() +
-                                                                                        AnsiUtilityEnum.ANSI_BLACK.getCodice() +
-                                                                                        "Non è possibile prenotare il tavolo selezionato" +
-                                                                                        AnsiUtilityEnum.ANSI_RESET.getCodice());
-                    else this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
+
+        if (idTavolo > TavoliEnum.values().length) System.out.println("Il tavolo selezionato non esiste");
+        else for (TavoliEnum enumTavoli : TavoliEnum.values()) {
+            if (idTavolo == enumTavoli.getId()) {
+                if (this.mappaTavoli.get(idTavolo) == 0) {
+                    System.out.println(AnsiUtilityEnum.ANSI_BRIGHT_YELLOW_BACKGROUND.getCodice() +
+                            AnsiUtilityEnum.ANSI_BLACK.getCodice() +
+                            "Non è possibile prenotare il tavolo selezionato" +
+                            AnsiUtilityEnum.ANSI_RESET.getCodice());
+                } else {
+                    this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
                 }
             }
-        
+        }
+
     }
 
     public void printMappaTavoli() {
@@ -80,9 +87,10 @@ public class Ristorante {
             System.out.print("Tavolo: " + entry.getKey() + " - Disponibilità: " + entry.getValue() + "\n");
         }
     }
+
     public void bigliettoDaVisita() {
         System.out.println("\nRistorante: " + getName() + "\n" +
-                                   "Tipo di Cucina: " + tipo.getDescription() + "\n" +
-                                   "Indirizzo: " + getAddress());
+                "Tipo di Cucina: " + tipo.getDescription() + "\n" +
+                "Indirizzo: " + getAddress());
     }
 }
