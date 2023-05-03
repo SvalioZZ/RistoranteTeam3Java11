@@ -26,7 +26,7 @@ public class Tavolo {
      * getter e setter
      */
 
-    public double getTavoloId() {
+    public int getTavoloId() {
         return tavoloId;
     }
 
@@ -48,5 +48,11 @@ public class Tavolo {
 
     public void setDescrizione(String descrizione) {
         this.descrizione = descrizione;
+    }
+
+
+    @Override
+    public String toString() {
+        return  descrizione + " - disponibilita: "  + disponibilitaTavolo;
     }
 }

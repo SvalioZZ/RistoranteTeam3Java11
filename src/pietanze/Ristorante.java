@@ -1,11 +1,9 @@
 package pietanze;
 
-import pietanze.enumerati.AnsiUtilityEnum;
-import pietanze.enumerati.TavoliEnum;
 import pietanze.enumerati.TypeEnum;
 
+import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class Ristorante {
     private TypeEnum tipo;
@@ -13,12 +11,12 @@ public class Ristorante {
     private String address;
 
     //TODO dobbiamo passa un tavolo e  cliente
-    private TreeMap<Integer, Integer> mappaTavoli;
+    private HashMap<Cliente, Tavolo> mappaTavoli;
 
     public Ristorante(String name, String address, TypeEnum tipo) {
         this.name = name;
         this.address = address;
-        this.mappaTavoli = new TreeMap<>();
+        this.mappaTavoli = new HashMap<>();
         this.tipo = tipo;
     }
 
@@ -46,44 +44,58 @@ public class Ristorante {
         this.tipo = tipo;
     }
 
-    public Map<Integer, Integer> getMappaTavoli() {
+    public Map<Cliente, Tavolo> getMappaTavoli() {
         return mappaTavoli;
     }
 
-    public void setMappaTavoli(TreeMap<Integer, Integer> mappaTavoli) {
+    public void setMappaTavoli(HashMap<Cliente, Tavolo> mappaTavoli) {
         this.mappaTavoli = mappaTavoli;
     }
 
-    public TreeMap<Integer, Integer> aggiungiEnumAMappa() {
-        for (TavoliEnum tavolo : TavoliEnum.values()) {
-            this.mappaTavoli.put(tavolo.getId(), tavolo.getDisponibilitaTable());
-        }
+
+
+    public HashMap<Cliente, Tavolo> prenotaOrdineRistorante (Cliente cliente, Tavolo tavolo){
+
+        this.mappaTavoli.put(cliente, tavolo);
+
+        printMappaTavoli();
+
+        tavolo.setDisponibilitaTavolo(tavolo.getDisponibilitaTavolo()-1);
+
         return this.mappaTavoli;
-    }
-
-    //TODO rifattorizzare tutti i tipi primitivi come oggetti ovunque
-    public void prenotaTavolo(Integer idTavolo) {
-
-        if (idTavolo > TavoliEnum.values().length) System.out.println("Il tavolo selezionato non esiste");
-        else for (TavoliEnum enumTavoli : TavoliEnum.values()) {
-            if (idTavolo == enumTavoli.getId()) {
-                if (this.mappaTavoli.get(idTavolo) == 0) {
-                    System.out.println(AnsiUtilityEnum.ANSI_BRIGHT_YELLOW_BACKGROUND.getCodice() +
-                            AnsiUtilityEnum.ANSI_BLACK.getCodice() +
-                            "Non è possibile prenotare il tavolo selezionato" +
-                            AnsiUtilityEnum.ANSI_RESET.getCodice());
-                } else {
-                    this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
-                }
-            }
-        }
 
     }
+
+//    public TreeMap<Integer, Integer> aggiungiEnumAMappa() {
+//        for (TavoliEnum tavolo : TavoliEnum.values()) {
+//            this.mappaTavoli.put(tavolo.getId(), tavolo.getDisponibilitaTable());
+//        }
+//        return this.mappaTavoli;
+//    }
+//
+//    //TODO rifattorizzare tutti i tipi primitivi come oggetti ovunque
+//    public void prenotaTavolo(Integer idTavolo) {
+//
+//        if (idTavolo > TavoliEnum.values().length) System.out.println("Il tavolo selezionato non esiste");
+//        else for (TavoliEnum enumTavoli : TavoliEnum.values()) {
+//            if (idTavolo == enumTavoli.getId()) {
+//                if (this.mappaTavoli.get(idTavolo) == 0) {
+//                    System.out.println(AnsiUtilityEnum.ANSI_BRIGHT_YELLOW_BACKGROUND.getCodice() +
+//                            AnsiUtilityEnum.ANSI_BLACK.getCodice() +
+//                            "Non è possibile prenotare il tavolo selezionato" +
+//                            AnsiUtilityEnum.ANSI_RESET.getCodice());
+//                } else {
+//                    this.mappaTavoli.replace(idTavolo, mappaTavoli.get(idTavolo) - 1);
+//                }
+//            }
+//        }
+//
+//    }
 
     public void printMappaTavoli() {
         System.out.println();
-        for (Map.Entry<Integer, Integer> entry : mappaTavoli.entrySet()) {
-            System.out.print("Tavolo: " + entry.getKey() + " - Disponibilità: " + entry.getValue() + "\n");
+        for (Map.Entry<Cliente, Tavolo> entry : mappaTavoli.entrySet()) {
+            System.out.print("Cliente: " + entry.getKey() + "\nTavolo: " + entry.getValue().getTavoloId() + "\n\n");
         }
     }
 

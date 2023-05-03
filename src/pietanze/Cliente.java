@@ -1,8 +1,7 @@
 package pietanze;
 
 public class Cliente {
-
-    private double ID;
+    private int ID;
     private int age;
     private String name;
     private String password;
@@ -12,8 +11,8 @@ public class Cliente {
     private long numeroDiTelefono;
     private long numeroCartaDiCredito;
 
-    public Cliente(int age, String name, String password, String address, String dieta, String email, long numeroDiTelefono, long numeroCartaDiCredito) {
-        this.ID = Math.random()*1000;
+    public Cliente(int ID, int age, String name, String password, String address, String dieta, String email, long numeroDiTelefono, long numeroCartaDiCredito) {
+        this.ID = ID;
         this.age = age;
         this.name = name;
         this.password = password;
@@ -24,7 +23,7 @@ public class Cliente {
         this.numeroCartaDiCredito = numeroCartaDiCredito;
     }
 
-    public double getID() {
+    public int getID() {
         return ID;
     }
 
@@ -94,5 +93,14 @@ public class Cliente {
 
     public void setNumeroCartaDiCredito(long numeroCartaDiCredito) {
         this.numeroCartaDiCredito = numeroCartaDiCredito;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Cliente: " +
+                "ID: " + ID +
+                ", name: '" + name + '\'' +
+                ", email: '" + email + '\'' ;
     }
 }

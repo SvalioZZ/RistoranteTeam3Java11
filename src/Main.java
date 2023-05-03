@@ -3,9 +3,7 @@ import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.SapiditaEnum;
 import pietanze.enumerati.TypeEnum;
 
-import java.util.List;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 
 public class Main {
@@ -72,19 +70,40 @@ public class Main {
                 SapiditaEnum.AMARO, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.HAZELNUTS, IngredientiEnum.COCOA,
                 IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST)));
 
-
-        Ristorante ristorante = new Ristorante("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
-
-        TreeMap<Integer, Integer> mappaTavoli = ristorante.aggiungiEnumAMappa();
-
         menu.printInfoMenu();
         menu.printMenu();
 
-        ristorante.printMappaTavoli();
-        
-        ristorante.prenotaTavolo(4);
-        
-        ristorante.printMappaTavoli();
+
+        Ristorante ristorante = new Ristorante("Gianfrancos Rosticceries", "Via dalle palle sudate", TypeEnum.MEAT);
+
+        Tavolo tavoloPer2 = new Tavolo(1, 4, "Tavolo per 2");
+        Tavolo tavoloPer4 = new Tavolo(2, 3, "Tavolo per 4");
+        Tavolo tavoloPer6 = new Tavolo(3, 5, "Tavolo per 6");
+        Tavolo tavoloPer10 = new Tavolo(4, 1, "Tavolo per 10");
+
+        Set<Tavolo> setTavoli = new HashSet<>();
+
+        setTavoli.add(tavoloPer2);
+        setTavoli.add(tavoloPer4);
+        setTavoli.add(tavoloPer6);
+        setTavoli.add(tavoloPer10);
+
+        Cliente cliente = new Cliente ((int)Math.round(Math.random()*100), 19, "Giovanni", "provola123", "Via casa mia",
+                    "Vegano", "giomauro27@gmail.com", 3331327482L, 52133127897L);
+
+        System.out.println(setTavoli);
+
+        HashMap<Cliente, Tavolo> mappaTavoli = ristorante.prenotaOrdineRistorante(cliente, tavoloPer4);
+
+        System.out.println(setTavoli);
+
+
+//
+//        ristorante.printMappaTavoli();
+//
+//        ristorante.prenotaTavolo(4);
+//
+//        ristorante.printMappaTavoli();
         
         ristorante.bigliettoDaVisita();
     }
