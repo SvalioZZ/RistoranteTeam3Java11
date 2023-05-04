@@ -95,7 +95,7 @@ public class Ristorante {
     public void printMappaTavoli() {
         System.out.println();
         for (Map.Entry<Cliente, Tavolo> entry : mappaTavoli.entrySet()) {
-            System.out.print("Cliente: " + entry.getKey() + "\nTavolo: " + entry.getValue().getTavoloId() + "\n\n");
+            System.out.print(entry.getKey() + "\nTavolo: " + entry.getValue().getTavoloId() + "\n\n");
         }
     }
 
