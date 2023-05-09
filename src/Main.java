@@ -3,6 +3,7 @@ import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.SapiditaEnum;
 import pietanze.enumerati.TypeEnum;
 
+import java.sql.*;
 import java.util.*;
 
 
@@ -98,6 +99,29 @@ public class Main {
         System.out.println(setTavoli);
 
 
+            // Open a connection
+            try{
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/main", "Giovanni", "");
+                Statement stmt = conn.createStatement();
+
+                ResultSet rs = stmt.executeQuery("SELECT * FROM MEAL" );
+                ResultSetMetaData rsmd = rs.getMetaData();
+                int columnsNumber = rsmd.getColumnCount();
+                while (rs.next()) {
+                    for (int i = 1; i <= columnsNumber; i++) {
+                        if (i > 1) System.out.print(",  ");
+                        String columnValue = rs.getString(i);
+                        System.out.print(rsmd.getColumnName(i) + ": " + columnValue);
+                    }
+                    System.out.println("");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+
+
+
 //
 //        ristorante.printMappaTavoli();
 //
@@ -105,6 +129,6 @@ public class Main {
 //
 //        ristorante.printMappaTavoli();
         
-        ristorante.bigliettoDaVisita();
+//        ristorante.bigliettoDaVisita();
     }
 }
