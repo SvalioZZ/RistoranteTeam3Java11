@@ -99,8 +99,9 @@ public class Main {
 
         System.out.println(setTavoli);
         
-        //Connessioni.selectAllQuery( "ingredient");
-        Connessioni.selectQuery("m.NAME", "MEAL m");
+        Connessioni.selectAllQuery( "meal ");
+        
+        Connessioni.selectQuery("meal_id", "meal");
 
 
 

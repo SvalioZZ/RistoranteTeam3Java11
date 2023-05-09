@@ -15,15 +15,15 @@ public class Connessioni {
         return conn;
     }
     
-    public static void selectAllQuery( String tableName) throws Exception {
+    public static void selectAllQuery(String tableName) throws Exception {
         Connection conn = connect();
         Statement stmt = conn.createStatement();
         
-        ResultSet rs = stmt.executeQuery("select * from " + tableName);
+        ResultSet rs = stmt.executeQuery("select * from " + tableName + ";");
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnsNum = rsmd.getColumnCount();
         while (rs.next()) {
-            for (int i = 1; i < columnsNum; i++) {
+            for (int i = 1; i <= columnsNum; i++) {
                 if (i > 1) System.out.print(" - ");
                 String columnValue = rs.getString(i);
                 System.out.print(rsmd.getColumnName(i) + ": " + columnValue);
@@ -43,7 +43,6 @@ public class Connessioni {
                 String columnValue = rs.getString(i);
                 System.out.print(rsmd.getColumnName(i) + ": " + columnValue);
             }
-            System.out.println();
         }
     }
 
