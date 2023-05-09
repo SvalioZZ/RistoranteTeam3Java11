@@ -1,4 +1,5 @@
 import pietanze.*;
+import pietanze.connections.Connessioni;
 import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.SapiditaEnum;
 import pietanze.enumerati.TypeEnum;
@@ -9,7 +10,7 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
 
@@ -97,27 +98,9 @@ public class Main {
         HashMap<Cliente, Tavolo> mappaTavoli = ristorante.prenotaOrdineRistorante(cliente, tavoloPer4);
 
         System.out.println(setTavoli);
-
-
-            // Open a connection
-            try{
-                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/main", "Giovanni", "");
-                Statement stmt = conn.createStatement();
-
-                ResultSet rs = stmt.executeQuery("SELECT * FROM MEAL" );
-                ResultSetMetaData rsmd = rs.getMetaData();
-                int columnsNumber = rsmd.getColumnCount();
-                while (rs.next()) {
-                    for (int i = 1; i <= columnsNumber; i++) {
-                        if (i > 1) System.out.print(",  ");
-                        String columnValue = rs.getString(i);
-                        System.out.print(rsmd.getColumnName(i) + ": " + columnValue);
-                    }
-                    System.out.println("");
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+        
+        //Connessioni.selectAllQuery( "ingredient");
+        Connessioni.selectQuery("m.NAME", "MEAL m");
 
 
 
