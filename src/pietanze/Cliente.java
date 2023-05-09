@@ -1,8 +1,8 @@
 package pietanze;
 
 public class Cliente {
-    private int ID;
-    private int age;
+    private Integer ID;
+    private Integer age;
     private String name;
     private String password;
     private String address;
@@ -11,7 +11,7 @@ public class Cliente {
     private long numeroDiTelefono;
     private long numeroCartaDiCredito;
 
-    public Cliente(int ID, int age, String name, String password, String address, String dieta, String email, long numeroDiTelefono, long numeroCartaDiCredito) {
+    public Cliente(Integer ID, Integer age, String name, String password, String address, String dieta, String email, long numeroDiTelefono, long numeroCartaDiCredito) {
         this.ID = ID;
         this.age = age;
         this.name = name;
@@ -23,7 +23,7 @@ public class Cliente {
         this.numeroCartaDiCredito = numeroCartaDiCredito;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
@@ -31,7 +31,7 @@ public class Cliente {
         this.ID = ID;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
