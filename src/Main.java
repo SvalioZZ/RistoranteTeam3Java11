@@ -99,20 +99,17 @@ public class Main {
 
         System.out.println(setTavoli);
         
-        Connessioni.selectAllQuery( "meal ");
+        /*Connessioni.selectAllQuery( "meal");
         
-        Connessioni.selectQuery("meal_id", "meal");
-
-
-
-
-//
-//        ristorante.printMappaTavoli();
-//
-//        ristorante.prenotaTavolo(4);
-//
-//        ristorante.printMappaTavoli();
+        Connessioni.selectQuery("name, vegan, vegetarian", "ingredient");
         
-//        ristorante.bigliettoDaVisita();
+        Connessioni.insertQuery(
+                "meal",
+                Arrays.asList("name", "price", "calories"),
+                Arrays.asList("Wagyu Beef Fillet", "20.99", "800")
+        );*/
+        Connessioni.deleteWhereQuery("meal", "meal_id", "7");
+        Connessioni.deleteWhereQuery("meal", "meal_id", "8");
+        Connessioni.selectAllQuery( "meal");
     }
 }
