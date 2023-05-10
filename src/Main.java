@@ -99,17 +99,6 @@ public class Main {
 
         System.out.println(setTavoli);
         
-        /*Connessioni.selectAllQuery( "meal");
-        
-        Connessioni.selectQuery("name, vegan, vegetarian", "ingredient");
-        
-        Connessioni.insertQuery(
-                "meal",
-                Arrays.asList("name", "price", "calories"),
-                Arrays.asList("Wagyu Beef Fillet", "20.99", "800")
-        );*/
-        Connessioni.deleteWhereQuery("meal", "meal_id", "7");
-        Connessioni.deleteWhereQuery("meal", "meal_id", "8");
-        Connessioni.selectAllQuery( "meal");
+        Connessioni.selectQuery("name, price, calories", "meal");
     }
 }

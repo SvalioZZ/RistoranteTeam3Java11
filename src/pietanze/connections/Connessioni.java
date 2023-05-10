@@ -7,20 +7,26 @@ import java.util.List;
 
 public class Connessioni {
     
-    private static String url = "jdbc:mysql://localhost:3306/my_database";
+    private static String url = "jdbc:mysql://localhost:3306/";
     private static String username = "root";
-    
     private static String password = "password";
+    private static Connection conn;
     
-    public static Connection connect() throws Exception {
-        Connection conn = DriverManager.getConnection(url, username, password);
+    static {
+        try {
+            conn = connect("my_database");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public Connessioni() throws Exception {
+    }
+    public static Connection connect(String dbName) throws Exception {
+        Connection conn = DriverManager.getConnection(url + dbName, username, password);
         return conn;
     }
-    
     public static void selectAllQuery(String tableName) throws Exception {
-        Connection conn = connect();
         Statement stmt = conn.createStatement();
-        
         ResultSet rs = stmt.executeQuery("select * from " + tableName + ";");
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnsNum = rsmd.getColumnCount();
@@ -33,9 +39,7 @@ public class Connessioni {
             System.out.println();
         }
     }
-    
     public static void selectQuery(String pointer, String tableName) throws Exception {
-        Connection conn = connect();
         Statement stmt = conn.createStatement();
         if (!pointer.equals("*")) {
             ResultSet rs = stmt.executeQuery("SELECT " + pointer + " FROM " + tableName + ";");
@@ -56,9 +60,7 @@ public class Connessioni {
         stmt.close();
         conn.close();
     }
-    
     public static void deleteWhereQuery(String tableName, String pointer, String dataValue) throws Exception {
-        Connection conn = connect();
         PreparedStatement ps = conn.prepareStatement(
                 "delete from " + tableName + " where " + pointer + " = ?;"
         );
@@ -71,18 +73,14 @@ public class Connessioni {
         ps.close();
         conn.close();
     }
-    
     public static void deleteAllFromQuery(String tableName) throws Exception {
-        Connection conn = connect();
         PreparedStatement ps = conn.prepareStatement("delete from " + tableName);
         int rowsDeleted = ps.executeUpdate();
         System.out.println(rowsDeleted + " rows deleted from table " + tableName);
         ps.close();
         conn.close();
     }
-    
     public static void insertQuery(String tableName, List<String> columnNames, List<String> values) throws Exception {
-        Connection conn = connect();
         PreparedStatement ps = conn.prepareStatement(
                 "INSERT INTO " + tableName + " (" + String.join(", ", columnNames) + ") VALUES (" +
                         String.join(", ", Collections.nCopies(columnNames.size(), "?")) + ")"
@@ -95,5 +93,4 @@ public class Connessioni {
         ps.close();
         conn.close();
     }
-    
 }
