@@ -11,6 +11,8 @@ public class Ristorante {
     private String address;
     private HashMap<Cliente, Tavolo> mappaTavoli;
 
+    //TODO dov'è la disponibilità dei tavoli? inserire la capacità del ristorante
+
     public Ristorante(String name, String address, TypeEnum tipo) {
         this.name = name;
         this.address = address;
@@ -53,6 +55,7 @@ public class Ristorante {
 
     public HashMap<Cliente, Tavolo> prenotaOrdineRistorante(Cliente cliente, Tavolo tavolo) {
 
+        //TODO e se arrivano più prenotazioni rispetto alla capienza del ristorante
         this.mappaTavoli.put(cliente, tavolo);
 
         printMappaTavoli();
@@ -62,9 +65,6 @@ public class Ristorante {
         return this.mappaTavoli;
 
     }
-
-
-//    //TODO rifattorizzare tutti i tipi primitivi come oggetti ovunque
 
 
     public void printMappaTavoli() {

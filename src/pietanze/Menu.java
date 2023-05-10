@@ -15,6 +15,8 @@ public class Menu {
     private List<Portata> portataList;
     private String name;
     private TypeEnum type;
+
+    private FirstCoursesDAO firstCoursesDAO;
     
     public Menu(String nome, TypeEnum type) {
         
@@ -41,6 +43,11 @@ public class Menu {
     }
     
     public void addPortata(Portata portata) {
+        //TODO qui fare la chiamata che aggiunge al database
+        if(portata.getType().equals(PortateEnum.FIRST)){
+            firstCoursesDAO.insert((FirstCourses)portata);
+        }
+
         portataList.add(portata);
     }
     

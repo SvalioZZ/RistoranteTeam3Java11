@@ -48,7 +48,6 @@ public class Portata {
         System.out.println(ANSI_BLACK_CHARS.getCodice() + ANSI_CYAN_BACKGROUND.getCodice() + name + " - " + price + ANSI_RESET.getCodice());
     }
 
-    //TODO guardare e chiedere ai tutor di rivedere l'overloaded
     public void printPortata(AnsiUtilityEnum ansiUtilityEnum1,AnsiUtilityEnum ansiUtilityEnum2 ) {
         System.out.println(ansiUtilityEnum1.getCodice() + ansiUtilityEnum2.getCodice() + name + " - " + price + ANSI_RESET.getCodice());
     }

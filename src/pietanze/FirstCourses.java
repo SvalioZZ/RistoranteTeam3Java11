@@ -20,6 +20,8 @@ public class FirstCourses extends Portata {
     private boolean glutenFree;
     private double kCal;
     private double salePrice;
+
+
     /**
      * Elenco Proprietà Costruttore:
      * @constructor costruttore di default.

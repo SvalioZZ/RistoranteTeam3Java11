@@ -6,27 +6,23 @@ import java.util.Collections;
 import java.util.List;
 
 public class Connessioni {
-    
-    private static String url = "jdbc:mysql://localhost:3306/";
+
+    //TODO spostare in una classe di utility
+    private static String url = "jdbc:mysql://localhost:3306/ristorante";
     private static String username = "root";
     private static String password = "password";
-    private static Connection conn;
-    
-    static {
-        try {
-            conn = connect("my_database");
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-    public Connessioni() throws Exception {
-    }
-    public static Connection connect(String dbName) throws Exception {
+    private static Connection conn = null;
+    String dbName;
+
+    //TODO sistemare
+
+    public static Connection connect() throws Exception {
+
         Connection conn = DriverManager.getConnection(url + dbName, username, password);
         return conn;
     }
     public static void selectAllQuery(String tableName) throws Exception {
-        Statement stmt = conn.createStatement();
+        Statement stmt = connect().createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + tableName + ";");
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnsNum = rsmd.getColumnCount();
@@ -70,6 +66,7 @@ public class Connessioni {
                 rowsDeleted + " rows eleted from " + tableName +
                         "\nWhere " + pointer + " is " + dataValue
         );
+
         ps.close();
         conn.close();
     }

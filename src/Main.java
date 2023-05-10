@@ -15,7 +15,8 @@ public class Main {
         Menu menu = new Menu("GinoBiscottino", TypeEnum.MEAT);
 
 
-
+        //Creazione menù
+        //creazione portate con chiave esterna sull'id del menu che avete creato
 
         menu.addPortata(new Beverage("Coca-Cola", "33cl", 2.99, 0, false));
         menu.addPortata(new Beverage("Sprite", "33cl", 2.99, 0, false));
