@@ -44,10 +44,9 @@ public class Menu {
     
     public void addPortata(Portata portata) {
         //TODO qui fare la chiamata che aggiunge al database
-        if(portata.getType().equals(PortateEnum.FIRST)){
-            firstCoursesDAO.insert((FirstCourses)portata);
-        }
-
+        //if(portata.getType().equals(PortateEnum.FIRST)){
+            //firstCoursesDAO.insert((FirstCourses)portata);
+        //}
         portataList.add(portata);
     }
     

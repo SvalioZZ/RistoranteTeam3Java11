@@ -8,17 +8,15 @@ import java.util.List;
 public class Connessioni {
 
     //TODO spostare in una classe di utility
-    private static String url = "jdbc:mysql://localhost:3306/ristorante";
+    private static String url = "jdbc:mysql://localhost:3306/my_database";
     private static String username = "root";
     private static String password = "password";
     private static Connection conn = null;
-    String dbName;
-
+    
     //TODO sistemare
 
     public static Connection connect() throws Exception {
-
-        Connection conn = DriverManager.getConnection(url + dbName, username, password);
+        conn = DriverManager.getConnection(url, username, password);
         return conn;
     }
     public static void selectAllQuery(String tableName) throws Exception {
@@ -36,7 +34,7 @@ public class Connessioni {
         }
     }
     public static void selectQuery(String pointer, String tableName) throws Exception {
-        Statement stmt = conn.createStatement();
+        Statement stmt = connect().createStatement();
         if (!pointer.equals("*")) {
             ResultSet rs = stmt.executeQuery("SELECT " + pointer + " FROM " + tableName + ";");
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -57,7 +55,7 @@ public class Connessioni {
         conn.close();
     }
     public static void deleteWhereQuery(String tableName, String pointer, String dataValue) throws Exception {
-        PreparedStatement ps = conn.prepareStatement(
+        PreparedStatement ps = connect().prepareStatement(
                 "delete from " + tableName + " where " + pointer + " = ?;"
         );
         ps.setString(1, dataValue);
@@ -71,14 +69,14 @@ public class Connessioni {
         conn.close();
     }
     public static void deleteAllFromQuery(String tableName) throws Exception {
-        PreparedStatement ps = conn.prepareStatement("delete from " + tableName);
+        PreparedStatement ps = connect().prepareStatement("delete from " + tableName);
         int rowsDeleted = ps.executeUpdate();
         System.out.println(rowsDeleted + " rows deleted from table " + tableName);
         ps.close();
         conn.close();
     }
     public static void insertQuery(String tableName, List<String> columnNames, List<String> values) throws Exception {
-        PreparedStatement ps = conn.prepareStatement(
+        PreparedStatement ps = connect().prepareStatement(
                 "INSERT INTO " + tableName + " (" + String.join(", ", columnNames) + ") VALUES (" +
                         String.join(", ", Collections.nCopies(columnNames.size(), "?")) + ")"
         );
