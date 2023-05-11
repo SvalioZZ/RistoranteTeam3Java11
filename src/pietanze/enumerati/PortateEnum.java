@@ -11,9 +11,9 @@ public enum PortateEnum {
     DESSERT(5, "------- DESSERTS -------");
     
     private final String nome;
-    private final int key;
+    private final Integer key;
     
-    PortateEnum(int key, String nome) {
+    PortateEnum(Integer key, String nome) {
         this.nome =  nome ;
         this.key = key;
     }
@@ -22,7 +22,7 @@ public enum PortateEnum {
         return ANSI_BLACK_CHARS.getCodice() + ANSI_RED_BACKGROUND.getCodice() + nome + ANSI_RESET.getCodice();
     }
 
-    public int getKey() {
+    public Integer getKey() {
         return key;
     }
 

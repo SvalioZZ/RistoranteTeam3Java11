@@ -22,17 +22,17 @@ public enum IngredientiEnum {
     RED_FOOD_COLORING(19, "Colorante alimentare rosso"),
     VANILLA(20, "Vaniglia");
     
-    private int id;
+    private Integer id;
     private String name;
     
     
-    IngredientiEnum(int id, String name) {
+    IngredientiEnum(Integer id, String name) {
         this.id = id;
         this.name = name;
         
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

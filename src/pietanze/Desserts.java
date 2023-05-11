@@ -4,15 +4,12 @@ import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.PortateEnum;
 import pietanze.enumerati.SapiditaEnum;
 
-import java.util.Arrays;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 /**
- * La classe Desserts ha un costruttore che è usato per istanziare tutti i desserts nel main
+ * La classe Desserts ha un costruttore che è usato per stanziare tutti i desserts nel main
  * con nome, prezzo, tutti gli ingredienti del piatto se esso contiene glutine e lattosio.
  * Ha tre metodi che verranno poi usati nel metodo di stampa per fornire tutte le informazioni necessarie per ogni piatto.
  *
@@ -22,9 +19,9 @@ import static pietanze.enumerati.AnsiUtilityEnum.*;
  */
 
 public class Desserts extends Portata {
-    private final boolean containFrozenIngredients;
-    private final boolean glutenFree;
-    private final boolean lactoseFree;
+    private final Boolean containFrozenIngredients;
+    private final Boolean glutenFree;
+    private final Boolean lactoseFree;
     private SapiditaEnum dolcezza;
     private Set<IngredientiEnum> ingredienti;
 
@@ -39,7 +36,7 @@ public class Desserts extends Portata {
      * @constructor costruttore della classe
      */
 
-    public Desserts(String name, double price, boolean containFrozenIngredients, boolean glutenFree, boolean lactoseFree,
+    public Desserts(String name, Double price, Boolean containFrozenIngredients, Boolean glutenFree, Boolean lactoseFree,
                     SapiditaEnum dolcezza, Set<IngredientiEnum> ingredienti) {
         super(name, price, PortateEnum.DESSERT);
         this.containFrozenIngredients = containFrozenIngredients;
@@ -54,7 +51,7 @@ public class Desserts extends Portata {
      *
      * @return glutenFree
      */
-    public boolean isGlutenFree() {
+    public Boolean isGlutenFree() {
         return glutenFree;
     }
 
@@ -63,7 +60,7 @@ public class Desserts extends Portata {
      *
      * @return lactoseFree
      */
-    public boolean isLactoseFree() {
+    public Boolean isLactoseFree() {
         return lactoseFree;
     }
 
@@ -81,7 +78,7 @@ public class Desserts extends Portata {
      *
      * @return containFrozenIngredients
      */
-    public boolean getContainFrozenIngredients() {
+    public Boolean getContainFrozenIngredients() {
         return containFrozenIngredients;
     }
 

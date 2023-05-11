@@ -5,10 +5,10 @@ public enum SapiditaEnum {
     DOLCISSIMO(4, "Dolcissimo"), SALATO(5, "Salato"), SALATISSIMO(6, "Salatissimo"),
     SCIAPO(7, "Senza Sale"), AGRODOLCE(8, "Agrodolce");
 
-    private int id;
+    private Integer id;
     private String name;
 
-    SapiditaEnum(int id, String name) {
+    SapiditaEnum(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -21,7 +21,7 @@ public enum SapiditaEnum {
         this.name = name;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

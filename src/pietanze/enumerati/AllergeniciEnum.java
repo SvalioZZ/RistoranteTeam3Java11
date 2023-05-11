@@ -14,9 +14,9 @@ public enum AllergeniciEnum {
     SOLFITI(11, "Solfiti", "This courses countains sulfites and derivatives");
     private String name;
     private String description;
-    private int id;
+    private Integer id;
     
-    AllergeniciEnum(int id, String name, String description) {
+    AllergeniciEnum(Integer id, String name, String description) {
         this.name = name;
         this.id = id;
         this.description = description;
@@ -28,7 +28,7 @@ public enum AllergeniciEnum {
     public void setName(String name) {
         this.name = name;
     }
-    public int getId() {
+    public Integer getId() {
         return id;
     }
     public void setId(int id) {
