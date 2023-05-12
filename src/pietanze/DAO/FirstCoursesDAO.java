@@ -1,4 +1,4 @@
-package pietanze;
+package pietanze.DAO;
 
 public class FirstCoursesDAO {
 

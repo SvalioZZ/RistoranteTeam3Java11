@@ -1,4 +1,4 @@
-package pietanze.connections;
+package connections;
 
 
 import java.sql.*;
@@ -8,19 +8,20 @@ import java.util.List;
 public class Connessioni {
 
     //TODO spostare in una classe di utility
-    private static String url = "jdbc:mysql://localhost:3306/my_database";
-    private static String username = "root";
-    private static String password = "password";
+    private static final String url = "jdbc:mysql://localhost:3306/my_database";
+    private static final String username = "root";
+    private static final String password = "password";
     private static Connection conn = null;
     
     //TODO sistemare
+
 
     public static Connection connect() throws Exception {
         conn = DriverManager.getConnection(url, username, password);
         return conn;
     }
     public static void selectAllQuery(String tableName) throws Exception {
-        Statement stmt = connect().createStatement();
+        Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + tableName + ";");
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnsNum = rsmd.getColumnCount();
@@ -32,9 +33,11 @@ public class Connessioni {
             }
             System.out.println();
         }
+        conn.close();
+
     }
     public static void selectQuery(String pointer, String tableName) throws Exception {
-        Statement stmt = connect().createStatement();
+        Statement stmt = conn.createStatement();
         if (!pointer.equals("*")) {
             ResultSet rs = stmt.executeQuery("SELECT " + pointer + " FROM " + tableName + ";");
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -51,17 +54,16 @@ public class Connessioni {
             System.out.println("Select another command, there's a method for that: " +
                                        "\nPointer used: " + pointer);
         }
-        stmt.close();
         conn.close();
     }
     public static void deleteWhereQuery(String tableName, String pointer, String dataValue) throws Exception {
-        PreparedStatement ps = connect().prepareStatement(
+        PreparedStatement ps = conn.prepareStatement(
                 "delete from " + tableName + " where " + pointer + " = ?;"
         );
         ps.setString(1, dataValue);
         int rowsDeleted = ps.executeUpdate();
         System.out.println(
-                rowsDeleted + " rows eleted from " + tableName +
+                rowsDeleted + " rows deleted from " + tableName +
                         "\nWhere " + pointer + " is " + dataValue
         );
 
@@ -69,14 +71,14 @@ public class Connessioni {
         conn.close();
     }
     public static void deleteAllFromQuery(String tableName) throws Exception {
-        PreparedStatement ps = connect().prepareStatement("delete from " + tableName);
+        PreparedStatement ps = conn.prepareStatement("delete from " + tableName);
         int rowsDeleted = ps.executeUpdate();
         System.out.println(rowsDeleted + " rows deleted from table " + tableName);
         ps.close();
         conn.close();
     }
     public static void insertQuery(String tableName, List<String> columnNames, List<String> values) throws Exception {
-        PreparedStatement ps = connect().prepareStatement(
+        PreparedStatement ps = conn.prepareStatement(
                 "INSERT INTO " + tableName + " (" + String.join(", ", columnNames) + ") VALUES (" +
                         String.join(", ", Collections.nCopies(columnNames.size(), "?")) + ")"
         );

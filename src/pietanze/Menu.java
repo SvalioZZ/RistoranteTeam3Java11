@@ -1,5 +1,7 @@
 package pietanze;
 
+import pietanze.DAO.DessertDAO;
+import pietanze.DAO.FirstCoursesDAO;
 import pietanze.enumerati.PortateEnum;
 import pietanze.enumerati.TypeEnum;
 
@@ -17,31 +19,32 @@ public class Menu {
     private TypeEnum type;
 
     private FirstCoursesDAO firstCoursesDAO;
-    
+    private DessertDAO dessertDao;
+
     public Menu(String nome, TypeEnum type) {
-        
+
         this.name = nome;
         this.type = type;
         this.portataList = new ArrayList<>();
-        
+
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public TypeEnum getType() {
         return type;
     }
-    
+
     public void setType(TypeEnum type) {
         this.type = type;
     }
-    
+
     public void addPortata(Portata portata) {
         //TODO qui fare la chiamata che aggiunge al database
         //if(portata.getType().equals(PortateEnum.FIRST)){
@@ -49,7 +52,7 @@ public class Menu {
         //}
         portataList.add(portata);
     }
-    
+
     public void printInfoMenu() {
         System.out.println(ANSI_PURPLE_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() + "***" + this.getName() +
                                    "***" + ANSI_RESET.getCodice() + "\n" + ANSI_PURPLE_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice() +

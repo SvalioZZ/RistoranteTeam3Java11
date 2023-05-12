@@ -1,10 +1,9 @@
 import pietanze.*;
-import pietanze.connections.Connessioni;
+import pietanze.DAO.DessertDAO;
 import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.SapiditaEnum;
 import pietanze.enumerati.TypeEnum;
 
-import java.sql.*;
 import java.util.*;
 
 
@@ -100,6 +99,13 @@ public class Main {
 
         System.out.println(setTavoli);
         
-        Connessioni.selectQuery("name, price, calories", "meal");
+//        Connessioni.selectQuery("name, price, calories", "meal");
+
+        DessertDAO desserts = new DessertDAO();
+        desserts.createTable();
+        //non funziona, errore sintassi MySQL, chiedere
+        desserts.insertDessert("Strawberries Cheesecake",8.0,false,false,false, SapiditaEnum.DOLCE);
+        desserts.printAllDesserts();
+
     }
 }
