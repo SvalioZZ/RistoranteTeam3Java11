@@ -6,19 +6,19 @@ public enum SapiditaEnum {
     SCIAPO(7, "Senza Sale"), AGRODOLCE(8, "Agrodolce");
 
     private Integer id;
-    private String name;
+    private String descrizione;
 
-    SapiditaEnum(Integer id, String name) {
+    SapiditaEnum(Integer id, String descrizione) {
         this.id = id;
-        this.name = name;
+        this.descrizione = descrizione;
     }
 
-    public String getName() {
-        return name;
+    public String getDescrizione() {
+        return descrizione;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescrizione(String name) {
+        this.descrizione = name;
     }
 
     public Integer getId() {

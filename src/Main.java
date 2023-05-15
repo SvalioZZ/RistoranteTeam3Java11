@@ -103,8 +103,8 @@ public class Main {
 
         DessertDAO desserts = new DessertDAO();
         desserts.createTable();
-        //non funziona, errore sintassi MySQL, chiedere
-        desserts.insertDessert("Strawberries Cheesecake",8.0,false,false,false, SapiditaEnum.DOLCE);
+
+        //desserts.insertDessert("Hazelnuts chocolate Brownies", 5.00, true, true, true, SapiditaEnum.AMARO);
         desserts.printAllDesserts();
 
     }

@@ -1,9 +1,9 @@
 package pietanze.DAO;
 
-import pietanze.Desserts;
 import pietanze.enumerati.SapiditaEnum;
 
 import java.sql.*;
+import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class DessertDAO {
     private static final String url = "jdbc:mysql://localhost:3306/my_database";
@@ -16,13 +16,14 @@ public class DessertDAO {
 
         String createQuery = """
                 CREATE TABLE IF NOT EXISTS Desserts
-                ( id_dessert INTEGER(10) NOT NULL AUTO_INCREMENT,
-                  name VARCHAR(30) NOT NULL,
+                ( id_dessert INTEGER NOT NULL AUTO_INCREMENT,
+                  name VARCHAR(50) NOT NULL,
                   price DOUBLE NOT NULL,
                   containFrozenIngredients BOOLEAN NOT NULL,
                   glutenFree BOOLEAN NOT NULL,
                   lactoseFree BOOLEAN NOT NULL,
                   dolcezza VARCHAR(30) NOT NULL,
+                  ingredienti varchar(30),
                   CONSTRAINT Desserts_pk PRIMARY KEY (id_dessert)
                 );
                 """;
@@ -37,10 +38,9 @@ public class DessertDAO {
         Connection conn = DriverManager.getConnection(url, username, password);
         Statement statement = conn.createStatement();
 
-        //chiedere per il Set<IngredientiEnum>, non fa fare il getName()
-        String insertQuery = "INSERT INTO Desserts (name, price, containFrozenIngredients, glutenFree, lactoseFree, dolcezza) VALUES ('"
-                + name + "', " + price + "', " + containFrozenIngredients + "', " + glutenFree + "', "
-                + lactoseFree + "', " + dolcezza.getName() + "');";
+        String insertQuery = "INSERT INTO my_database.desserts (name, price, containFrozenIngredients, glutenFree, lactoseFree, dolcezza)" +
+                " VALUES ('" + name + "', " + price + ", " + containFrozenIngredients + ", " + glutenFree +
+                ", " + lactoseFree + ", '" + dolcezza.getDescrizione() + "');";
 
         statement.executeUpdate(insertQuery);
         conn.close();
@@ -60,13 +60,13 @@ public class DessertDAO {
 
         while (resultSet.next()) {
             i = i + 1;
-            System.out.println(" name " + resultSet.getString("name") + i);
-            System.out.println(" price " + resultSet.getString("price") + i);
-            System.out.println(" containFrozenIngredients " + resultSet.getString("containFrozenIngredients") + i);
-            System.out.println(" glutenFree " + resultSet.getString("glutenFree") + i);
-            System.out.println(" lactoseFree " + resultSet.getString("lactoseFree") + i);
-            System.out.println(" dolcezza " + resultSet.getString("dolcezza") + i);
-            System.out.println(" ingredienti " + resultSet.getString("ingredienti") + i);
+            System.out.println(ANSI_RED_BACKGROUND.getCodice() + resultSet.getString("name") + ANSI_RESET.getCodice());
+            System.out.println("PREZZO: " + resultSet.getDouble("price"));
+            System.out.println("containFrozenIngredients: " + resultSet.getBoolean("containFrozenIngredients"));
+            System.out.println("glutenFree: " + resultSet.getBoolean("glutenFree"));
+            System.out.println("lactoseFree: " + resultSet.getBoolean("lactoseFree"));
+            System.out.println("Livello di dolcezza: " + resultSet.getString("dolcezza"));
+            System.out.println("Ingredienti: " + resultSet.getString("ingredienti") + "\n");
         }
         conn.close();
     }

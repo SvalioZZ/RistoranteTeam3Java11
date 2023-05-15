@@ -157,7 +157,7 @@ public class Desserts extends Portata {
                 + "Ingredienti: " + getIngredienti() + " " + ANSI_WHITE_BACKGROUND.getCodice() + ANSI_ITALIC.getCodice()
                 + infoFrozenIngredients() + ANSI_RESET.getCodice());
         System.out.println(ANSI_BRIGHT_GREEN_BACKGROUND.getCodice() + ANSI_BLACK_CHARS.getCodice()
-                + "Livello di dolcezza: " + getDolcezza().getName().toUpperCase() + ANSI_RESET.getCodice() + "\n");
+                + "Livello di dolcezza: " + getDolcezza().getDescrizione().toUpperCase() + ANSI_RESET.getCodice() + "\n");
 
     }
 }
