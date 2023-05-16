@@ -1,16 +1,18 @@
 package pietanze.DAO;
+
 import java.sql.*;
-import java.util.Collections;
 import java.util.List;
 
 /**
  * Classe DAO per il management delle istanze di tipo beverage
+ *
  * @author Valerio Corallini
  * @version 1.0
  */
 public class BeverageDAO {
     /**
      * Costruttore di default per lanciare le varie istruzioni sql
+     *
      * @throws SQLException
      */
     
@@ -20,9 +22,9 @@ public class BeverageDAO {
     
     /**
      * Istanza di connessione attiva
-     * @param conn = connessione al database tramite riferimento
-     *             alla classe ConnUtilityEnum;
      *
+     * @param conn = connessione al database tramite riferimento
+     * alla classe ConnUtilityEnum;
      */
     private final Connection conn = DriverManager.getConnection(
             ConnUtilityEnum.URL.getSqlUtil(),
@@ -32,10 +34,11 @@ public class BeverageDAO {
     
     /**
      * METODI CRUD
-     *
+     * <p>
      * Questo metodo generale legge la query quando viene richiamato il metodo,
      * crea in base alla stessa ciò che viene chiesto, all'interno del
      * database di riferimento.
+     *
      * @param query
      * @param tableName
      * @throws Exception
@@ -52,6 +55,7 @@ public class BeverageDAO {
     /**
      * Questo metodo invece di creare come l'update poco più su, in
      * questo caso chiama una query di read dei dati
+     *
      * @param query
      * @throws Exception
      */
@@ -75,23 +79,29 @@ public class BeverageDAO {
     
     /**
      * Questo metodo crea una tabella
+     *
      * @param tableName
      * @param columns
      * @throws SQLException
      */
     public void create(String tableName, List<String> columns) throws SQLException {
         PreparedStatement ps = conn.prepareStatement(
-                "create table " + tableName +
+                "create table if not exists my_database." + tableName +
                         " (" + String.join(", ", columns) + ");"
         );
-        System.out.println("Query executed successfully: \n" +
-                                   "Query: " + ps.toString());
+        System.out.println(
+                "Query executed successfully: \n" +
+                        "Query: \n" +
+                        ps.toString()
+        );
+        ps.executeUpdate();
         ps.close();
         conn.close();
     }
     
     /**
      * Questo metodo selezione tutto da una tabella
+     *
      * @param tableName
      * @throws Exception
      */
@@ -115,12 +125,14 @@ public class BeverageDAO {
      * Questo metodo seleziona specificatamente colonne della tabella
      * o se c'è un match per la stringa pointer con il valore '*'
      * esegui direttamente la selectAllQuery()
+     *
      * @param pointer
      * @param tableName
      * @throws Exception
      */
     public void selectQuery(String pointer, String tableName) throws Exception {
-        Statement stmt = conn.createStatement();;
+        Statement stmt = conn.createStatement();
+        ;
         if (!pointer.equals("*")) {
             ResultSet rs = stmt.executeQuery("SELECT " + pointer + " FROM " + tableName + ";");
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -139,10 +151,11 @@ public class BeverageDAO {
     
     /**
      * Questo metodo cancella tutto da una tabella e notifica l'utente
+     *
      * @param tableName
      * @throws Exception
      */
-    public  void deleteAllFromQuery(String tableName) throws Exception {
+    public void deleteAllFromQuery(String tableName) throws Exception {
         PreparedStatement ps = conn.prepareStatement("delete from " + tableName);
         int rowsDeleted = ps.executeUpdate();
         System.out.println(rowsDeleted + " rows deleted from table " + tableName);
@@ -153,6 +166,7 @@ public class BeverageDAO {
     /**
      * Questo metodo utilizza la clausola where per indicare cosa andare ad eliminare
      * nella tabella
+     *
      * @param tableName
      * @param pointer
      * @param dataValue

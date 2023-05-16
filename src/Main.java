@@ -1,4 +1,5 @@
 import pietanze.*;
+import pietanze.DAO.BeverageDAO;
 import pietanze.DAO.DessertDAO;
 import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.SapiditaEnum;
@@ -102,10 +103,21 @@ public class Main {
 //        Connessioni.selectQuery("name, price, calories", "meal");
 
         DessertDAO desserts = new DessertDAO();
-        desserts.createTable();
+        //desserts.createTable();
 
         //desserts.insertDessert("Hazelnuts chocolate Brownies", 5.00, true, true, true, SapiditaEnum.AMARO);
-        desserts.printAllDesserts();
+        //desserts.printAllDesserts();
+        
+        BeverageDAO bevDao = new BeverageDAO();
+        bevDao.create("beverage", Arrays.asList(
+                "ID int auto_increment primary key",
+                "name varchar(255) not null",
+                "price double not null",
+                "tipo varchar(255) not null",
+                "capienza varchar(255) not null",
+                "alcolico boolean not null",
+                "percentualeAlcohol int not null")
+        );
 
     }
 }
