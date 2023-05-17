@@ -23,9 +23,9 @@ public class Ordine {
      * @return una mappa contenente le portate ordinate dal cliente, basate su Nome della portata
      * come chiave, e prezzo della stessa come valore.
      */
-    private final int perc1 = 15;
-    private final int perc2 = 18;
-    private final int perc3 = 22;
+    private final Integer perc1 = 15;
+    private final Integer perc2 = 18;
+    private final Integer perc3 = 22;
 
     public Map<String, Double> ordine = new HashMap();
 
@@ -70,8 +70,8 @@ public class Ordine {
      * @return una variabile double contenente il prezzo totale dell'ordine
      */
     public double calculateTotalImport(){
-        double total = 0;
-        for (double value: ordine.values()) {
+        Double total = 0.0;
+        for (Double value: ordine.values()) {
             total += value;
         }
         return total;
@@ -93,8 +93,8 @@ public class Ordine {
      * @param perc
      * @return calcola e ritorna il prezzo finale con l'aggiunta della mancia scelta.
      */
-    public String applyTipPerc (int perc){
-        double total = (calculateTotalImport()*perc)/100;
+    public String applyTipPerc (Integer perc){
+        Double total = (calculateTotalImport()*perc)/100;
         return "The total import is: " + total;
     }
 }

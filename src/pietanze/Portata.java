@@ -8,7 +8,7 @@ import static pietanze.enumerati.AnsiUtilityEnum.*;
 public class Portata {
 
     private String name;
-    private double price;
+    private Double price;
     private PortateEnum type;
     
     private String description;
@@ -27,11 +27,11 @@ public class Portata {
         return name;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
     
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
     

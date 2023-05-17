@@ -5,8 +5,8 @@ package pietanze;
  * @author Kristian
  */
 public class Tavolo {
-    private int tavoloId;
-    private int disponibilitaTavolo;
+    private Integer tavoloId;
+    private Integer disponibilitaTavolo;
     private String descrizione;
 
     /**
@@ -16,7 +16,7 @@ public class Tavolo {
      * @param descrizione
      */
 
-    public Tavolo(int tavoloId, int disponibilitaTavolo, String descrizione) {
+    public Tavolo(Integer tavoloId, Integer disponibilitaTavolo, String descrizione) {
         this.tavoloId = tavoloId;
         this.disponibilitaTavolo = disponibilitaTavolo;
         this.descrizione = descrizione;
@@ -26,19 +26,19 @@ public class Tavolo {
      * getter e setter
      */
 
-    public int getTavoloId() {
+    public Integer getTavoloId() {
         return tavoloId;
     }
 
-    public void setTavoloId(int tavoloId) {
+    public void setTavoloId(Integer tavoloId) {
         this.tavoloId = tavoloId;
     }
 
-    public int getDisponibilitaTavolo() {
+    public Integer getDisponibilitaTavolo() {
         return disponibilitaTavolo;
     }
 
-    public void setDisponibilitaTavolo(int disponibilitaTavolo) {
+    public void setDisponibilitaTavolo(Integer disponibilitaTavolo) {
         this.disponibilitaTavolo = disponibilitaTavolo;
     }
 

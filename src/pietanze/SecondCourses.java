@@ -26,18 +26,18 @@ public class SecondCourses extends Portata {
      *
      * @return Ritorna una stringa contenente nome - prezzo - proteinValue
      */
-    private boolean highProteinValue;
+    private Boolean highProteinValue;
 
-    public SecondCourses(String name, double price, boolean highProteinValueParameter) {
+    public SecondCourses(String name, Double price, Boolean highProteinValueParameter) {
         super(name, price, PortateEnum.SECOND);
         this.highProteinValue = highProteinValueParameter;
     }
 
-    public boolean isHighProteinValue() {
+    public Boolean isHighProteinValue() {
         return highProteinValue;
     }
 
-    public void setHighProteinValue(boolean highProteinValueParameter) {
+    public void setHighProteinValue(Boolean highProteinValueParameter) {
         highProteinValue = highProteinValueParameter;
     }
 
