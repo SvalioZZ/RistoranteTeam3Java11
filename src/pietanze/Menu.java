@@ -1,7 +1,5 @@
 package pietanze;
 
-import pietanze.DAO.DessertDAO;
-import pietanze.DAO.FirstCoursesDAO;
 import pietanze.enumerati.PortateEnum;
 import pietanze.enumerati.TypeEnum;
 
@@ -17,9 +15,6 @@ public class Menu {
     private List<Portata> portataList;
     private String name;
     private TypeEnum type;
-
-    private FirstCoursesDAO firstCoursesDAO;
-    private DessertDAO dessertDao;
 
     public Menu(String nome, TypeEnum type) {
 
