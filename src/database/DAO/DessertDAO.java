@@ -1,24 +1,21 @@
-package pietanze.DAO;
+package database.DAO;
 
+import database.utility.Connector;
 import pietanze.Desserts;
-import pietanze.enumerati.SapiditaEnum;
 
 import java.sql.*;
 import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class DessertDAO {
-    private static final String url = "jdbc:mysql://localhost:3306/my_database";
-    private static final String username = "root";
-    private static final String password = "password";
-
     public void createTable() throws SQLException {
-        Connection conn = DriverManager.getConnection(url, username, password);
+        Connection conn = Connector.getConnection();
+
         Statement statement = conn.createStatement();
 
         String createQuery = """
                 CREATE TABLE IF NOT EXISTS Desserts
                 ( id_dessert INTEGER NOT NULL AUTO_INCREMENT,
-                  name VARCHAR(50) NOT NULL,
+                  name VARCHAR(50) UNIQUE NOT NULL,
                   price DOUBLE NOT NULL,
                   containFrozenIngredients BOOLEAN NOT NULL,
                   glutenFree BOOLEAN NOT NULL,
@@ -33,10 +30,8 @@ public class DessertDAO {
         System.out.println("Tabella Desserts creata");
     }
 
-    //TODO sistamare
     public void insertDessert(Desserts desserts) throws SQLException {
-
-        Connection conn = DriverManager.getConnection(url, username, password);
+        Connection conn = Connector.getConnection();
         Statement statement = conn.createStatement();
 
         String insertQuery = "INSERT INTO my_database.desserts (name, price, containFrozenIngredients, glutenFree, lactoseFree, dolcezza)" +
@@ -48,8 +43,19 @@ public class DessertDAO {
         System.out.println("Tabella Desserts popolata");
     }
 
+    public void deleteAllDesserts() throws SQLException {
+        Connection conn = Connector.getConnection();
+        Statement statement = conn.createStatement();
+
+        String deleteQuery = "DELETE * FROM my_database.Desserts";
+
+        statement.executeUpdate(deleteQuery);
+        conn.close();
+        System.out.println("Tabella Dessert svuotata");
+    }
+
     public void printAllDesserts() throws SQLException {
-        Connection conn = DriverManager.getConnection(url, username, password);
+        Connection conn = Connector.getConnection();
         Statement statement = conn.createStatement();
 
         String printQuery = """

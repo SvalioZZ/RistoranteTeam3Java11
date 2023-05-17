@@ -1,6 +1,6 @@
 import pietanze.*;
-import pietanze.DAO.BeverageDAO;
-import pietanze.DAO.DessertDAO;
+import database.DAO.BeverageDAO;
+import database.DAO.DessertDAO;
 import pietanze.enumerati.IngredientiEnum;
 import pietanze.enumerati.PortateEnum;
 import pietanze.enumerati.SapiditaEnum;
@@ -92,40 +92,63 @@ public class Main {
         setTavoli.add(tavoloPer6);
         setTavoli.add(tavoloPer10);
 
-        Cliente cliente = new Cliente ((int)Math.round(Math.random()*100), 19, "Giovanni", "provola123", "Via casa mia",
-                    "Vegano", "giomauro27@gmail.com", 3331327482L, 52133127897L);
+        Cliente cliente = new Cliente((int) Math.round(Math.random() * 100), 19, "Giovanni", "provola123", "Via casa mia",
+                "Vegano", "giomauro27@gmail.com", 3331327482L, 52133127897L);
 
         System.out.println(setTavoli);
 
         HashMap<Cliente, Tavolo> mappaTavoli = ristorante.prenotaOrdineRistorante(cliente, tavoloPer4);
 
         System.out.println(setTavoli);
-        
+
 //        Connessioni.selectQuery("name, price, calories", "meal");
 
-        Desserts desserts =  new Desserts("Tiramisù", 10.00, false, false, false,
+        Desserts tiramisu = new Desserts("Tiramisù", 10.00, false, false, false,
                 SapiditaEnum.DOLCE, Set.of(IngredientiEnum.COFFEE, IngredientiEnum.EGGS, IngredientiEnum.MASCARPONE_CHEESE,
                 IngredientiEnum.SAVOIARDI_BISCUITS, IngredientiEnum.SUGAR, IngredientiEnum.COCOA));
+        Desserts chocoCheesecake = new Desserts("Chocolate Cheesecake", 8.00, false, false, false,
+                SapiditaEnum.DOLCE, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
+                IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR));
+        Desserts strawCheesecake = new Desserts("Strawberries Cheesecake", 8.00, false, false, false,
+                SapiditaEnum.DOLCE, Set.of(IngredientiEnum.STRAWBERRIES, IngredientiEnum.EGGS, IngredientiEnum.CREAM_CHEESE,
+                IngredientiEnum.BUTTER, IngredientiEnum.DRY_BISCUITS, IngredientiEnum.SUGAR));
+        Desserts applePie = new Desserts("Apple Pie", 6.00, true, false, false,
+                SapiditaEnum.AGRODOLCE, Set.of(IngredientiEnum.FLOUR, IngredientiEnum.APPLES, IngredientiEnum.EGGS,
+                IngredientiEnum.SUGAR, IngredientiEnum.YEAST, IngredientiEnum.BUTTER, IngredientiEnum.VANILLA));
+        Desserts redVelvet = new Desserts("Red Velvet Cake", 8.00, true, false, false,
+                SapiditaEnum.DOLCISSIMO, Set.of(IngredientiEnum.FLOUR, IngredientiEnum.EGGS, IngredientiEnum.BUTTER,
+                IngredientiEnum.SUGAR, IngredientiEnum.MILK_CREAM, IngredientiEnum.RED_FOOD_COLORING));
+        Desserts brownies = new Desserts("Hazelnuts and chocolate Brownies", 5.00, true, true, true,
+                        SapiditaEnum.AMARO, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.HAZELNUTS, IngredientiEnum.COCOA,
+                        IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST));
+
         DessertDAO dessertDao = new DessertDAO();
+
         dessertDao.createTable();
-        dessertDao.insertDessert(desserts);
-        //desserts.insertDessert("Hazelnuts chocolate Brownies", 5.00, true, true, true, SapiditaEnum.AMARO);
+
+        dessertDao.insertDessert(tiramisu);
+        dessertDao.insertDessert(chocoCheesecake);
+        dessertDao.insertDessert(strawCheesecake);
+        dessertDao.insertDessert(applePie);
+        dessertDao.insertDessert(redVelvet);
+        dessertDao.insertDessert(brownies);
+
         dessertDao.printAllDesserts();
-        
+
         BeverageDAO bevDao = new BeverageDAO();
         bevDao.create("beverage", List.of(
                 "ID int auto_increment primary key",
-                "name varchar(255) not null",
+                "name varchar(255) UNIQUE not null",
                 "price double not null",
                 "tipo varchar(255) not null",
                 "capienza varchar(255) not null",
                 "alcolico boolean not null",
                 "percentualeAlcohol int not null")
         );
-        
+
         bevDao.insertInto(
                 List.of("name", "price", "tipo", "capienza", "alcolico", "percentualeAlcohol"),
-                List.of("Coca-Cola", "2.99", String.valueOf(PortateEnum.BEVERAGES),"33cl", "0", "0")
+                List.of("Coca-Cola", "2.99", String.valueOf(PortateEnum.BEVERAGES), "33cl", "0", "0")
         );
 
     }
