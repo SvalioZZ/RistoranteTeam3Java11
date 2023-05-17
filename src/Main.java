@@ -110,7 +110,7 @@ public class Main {
         desserts.printAllDesserts();
         
         BeverageDAO bevDao = new BeverageDAO();
-        bevDao.create("beverage", Arrays.asList(
+        bevDao.create("beverage", List.of(
                 "ID int auto_increment primary key",
                 "name varchar(255) not null",
                 "price double not null",
@@ -121,9 +121,8 @@ public class Main {
         );
         
         bevDao.insertInto(
-                "beverage",
-                Arrays.asList("name", "price", "tipo", "capienza", "alcolico", "percentualeAlcohol"),
-                Arrays.asList("Coca-Cola", "2.99", String.valueOf(PortateEnum.BEVERAGES),"33cl", "false", "0")
+                List.of("name", "price", "tipo", "capienza", "alcolico", "percentualeAlcohol"),
+                List.of("Coca-Cola", "2.99", String.valueOf(PortateEnum.BEVERAGES),"33cl", "0", "0")
         );
 
     }

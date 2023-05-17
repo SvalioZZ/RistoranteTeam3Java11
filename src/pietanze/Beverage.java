@@ -16,8 +16,8 @@ import static pietanze.enumerati.AnsiUtilityEnum.*;
 
 public class Beverage extends Portata {
     private String capacity;
-    private boolean isAlcoholic;
-    private int alcoholPerc;
+    private Boolean isAlcoholic;
+    private Integer alcoholPerc;
     
     /**
      * @constructor costruttore di default, presente match con la superClasse Portata.
@@ -30,7 +30,7 @@ public class Beverage extends Portata {
      * @param isAlcoholic - valore in booleano per identificare l'alcolicità di una bevanda.
      */
     
-    public Beverage(String name, String capacity, double price, int alcoholPerc, boolean isAlcoholic) {
+    public Beverage(String name, String capacity, Double price, Integer alcoholPerc, Boolean isAlcoholic) {
         super(name, price, PortateEnum.BEVERAGES);
         this.capacity = capacity;
         this.isAlcoholic = isAlcoholic;
@@ -56,28 +56,28 @@ public class Beverage extends Portata {
      * Getter per estrapolare il valore isAlcoholic della Bevanda.
      * @return isAlcoholic
      */
-    public boolean isAlcoholic() {
+    public Boolean isAlcoholic() {
         return isAlcoholic;
     }
     /**
      * Setter per impostare il valore isAlcoholic della Bevanda.
      * @param alcoholic
      */
-    public void setAlcoholic(boolean alcoholic) {
+    public void setAlcoholic(Boolean alcoholic) {
         isAlcoholic = alcoholic;
     }
     /**
      * Getter per estrapolare il valore alcoholPerc della Bevanda.
      * @return alcoholPerc
      */
-    public int getAlcoholPerc() {
+    public Integer getAlcoholPerc() {
         return alcoholPerc;
     }
     /**
      * Setter per impostare il valore alcoholPerc della Bevanda.
      * @param alcoholPerc
      */
-    public void setAlcoholPerc(int alcoholPerc) {
+    public void setAlcoholPerc(Integer alcoholPerc) {
         this.alcoholPerc = alcoholPerc;
     }
     

@@ -45,7 +45,7 @@ public class BeverageDAO {
      * @throws Exception
      */
     public void commandUpdate(String query, String tableName) throws Exception {
-        PreparedStatement ps = conn.prepareStatement(query);
+        PreparedStatement ps = this.conn.prepareStatement(query);
         ps.executeUpdate();
         System.out.println("Query executed: " + query + ";\nOn (new) table: " +
                                    tableName + "\n*** SUCCESS ***");
@@ -61,7 +61,7 @@ public class BeverageDAO {
      * @throws Exception
      */
     public void commandQuery(String query) throws Exception {
-        PreparedStatement ps = conn.prepareStatement(query);
+        PreparedStatement ps = this.conn.prepareStatement(query);
         ResultSet rs = ps.executeQuery();
         ResultSetMetaData rsmt = rs.getMetaData();
         int columnCount = rsmt.getColumnCount();
@@ -86,7 +86,7 @@ public class BeverageDAO {
      * @throws SQLException
      */
     public void create(String tableName, List<String> columns) throws SQLException {
-        PreparedStatement ps = conn.prepareStatement(
+        PreparedStatement ps = this.conn.prepareStatement(
                 "create table if not exists my_database." + tableName +
                         " (" + String.join(", ", columns) + ");"
         );
@@ -97,7 +97,6 @@ public class BeverageDAO {
         );
         ps.executeUpdate();
         ps.close();
-        conn.close();
     }
     
     /**
@@ -107,7 +106,7 @@ public class BeverageDAO {
      * @throws Exception
      */
     public void selectAllQuery(String tableName) throws Exception {
-        Statement stmt = conn.createStatement();
+        Statement stmt = this.conn.createStatement();
         ResultSet rs = stmt.executeQuery("select * from " + tableName + ";");
         ResultSetMetaData rsmd = rs.getMetaData();
         int columnsNum = rsmd.getColumnCount();
@@ -132,8 +131,7 @@ public class BeverageDAO {
      * @throws Exception
      */
     public void selectQuery(String pointer, String tableName) throws Exception {
-        Statement stmt = conn.createStatement();
-        ;
+        Statement stmt = this.conn.createStatement();
         if (!pointer.equals("*")) {
             ResultSet rs = stmt.executeQuery("SELECT " + pointer + " FROM " + tableName + ";");
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -157,7 +155,7 @@ public class BeverageDAO {
      * @throws Exception
      */
     public void deleteAllFromQuery(String tableName) throws Exception {
-        PreparedStatement ps = conn.prepareStatement("delete from " + tableName);
+        PreparedStatement ps = this.conn.prepareStatement("delete from " + tableName);
         int rowsDeleted = ps.executeUpdate();
         System.out.println(rowsDeleted + " rows deleted from table " + tableName);
         ps.close();
@@ -174,7 +172,7 @@ public class BeverageDAO {
      * @throws Exception
      */
     public void deleteWhereQuery(String tableName, String pointer, String dataValue) throws Exception {
-        PreparedStatement ps = conn.prepareStatement(
+        PreparedStatement ps = this.conn.prepareStatement(
                 "delete from " + tableName + " where " + pointer + " = ?;"
         );
         ps.setString(1, dataValue);
@@ -189,21 +187,26 @@ public class BeverageDAO {
     
     /**
      * Inserisce i valori nelle tabelle
-     * @param tableName
+     *
      * @param columns
      * @param values
      * @throws SQLException
      */
-    public void insertInto(String tableName, List<String> columns, List<String> values) throws SQLException {
-        String query = "insert into " + tableName +
-                        " (" + String.join(", ", columns) + ") " +
-                        "values (" + String.join(", ", Collections.nCopies(columns.size(), "?")) + ")";
-        PreparedStatement ps = conn.prepareStatement(query);
+    public void insertInto(List<String> columns, List<String> values) throws SQLException {
+        PreparedStatement ps = null;
+        try {
+            ps = this.conn.prepareStatement(
+                    "insert into beverage (" + String.join(", ", columns) + ") " +
+                            "values (" + String.join(", ", Collections.nCopies(columns.size(), "?")) + ")"
+            );
         for (int i = 0; i < values.size(); i++) {
             ps.setString(i + 1, values.get(i));
         }
-        ps.executeUpdate();
-        ps.close();
-        conn.close();
+        int rowsInserted = ps.executeUpdate();
+        System.out.println(rowsInserted + " row(s) inserted into beverage");
+        } finally {
+            if (ps != null) ps.close();
+            if (conn != null) conn.close();
+        }
     }
 }
