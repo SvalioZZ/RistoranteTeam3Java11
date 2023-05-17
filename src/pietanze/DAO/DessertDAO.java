@@ -1,5 +1,6 @@
 package pietanze.DAO;
 
+import pietanze.Desserts;
 import pietanze.enumerati.SapiditaEnum;
 
 import java.sql.*;
@@ -32,14 +33,14 @@ public class DessertDAO {
         System.out.println("Tabella Desserts creata");
     }
 
-    public void insertDessert(String name, Double price, Boolean containFrozenIngredients, Boolean glutenFree, Boolean lactoseFree,
-                              SapiditaEnum dolcezza) throws SQLException {
+    //TODO sistamare
+    public void insertDessert(Desserts desserts) throws SQLException {
 
         Connection conn = DriverManager.getConnection(url, username, password);
         Statement statement = conn.createStatement();
 
         String insertQuery = "INSERT INTO my_database.desserts (name, price, containFrozenIngredients, glutenFree, lactoseFree, dolcezza)" +
-                " VALUES ('" + name + "', " + price + ", " + containFrozenIngredients + ", " + glutenFree +
+                " VALUES ('" + desserts.getName() + "', " + desserts.getPrice() + ", " + containFrozenIngredients + ", " + glutenFree +
                 ", " + lactoseFree + ", '" + dolcezza.getDescrizione() + "');";
 
         statement.executeUpdate(insertQuery);

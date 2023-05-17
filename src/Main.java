@@ -103,11 +103,15 @@ public class Main {
         
 //        Connessioni.selectQuery("name, price, calories", "meal");
 
-        DessertDAO desserts = new DessertDAO();
-        desserts.createTable();
+        Desserts desserts =  new Desserts("Tiramisù", 10.00, false, false, false,
+                SapiditaEnum.DOLCE, Set.of(IngredientiEnum.COFFEE, IngredientiEnum.EGGS, IngredientiEnum.MASCARPONE_CHEESE,
+                IngredientiEnum.SAVOIARDI_BISCUITS, IngredientiEnum.SUGAR, IngredientiEnum.COCOA));
+        DessertDAO dessertDao = new DessertDAO();
+        dessertDao.createTable();
+        dessertDao.insertDessert(desserts);
 
         //desserts.insertDessert("Hazelnuts chocolate Brownies", 5.00, true, true, true, SapiditaEnum.AMARO);
-        desserts.printAllDesserts();
+        dessertDao.printAllDesserts();
         
         BeverageDAO bevDao = new BeverageDAO();
         bevDao.create("beverage", List.of(
