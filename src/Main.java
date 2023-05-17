@@ -109,7 +109,6 @@ public class Main {
         DessertDAO dessertDao = new DessertDAO();
         dessertDao.createTable();
         dessertDao.insertDessert(desserts);
-
         //desserts.insertDessert("Hazelnuts chocolate Brownies", 5.00, true, true, true, SapiditaEnum.AMARO);
         dessertDao.printAllDesserts();
         

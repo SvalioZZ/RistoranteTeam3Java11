@@ -40,8 +40,8 @@ public class DessertDAO {
         Statement statement = conn.createStatement();
 
         String insertQuery = "INSERT INTO my_database.desserts (name, price, containFrozenIngredients, glutenFree, lactoseFree, dolcezza)" +
-                " VALUES ('" + desserts.getName() + "', " + desserts.getPrice() + ", " + containFrozenIngredients + ", " + glutenFree +
-                ", " + lactoseFree + ", '" + dolcezza.getDescrizione() + "');";
+                " VALUES ('" + desserts.getName() + "', " + desserts.getPrice() + ", " + desserts.getContainFrozenIngredients() +
+                ", " + desserts.isGlutenFree() + ", " + desserts.isLactoseFree()+ ", '" + desserts.getDolcezza().getDescrizione() + "');";
 
         statement.executeUpdate(insertQuery);
         conn.close();
