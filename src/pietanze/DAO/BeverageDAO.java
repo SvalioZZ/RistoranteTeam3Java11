@@ -1,6 +1,7 @@
 package pietanze.DAO;
 
 import java.sql.*;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -182,6 +183,26 @@ public class BeverageDAO {
                 rowsDeleted + " rows deleted from " + tableName +
                         "\nWhere " + pointer + " is " + dataValue
         );
+        ps.close();
+        conn.close();
+    }
+    
+    /**
+     * Inserisce i valori nelle tabelle
+     * @param tableName
+     * @param columns
+     * @param values
+     * @throws SQLException
+     */
+    public void insertInto(String tableName, List<String> columns, List<String> values) throws SQLException {
+        String query = "insert into " + tableName +
+                        " (" + String.join(", ", columns) + ") " +
+                        "values (" + String.join(", ", Collections.nCopies(columns.size(), "?")) + ")";
+        PreparedStatement ps = conn.prepareStatement(query);
+        for (int i = 0; i < values.size(); i++) {
+            ps.setString(i + 1, values.get(i));
+        }
+        ps.executeUpdate();
         ps.close();
         conn.close();
     }
