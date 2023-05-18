@@ -119,11 +119,9 @@ public class Main {
                 "alcolico boolean not null",
                 "percentualeAlcohol int not null")
         );
-        
         bevDao.insertInto(
                 List.of("name", "price", "tipo", "capienza", "alcolico", "percentualeAlcohol"),
                 List.of("Coca-Cola", "2.99", String.valueOf(PortateEnum.BEVERAGES),"33cl", "0", "0")
         );
-
     }
 }
