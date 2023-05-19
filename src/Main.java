@@ -1,3 +1,4 @@
+import database.DAO.Schema;
 import pietanze.*;
 import database.DAO.BeverageDAO;
 import database.DAO.DessertDAO;
@@ -122,10 +123,10 @@ public class Main {
                         SapiditaEnum.AMARO, Set.of(IngredientiEnum.CHOCALATE, IngredientiEnum.HAZELNUTS, IngredientiEnum.COCOA,
                         IngredientiEnum.SUGAR, IngredientiEnum.EGGS, IngredientiEnum.YEAST));
 
+        Schema database = new Schema();
+        database.build();
+
         DessertDAO dessertDao = new DessertDAO();
-
-        dessertDao.createTable();
-
         dessertDao.insertDessert(tiramisu);
         dessertDao.insertDessert(chocoCheesecake);
         dessertDao.insertDessert(strawCheesecake);

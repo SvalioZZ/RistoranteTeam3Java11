@@ -6,11 +6,28 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.*;
 
-
 public class Schema {
     public void build() throws SQLException {
         Connection conn = Connector.getConnection();
-        Statement statment = conn.createStatement();
+        Statement statement = conn.createStatement();
+
+        String appetizersQuery = """
+                CREATE TABLE IF NOT EXISTS Appetizers
+                
+                """;
+        statement.executeUpdate(appetizersQuery);
+
+        String firstsQuery = """
+                CREATE TABLE IF NOT EXISTS FirstCourses
+                
+                """;
+        statement.executeUpdate(firstsQuery);
+
+        String secondsQuery = """
+                CREATE TABLE IF NOT EXISTS SecondCourses
+                
+                """;
+        statement.executeUpdate(secondsQuery);
 
         String dessertsQuery = """
                 CREATE TABLE IF NOT EXISTS Desserts
@@ -25,7 +42,15 @@ public class Schema {
                   CONSTRAINT Desserts_pk PRIMARY KEY (id_dessert)
                 );
                 """;
-        statment.executeUpdate(dessertsQuery);
+        statement.executeUpdate(dessertsQuery);
+
+        String beveragesQuery = """
+                CREATE TABLE IF NOT EXISTS Beverages
+                
+                """;
+        statement.executeUpdate(beveragesQuery);
+
+        System.out.println("Schema database creato");
 
         // IDEA: prima dopo da continuare con tutte le tabelle per creare solo lo schema del database,
         // le insert e i metodi li lasciamo nelle loro classi DAO
